@@ -1,0 +1,38 @@
+.fpt-about-nav
+	.container
+		background: #fff
+	.nav-wrapper
+		padding-top: 72px
+	.about-nav
+		list-style: none
+		display: flex
+		justify-content: center
+		padding: 8px 0
+		background-image: url('.././img/main-bg.png')
+		li
+			+ li
+				margin-left: 58px
+				position: relative
+				&:before
+					content: '|'
+					position: absolute
+					left: -29px
+					color: #999999
+			a
+				color: #999999
+				text-decoration: none
+			&.active,&:hover
+				a
+					color: #f26f21
+		@media (max-width: 992px)
+			a
+				font-size: 13px
+		@media (max-width: 768px)
+			white-space: nowrap
+			display: block
+			overflow-x: auto
+			padding: 8px 15px
+			&::-webkit-scrollbar
+				height: 0
+			li
+				display: inline-block

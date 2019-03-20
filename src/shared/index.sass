@@ -1,0 +1,90 @@
+@import "../plugins/font.css"
+@import "../plugins/grid.css"
+@import "../../bower_components/swiper/dist/css/swiper.min.css"
+@import 'mixins.sass'
+@import 'icon.sass'
+@import "header/index.sass"
+@import "footer/index.sass"
+@import "fixed-stuff/index.sass"
+
+
+
+@font-face
+	font-family: 'Muli'
+	src: url('../fonts/Muli/Muli-SemiBold.eot')
+	src: local("Muli SemiBold"), local("Muli-SemiBold"), url('../fonts/Muli/Muli-SemiBold.eot?#iefix') format("embedded-opentype"), url('../fonts/Muli/Muli-SemiBold.woff2') format("woff2"), url('../fonts/Muli/Muli-SemiBold.woff') format("woff"), url('../fonts/Muli/Muli-SemiBold.ttf') format("truetype")
+	font-weight: 600
+	font-style: normal
+
+
+@font-face
+	font-family: 'Muli'
+	src: url('../fonts/Muli/Muli-Black.eot')
+	src: local("Muli Black"), local("Muli-Black"), url('../fonts/Muli/Muli-Black.eot?#iefix') format("embedded-opentype"), url('../fonts/Muli/Muli-Black.woff2') format("woff2"), url('../fonts/Muli/Muli-Black.woff') format("woff"), url('../fonts/Muli/Muli-Black.ttf') format("truetype")
+	font-weight: 900
+	font-style: normal
+
+
+@font-face
+	font-family: 'Muli'
+	src: url('../fonts/Muli/Muli-Light.eot')
+	src: local("Muli Light"), local("Muli-Light"), url('../fonts/Muli/Muli-Light.eot?#iefix') format("embedded-opentype"), url('../fonts/Muli/Muli-Light.woff2') format("woff2"), url('../fonts/Muli/Muli-Light.woff') format("woff"), url('../fonts/Muli/Muli-Light.ttf') format("truetype")
+	font-weight: 300
+	font-style: normal
+
+
+@font-face
+	font-family: 'Muli'
+	src: url('../fonts/Muli/Muli-Regular.eot')
+	src: local("Muli Regular"), local("Muli-Regular"), url('../fonts/Muli/Muli-Regular.eot?#iefix') format("embedded-opentype"), url('../fonts/Muli/Muli-Regular.woff2') format("woff2"), url('../fonts/Muli/Muli-Regular.woff') format("woff"), url('../fonts/Muli/Muli-Regular.ttf') format("truetype")
+	font-weight: normal
+	font-style: normal
+
+
+@font-face
+	font-family: 'Muli'
+	src: url('../fonts/Muli/Muli-Bold.eot')
+	src: local("Muli Bold"), local("Muli-Bold"), url('../fonts/Muli/Muli-Bold.eot?#iefix') format("embedded-opentype"), url('../fonts/Muli/Muli-Bold.woff2') format("woff2"), url('../fonts/Muli/Muli-Bold.woff') format("woff"), url('../fonts/Muli/Muli-Bold.ttf') format("truetype")
+	font-weight: bold
+	font-style: normal
+
+@font-face
+	font-family: 'Roboto Slab'
+	src: url('../fonts/Roboto_Slab/RobotoSlab-Light.eot')
+	src: local("Roboto Slab Light"), local("RobotoSlab-Light"), url('../fonts/Roboto_Slab/RobotoSlab-Light.eot?#iefix') format("embedded-opentype"), url('../fonts/Roboto_Slab/RobotoSlab-Light.woff2') format("woff2"), url('../fonts/Roboto_Slab/RobotoSlab-Light.woff') format("woff"), url('../fonts/Roboto_Slab/RobotoSlab-Light.ttf') format("truetype")
+	font-weight: 300
+	font-style: normal
+
+
+@font-face
+	font-family: 'Roboto Slab'
+	src: url('../fonts/Roboto_Slab/RobotoSlab-Bold.eot')
+	src: local("Roboto Slab Bold"), local("RobotoSlab-Bold"), url('../fonts/Roboto_Slab/RobotoSlab-Bold.eot?#iefix') format("embedded-opentype"), url('../fonts/Roboto_Slab/RobotoSlab-Bold.woff2') format("woff2"), url('../fonts/Roboto_Slab/RobotoSlab-Bold.woff') format("woff"), url('../fonts/Roboto_Slab/RobotoSlab-Bold.ttf') format("truetype")
+	font-weight: bold
+	font-style: normal
+
+
+@font-face
+	font-family: 'Roboto Slab'
+	src: url('../fonts/Roboto_Slab/RobotoSlab-Regular.eot')
+	src: local("Roboto Slab Regular"), local("RobotoSlab-Regular"), url('../fonts/Roboto_Slab/RobotoSlab-Regular.eot?#iefix') format("embedded-opentype"), url('../fonts/Roboto_Slab/RobotoSlab-Regular.woff2') format("woff2"), url('../fonts/Roboto_Slab/RobotoSlab-Regular.woff') format("woff"), url('../fonts/Roboto_Slab/RobotoSlab-Regular.ttf') format("truetype")
+	font-weight: normal
+	font-style: normal
+
+body
+	font-size: 16px
+	font-family: 'Roboto Slab', sans-serif !important
+	background-image: url('.././img/main-bg.png')
+	@media (max-width: 992px)
+		font-size: 15px
+	@media (max-width: 768px)
+		font-size: 14px
+	@media (max-width: 576px)
+		font-size: 13px
+a
+	color: inherit
+	font-size: inherit
+img
+	max-width: 100%
+	height: auto
+	

@@ -1,0 +1,41 @@
+
+=line($line)
+	overflow: hidden
+	display: -webkit-box
+	text-overflow: ellipsis
+	-webkit-line-clamp: $line
+	-webkit-box-orient: vertical
+
+=mtrl($content)
+	display: inline-block
+	font-family: "Material Design Icons"
+	font-size: inherit
+	text-rendering: auto
+	line-height: 1
+	-webkit-font-smoothing: antialiased
+	-moz-osx-font-smoothing: grayscale
+	content: $content
+
+=larc($content)
+	content: $content
+	font-family: 'Linearicons-Free'
+	speak: none
+	font-style: normal
+	font-weight: normal
+	font-variant: normal
+	text-transform: none
+	line-height: 1
+	-webkit-font-smoothing: antialiased
+	-moz-osx-font-smoothing: grayscale
+
+=faws($content,$font, $fw)
+	font-family: $font
+	content: $content
+	font-weight: $fw
+	-moz-osx-font-smoothing: grayscale
+	-webkit-font-smoothing: antialiased
+	display: inline-block
+	font-style: normal
+	font-variant: normal
+	text-rendering: auto
+	line-height: 1

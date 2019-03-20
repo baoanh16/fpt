@@ -1,0 +1,92 @@
+.fpt-about
+	.container
+		background: #fff
+	.section-wrapper
+		padding: 32px 0 50px
+	h1
+		text-align: center
+		text-transform: uppercase
+		font-size: 35px
+		max-width: 80%
+		margin: 0 auto
+		color: #f26f21
+		font-weight: 700
+		margin-bottom: 32px
+		@media (max-width: 576px)
+			max-width: 100%
+			font-size: 24px
+	.statistic-col
+		&:nth-child(1)
+			.statistic-item
+				margin-left: auto
+		&:nth-child(2)
+			.statistic-item
+				margin: 0 auto
+		&:nth-child(3)
+			.statistic-item
+				margin-right: auto
+			.statistic-number
+				&:last-child
+					margin-left: 44px
+					position: relative
+					&:before
+						content: ''
+						position: absolute
+						width: 1px
+						height: 100%
+						top: 50%
+						left: -22px
+						background: rgba(white,0.7)
+						transform: translateY(-45%)
+		@media (max-width: 1200px)
+			&:nth-child(2)
+				.statistic-item
+					margin-left: 0
+			&:nth-child(3)
+				flex: 0 0 100% !important
+				max-width: 100% !important
+				.statistic-item
+					max-width: 50%
+					margin: 0 auto
+	.statistic-item
+		background: #f26f21
+		max-width: 75%
+		padding: 25px
+		font-family: 'Muli'
+		.statistic-title
+			display: flex
+			align-items: center
+			padding-bottom: 20px
+			border-bottom: 1px solid rgba(white,0.7)
+			span
+				font-size: 18px
+				font-weight: 700
+				color: #f6e7df
+				margin-left: 21px
+		.statistic-body
+			padding-top: 20px
+			text-align: center
+			span
+				display: block
+			.statistic-number
+				display: inline-block
+			.number
+				font-size: 46px
+				font-family: 'Roboto Slab'
+				color: #fff
+				font-weight: 700
+			.unit
+				font-weight: 700
+				font-size: 18px
+				color: #f6e7df
+		@media (max-width: 1200px)
+			margin-bottom: 30px
+			.statistic-title
+				justify-content: center
+		@media (max-width: 992px)
+			max-width: 50% !important
+			margin: 0 auto 30px !important
+		@media (max-width: 768px)
+			max-width: 75% !important
+		@media (max-width: 576px)
+			max-width: 100% !important

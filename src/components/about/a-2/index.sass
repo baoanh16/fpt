@@ -1,0 +1,119 @@
+.fpt-about-2
+	.container
+		background: #fff
+	.section-wrapper
+		padding-bottom: 60px
+	.fpt-logo
+		text-align: center
+	h2
+		margin-top: 18px
+		color: #f26f21
+		text-transform: uppercase
+		font-weight: 700
+		text-align: center
+		padding-bottom: 40px
+		position: relative
+		&:before
+			position: absolute
+			content: ''
+			height: 30px
+			width: 1px
+			bottom: 0
+			left: 50%
+			transform: translateX(-50%)
+			background: #4f4b4d
+		@media (max-width: 768px)
+			padding-bottom: 0
+			&:before
+				display: none
+	.nodes-list
+		padding-top: 28px
+		position: relative
+		&:before
+			position: absolute
+			content: ''
+			height: 1px
+			left: 12.5%
+			right: 12.5%
+			top: 0
+			background: #4f4b4d
+		@media (max-width: 768px)
+			padding-top: 30px
+			&:before
+				display: none
+	.node-col
+		@media (max-width: 768px)
+			+ .node-col
+			margin-bottom: 30px
+	.parent-node
+		background: #4f4b4d
+		padding: 15px 0
+		color: #fff
+		font-family: 'Muli'
+		text-align: center
+		position: relative
+		span
+			font-weight: 700
+			font-weight: 18px
+			margin-left: 16px
+		&:before
+			position: absolute
+			content: ''
+			height: 28px
+			width: 1px
+			background: #4f4b4d
+			top: -28px
+			left: 50%
+			transform: translateX(-50%)
+		@media (max-width: 992px)
+			span
+				margin-left: 8px
+			img
+				max-width: 2.5rem
+		@media (max-width: 768px)
+			&:before
+				display: none
+	.children-node
+		list-style: none
+		padding-top: 30px
+		padding-left: 30px
+		position: relative
+		li
+			position: relative
+			+ li
+				margin-top: 30px
+			&:before
+				position: absolute
+				content: ''
+				width: 30px
+				height: 1px
+				background: #4f4b4d
+				top: 50%
+				left: -30px
+				transform: translateY(-50%)
+			&:hover
+				a
+					border: 1px solid #f26f21
+					color: #f26f21
+					transition: 0.3s all
+		a
+			display: block
+			padding: 24px 12px
+			border: 1px solid #4f4b4d
+			text-decoration: none
+			font-size: 18px
+			font-family: 'Muli'
+			font-weight: 700
+			color: #4f4b4d
+			transition: 0.3s all
+		&:before
+			position: absolute
+			content: ''
+			background: #4f4b4d
+			width: 1px
+			height: calc(100% - 37px)
+			top: 0
+			left: 0
+		@media (max-width: 992px)
+			a
+				font-size: 14px

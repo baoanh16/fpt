@@ -1,0 +1,39 @@
+@import '../../shared/mixins.sass'
+.fpt-sub-banner
+	position: relative
+	.slogan
+		position: absolute
+		left: 50%
+		bottom: 0
+		transform: translate(-50%,50%)
+	.breadcrumb-wrapper
+		position: absolute
+		top: 0
+		left: 0
+		right: 0
+		padding: 13px 0
+		background: rgba(black,0.4)
+		ol
+			list-style: none
+			display: flex
+			li
+				+ li
+					margin-left: 16px
+					padding-left: 16px
+					position: relative
+					&:before
+						position: absolute
+						left: -8px
+						top: 55%
+						transform: translateY(-50%)
+						+mtrl('\f142')
+						color: #fff
+						font-size: 18px
+				a
+					color: #fff
+					text-decoration: none
+					font-family: 'Muli'
+					font-size: 15px
+	@media (max-width: 768px)
+		.breadcrumb-wrapper
+			display: none

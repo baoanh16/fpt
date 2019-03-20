@@ -1,0 +1,21 @@
+{
+	"buildAll": false,
+	"page": [{
+			"name": "index",
+			"isWorking": false,
+			"js": [
+				"./src/components/banner/home/index.js"
+			]
+		},
+		{
+			"name": "about",
+			"isWorking": false,
+			"js": []
+		},
+		{
+			"name": "event",
+			"isWorking": true,
+			"js": []
+		}
+	]
+}

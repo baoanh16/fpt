@@ -1,0 +1,16 @@
+{
+	"font": [
+		"bower_components/mdi/fonts/*",
+		"bower_components/font-awesome/webfonts/*",
+		"bower_components/linearicons/dist/web-font/fonts/*",
+		"./src/fonts/*/*"
+	],
+	"globalJs": [
+		"./bower_components/jquery/dist/jquery.min.js",
+		"./src/plugins/lazysizes.min.js",
+		"./src/plugins/mapping.js",
+		"./src/plugins/mapping-listener.js",
+		"./src/shared/**/**.js",
+		"./bower_components/swiper/dist/js/swiper.min.js"
+	]
+}

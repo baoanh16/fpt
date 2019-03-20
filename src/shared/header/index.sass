@@ -1,0 +1,186 @@
+.fpt-header
+	background: #fff
+	.top-header
+		padding: 10px 0
+		font-family: 'Muli'
+		.top-header-menu
+			display: flex
+			justify-content: flex-end
+			list-style: none
+			width: 100%
+			font-size: 0.8125rem
+			li
+				+ li
+					margin-left: 40px
+			@media (max-width: 576px)
+				justify-content: center
+				li
+					text-align: center
+					+ li
+						margin-left: 20px
+			@media (max-width: 380px)
+				li
+					font-size: 11px
+					+ li
+						margin-left: 12px
+	.middle-header
+		background: #f26f21
+		.middle-header-wrapper
+			display: flex
+		.middle-header-menu
+			display: flex
+			list-style: none
+			width: 100%
+			li
+				a
+					display: block
+					padding: 15px 22px
+					color: #fff
+					text-decoration: none
+					border-left: 1px solid rgba(white,20%)
+					font-size: 0.9375rem
+					text-transform: uppercase
+					font-weight: 700
+					height: 100%
+					line-height: 23px
+					display: flex
+					align-items: center
+					span
+						font-size: 24px
+				&:last-child
+					a
+						border-right: 1px solid rgba(white,20%)
+				&:hover,&.active
+					a
+						background: #faae2d
+		.language
+			display: flex
+			align-items: center
+		@media (max-width: 1200px)
+			position: relative
+			.middle-header-wrapper
+				padding: 12px 0
+				justify-content: space-between
+			.middle-header-menu
+				position: absolute
+				top: 100%
+				flex-direction: column
+				background: #f26f21
+				left: 0
+				transform: translateY(-2rem)
+				transform-origin: top
+				z-index: -1
+				opacity: 0
+				visibility: hidden
+				transition: 0.3s all
+				li
+					a
+						border-left: 0
+						border-right: 0 !important
+						border-top: 1px solid #fff
+						max-width: 930px
+						margin: 0 auto
+						padding-left: 8px
+				&.open
+					visibility: visible
+					opacity: 1
+					z-index: 150
+					transform: translateY(0%)
+					transition-delay: 0.3s all
+			.toggle-menu
+				width: 30px
+				height: 22.5px
+				position: relative
+				transform: rotate(0deg)
+				transition: .5s ease-in-out
+				cursor: pointer
+				span
+					display: block
+					position: absolute
+					height: 3px
+					width: 100%
+					background: #fff
+					border-radius: 9px
+					opacity: 1
+					left: 0
+					transform: rotate(0deg)
+					transition: .25s ease-in-out
+					&:nth-child(1) 
+						top: 0px
+						transform-origin: left center
+					&:nth-child(2) 
+						top: 9px
+						transform-origin: left center
+					&:nth-child(3) 
+						top: 18px
+						transform-origin: left center
+				&.open
+					span
+						&:nth-child(1)
+							transform: rotate(45deg)
+							top: 0px
+							left: 8px
+						&:nth-child(2) 
+							opacity: 0
+							width: 0
+						&:nth-child(3) 
+							transform: rotate(-45deg)
+							top: 21.5px
+							left: 8px
+		@media (max-width: 992px)
+			.middle-header-menu
+				a
+					max-width: 690px !important
+		@media (max-width: 768px)
+			.middle-header-menu
+				a
+					max-width: 510px !important
+		@media (max-width: 576px)
+			.middle-header-menu
+				a
+					padding-left: 20px !important
+	.bottom-header
+		padding: 13px 0
+		.bottom-header-wrapper
+			display: flex
+			align-items: center
+			justify-content: space-between
+		.search-wrapper
+			.searchbox
+				display: flex
+			input
+				height: 2.375rem
+				border: 1px solid #e1e1e1
+				border-right: 0
+				border-radius: 5px 0 0 5px
+				padding: 0 5px 0 19px
+				font-family: 'Muli'
+				&::placeholder
+					font-size: 13px
+					font-style: italic
+					color: #c5c5c5
+			button
+				height: 2.375rem
+				width: 2.375rem
+				border: 0
+				background: #f26f21
+				color: #fff
+				font-size: 25px
+				border-radius: 0 5px 5px 0
+		@media (max-width: 768px)
+			.logo-wrapper
+				img
+					max-width: 8rem
+		@media (max-width: 576px)
+			.logo-wrapper
+				img
+					max-width: 7rem
+		@media  (max-width: 375px)
+			input
+				height: 32px !important
+				width: 120px
+				padding-left: 5px !important
+			button
+				height: 32px !important
+				width: 32px !important
+				font-size: 18px !important

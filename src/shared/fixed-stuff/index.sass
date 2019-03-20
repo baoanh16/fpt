@@ -1,0 +1,211 @@
+.fixed-register
+	position: fixed
+	right: 0
+	top: 30%
+	z-index: 100
+	a
+		display: flex
+		padding: 17px
+		color: #fff
+		background: #0066b2
+		font-size: 15px
+		text-transform:  uppercase
+		font-weight: 700
+		border-radius: 5px 0 0 5px
+		align-items: center
+		img
+			margin-right: 11px
+		span
+			display: block
+			max-width: 80px
+	@media (max-width: 576px)
+		right: -91px
+		a
+			padding: 10px
+.fixed-chat
+	position: fixed
+	bottom: 0
+	z-index: 99
+	width: 100%
+	.fixed-chat-wrapper
+		display: flex
+		justify-content: space-between
+		align-items: flex-end
+	.register
+		height: 40px
+		width: 298px
+		border-radius: 5px 5px 0 0
+		display: flex
+		align-items: center
+		background: #f26f21
+		padding: 9px 0 9px 21px
+		color: #fff
+		font-size: 14px
+		text-transform:  uppercase
+		position: relative
+		.icon
+			position: absolute
+			bottom: 15px
+			right: -58px
+		span
+			font-weight: 700
+			margin-left: 11px
+			display: block
+	.online-status
+		background-image: url('.././img/online-bg.png')
+		height: 49px
+		width: 298px
+		display: flex
+		align-items: center
+		position: relative
+		font-size: 14px
+		img
+			position: absolute
+			top: 64%
+			transform:  translateY(-50%)
+			left: 26px
+			
+		span
+			position: absolute
+			color: #fff
+			text-transform:  uppercase
+			font-weight: 700
+			top: 64%
+			transform:  translateY(-50%)
+			right: 24px
+
+	@media (max-width: 768px)
+		.container
+			max-width: 95% !important
+	@media (max-width: 640px)
+		.online-status,.register
+			font-size: 11px !important
+		.online-status
+			background-image: none
+			background-color: #4fca00
+			height: 40px
+			border-radius: 5px 5px 0 0
+			display: flex
+			align-items: center
+			padding: 9px 0 9px 21px
+			img
+				position: static
+				transform:  none
+			span
+				position: static
+				right: 10%
+				transform:  none
+				margin-left: 11px
+	@media (max-width: 576px)
+		.container
+			max-width: 100% !important
+		.online-status
+			span
+				max-width: 103px
+.fixed-phone
+	position: fixed
+	right: 5%
+	bottom: 30%
+	display: flex
+	z-index: 99
+	align-items: center
+	.phone-icon
+		border-radius: 50%
+		width: 70px
+		height: 70px
+		background: #0a67b0
+		display: flex
+		align-items: center
+		justify-content: center
+		cursor: pointer
+		position: relative
+		img
+			width: 40px
+			animation: ringing-animation 1s infinite
+		&:after
+			position: absolute
+			content: ''
+			border-radius: 50%
+			z-index: -1
+			background: #0a67b0
+			width: 120px
+			height: 120px
+			animation: circle-animation 3s infinite
+	.phone-number
+		opacity: 0
+		background: #f26f21
+		padding: 5px 14px
+		margin-left: 21px
+		border-radius: 5px
+		position: relative
+		transition: 0.3s all
+		text-decoration: none
+		&:before
+			position: absolute
+			content: ''
+			left: -3.5px
+			top: 50%
+			transform:  translateY(-50%) rotate(45deg)
+			width: 7px
+			height: 7px
+			background: #f26f21
+		span
+			text-transform:  uppercase
+			font-weight: 700
+			font-family: 'Muli'
+			color: #fff
+			font-size: 18px
+		&.show
+			opacity: 1
+			transition: 0.3s all
+	@media (max-width: 1600px)
+		transform: scale(0.8)
+		right: 20px
+		bottom: 90px
+	@media (max-width: 1200px)
+		flex-direction: row-reverse
+		.phone-number
+			margin-left: 0
+			margin-right: 21px
+			&:before
+				right: -3.5px
+				left: auto
+	@media (max-width: 768px)
+		transform: scale(0.6)
+		right: -40px
+
+@keyframes circle-animation
+	0% 
+		transform:  rotate(0) scale(.4) skew(1deg)
+		opacity:.2
+	30% 
+		transform:  rotate(0) scale(.6) skew(1deg)
+		opacity:.6
+	60% 
+		transform:  rotate(0) scale(0.8) skew(1deg)
+		opacity:.3
+	100% 
+		transform:  rotate(0) scale(1) skew(1deg)
+		opacity:.0
+
+@keyframes ringing-animation
+	0%
+		transform: rotate(0) scale(1) skew(1deg)
+
+	10%
+		transform: rotate(-25deg) scale(1) skew(1deg)
+
+	20%
+		transform: rotate(25deg) scale(1) skew(1deg)
+
+	30%
+		transform: rotate(-25deg) scale(1) skew(1deg)
+
+	40%
+		transform: rotate(25deg) scale(1) skew(1deg)
+
+	50%
+		transform: rotate(0) scale(1) skew(1deg)
+
+	100%
+		transform: rotate(0) scale(1) skew(1deg)

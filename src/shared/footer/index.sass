@@ -1,0 +1,52 @@
+footer
+	background-color: #f6f5f2
+	background-image: url('.././img/bg-footer.jpg')
+	padding: 3.25rem 0
+	min-height: 817px
+	background-position: bottom
+	background-repeat: no-repeat
+	@media (max-width: 992px)
+		min-height: 1113px
+	.copyright
+		margin-top: 30px
+	p, address
+		font-size: 13px
+		font-family: 'Muli'
+		color: #606060
+		line-height: 20px
+	.footer-item
+		margin-bottom: 2rem
+	.footer-title
+		font-size: 15px
+		text-transform: uppercase
+		font-weight: 700
+		color: #f26f21
+	.footer-link
+		list-style: none
+		li
+			line-height: 30px
+			&:before
+				+mtrl('\f054')
+				color: #f26f21
+				font-size: 14px
+				margin-right: 8px
+			a
+				font-size: 13px
+				font-family: 'Muli'
+				color: #333333
+	.phone,.mail
+		display: block
+		font-size: 13px
+		color: #333333
+		text-decoration: none
+		font-family: 'Muli'
+		span[class*="mdi-"]
+			margin-right: 11px
+			color: #f26f21
+	.mail
+		span:nth-child(2)
+			color: #f26f21
+			text-decoration: underline
+			text-underline-position: under
+	iframe
+		width: 100%

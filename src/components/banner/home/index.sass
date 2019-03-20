@@ -1,0 +1,51 @@
+.fpt-banner-home
+	position: relative
+	.swiper-pagination-wrapper
+		position: absolute
+		width: 100%
+		bottom: 10%
+	.swiper-navigation-wrapper
+		width: 100%
+		position: absolute
+		top: 50%
+		left: 50%
+		transform: translate(-50%, -50%)
+		z-index: 20
+		.swiper-navigation
+			width: 100%
+			display: flex
+			justify-content: space-between
+		.swiper-prev,.swiper-next
+			color: white
+			outline: none
+			cursor: pointer
+			span
+				font-size: 40px
+		@media (max-width: 576px)
+			.swiper-prev,.swiper-next
+				span
+					font-size: 28px
+	.swiper-pagination-wrapper
+		z-index: 20
+		.scroll-to-section
+			margin-left: 45px
+			margin-bottom: 21px
+			cursor: pointer
+		.swiper-pagination-bullet
+			margin-left: 10px
+			background: #cdcacc
+			opacity: 1
+			width: 10px
+			height: 10px
+		.swiper-pagination-bullet-active
+			background: #f26f21
+		@media (max-width: 576px)
+			display: none
+	.slogan
+		position: absolute
+		bottom: 0
+		left: 50%
+		transform: translate(-50%,50%)
+		z-index: 20
+		@media (max-width: 576px)
+			max-width: 12rem
