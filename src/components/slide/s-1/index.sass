@@ -1,0 +1,68 @@
+@import ../../../bower_components/swiper/dist/css/swiper.min.css
+@import ../../../bower_components/fancybox/dist/jquery.fancybox.min.css
+.slide-1
+    background: url(../img/tintuc/slide.jpg)
+    background-size: cover
+    > .container
+        padding: 50px 0 70px
+        position: relative
+    .swiper-container
+        background: #fff
+        padding: 30px
+    .navigation
+        font-size: 30px
+        .lnr
+            z-index: 99
+            position: absolute
+            top: 40%
+            transform: translateY(-50%)
+            outline: none
+            transition: all .4s ease-in-out
+            color: #999
+            &:hover
+                color: #f26f21
+        .lnr-chevron-left
+            left: 0
+        .lnr-chevron-right
+            right: 0
+    .item
+        .box-img
+            position: relative
+            &:before
+                content: ''
+                background: url(../img/play-button.png)
+                width: 80px
+                height: 80px
+                background-size: cover
+                position: absolute
+                top: 50%
+                left: 50%
+                transform: translate(-50%, -50%)
+        figcaption
+            font-family: Muli, sans-serif
+            font-weight: 700
+            font-size: 16px
+            line-height: 20px
+            margin-top: 15px
+            +line(2)
+    .flex-center
+        display: flex
+        justify-content: center
+        align-items: center
+    .btn-more
+        margin-top: 30px
+        color: #fff
+        border: 1px solid #fff
+        background: transparent
+        padding: 7px 40px
+        transition: all .4s ease-in-out
+        span
+            font-weight: 700
+            text-transform: uppercase
+            font-size: 15px
+            &:after
+                +mtrl('\f35f')
+                margin-left: 4px
+        &:hover
+            background: #fff
+            color: #f26f21
