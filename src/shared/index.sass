@@ -98,3 +98,108 @@ img
 	height: auto
 .container
 	padding: 0 30px
+
+	
+.flex-center
+	display: flex
+	justify-content: center
+	align-items: center
+
+
+.btn-more
+	margin-top: 30px
+	color: #fff
+	border: 1px solid #fff
+	background: transparent
+	padding: 7px 40px
+	transition: all .4s ease-in-out
+	span
+		font-weight: 700
+		text-transform: uppercase
+		font-size: 15px
+		&:after
+			+mtrl('\f35f')
+			margin-left: 4px
+	&:hover
+		background: #fff
+		color: #f26f21
+	@media (max-width: 576px)
+		margin-top: 10px
+		padding: 5px 25px
+		span
+			font-size: 13px
+		
+.news-item
+	margin-bottom: 30px
+	text-align: justify
+	a
+		text-decoration: none
+	p, h4, h5, time
+		font-family: Muli, sans-serif
+	p
+		color: #808080
+		font-size: 15px
+		margin: 5px 0 10px
+		+line(4)
+	h4
+		color: #f26f21
+		font-size: 18px
+		font-weight: 700
+		margin-top: 15px
+		+line(2)
+	h5
+		font-size: 16px
+		line-height: 20px
+		color: #333
+		margin: 15px 0 10px
+		+line(3)
+	h6
+		display: inline-block
+		font-size: 13px
+		font-weight: 400
+		text-transform: uppercase
+		padding: 5px 10px
+		color: #fff
+		background: #f26f21
+		margin-top: 15px
+	time
+		font-size: 16px
+		font-weight: 700
+		color: #999
+	.link
+		color: #808080
+		font-weight: 700
+		font-size: 14px
+		padding-left: 15px
+		padding-bottom: 2px
+		position: relative
+		&:before
+			content: ''
+			display: block
+			width: 8px
+			height: 8px
+			background: #b7b7b7
+			position: absolute
+			top: 5px
+			left: 0
+		&:hover
+			box-shadow: 0 1px 0 0px
+	@media (max-width: 576px)
+		margin-bottom: 10px
+		p, .link
+			font-size: 13px
+		h4
+			font-size: 15px
+			line-height: 18px
+			margin-top: 5px
+			+line(3)
+		h5
+			font-size: 15px
+			line-height: 17px
+			margin: 10px 0 0
+		h6
+			font-size: 11px
+			margin-top: 6px
+			line-height: 13px
+		time
+			font-size: 10px
