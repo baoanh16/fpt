@@ -9,7 +9,21 @@ html(lang="en")
 		link(rel="stylesheet", href="./css/global.min.css")
 		link(rel="stylesheet", href="./css/"+name+".min.css")
 		title #{title}
-
+		//- script.
+		//- 	document.addEventListener('DOMContentLoaded', function() {
+		//- 	var calendarEl = document.getElementById('calendar');
+		//- 	var calendar = new FullCalendar.Calendar(calendarEl, {
+		//- 	plugins: [ 'dayGrid' ],
+		//- 	header: {
+		//- 	left: 'prevYear, prev, title, next, nextYear',
+		//- 	center: '',
+		//- 	right : ''
+		//- 	},
+		//- 	locale: 'vi'
+		//- 	});
+		//- 	calendar.render();
+		//- 	});
+		
 	body(class=bodyClass)
 		block header
 			include ../shared/header/index.pug

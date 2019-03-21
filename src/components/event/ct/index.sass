@@ -1,0 +1,102 @@
+.fpt-event-detail
+	.container
+		background: #fff
+	.section-wrapper
+		padding: 72px 0 50px
+		@media (max-width: 992px)
+			padding-bottom: 20px
+	.event-poster
+		text-align: center
+	.event-detail
+		padding: 10px 10px 0 10px
+		@media (max-width: 992px)
+			margin-top: 40px
+	.detail-row
+		margin-bottom: 50px
+	h1
+		font-size: 25px
+		color: #f26f21
+		font-weight: 400
+		max-width: 85%
+		position: relative
+		z-index: 2
+		margin-bottom: 40px
+		&:before
+			content: ''
+			position: absolute
+			width: 55%
+			height: 30px
+			background: #fde7d9
+			top: -10px
+			left: -10px
+			z-index: -1
+		@media (max-width: 480px)
+			max-width: 100%
+	h2 
+		font-size: 24px
+		color: #333
+		text-transform: uppercase
+		margin-bottom: 20px
+	.list-info
+		display: flex
+		margin: 0 -15px
+		@media (max-width: 480px)
+			flex-wrap: wrap
+	.info-item
+		display: flex
+		flex: auto
+		padding: 0 15px
+		.icon
+			margin-right: 8px
+		.info-content
+			.title
+				font-size: 13px
+				color: #333
+				text-transform: uppercase
+				font-weight: 700
+			.content
+				font-size: 13px
+				color: #333
+				font-family: 'Muli'
+		@media (max-width: 480px)
+			+ .info-item
+				margin-top: 20px
+	.fullcontent
+		margin-top: 40px
+		font-family: 'Muli'
+		color: #333
+		font-size: 15px
+	.social-sharing
+		margin-top: 20px
+	.contact
+		margin-top: 50px
+		font-family: 'Muli'
+		.title
+			font-family: 'Roboto Slab'
+		p
+			font-size: 14px
+			line-height: 30px
+			a 
+				color: #5282f0
+				text-decoration: underline
+				text-underline-position: under
+			&:nth-child(2)
+				&:before
+					+mtrl('\f20d')
+					font-size: 18px
+					color: #4267b2
+					width: 16px
+					margin-right: 8px
+			&:nth-child(3)
+				&:before
+					+larc('\e818')
+					font-size: 16px
+					margin-right: 4px
+			&:nth-child(4)
+				&:before
+					+larc('\e830')
+					margin-right: 8px
+					font-size: 16px
+	.event-item
+		@media (max-width: 992px)
+			margin-bottom: 30px

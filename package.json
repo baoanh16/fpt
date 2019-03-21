@@ -36,6 +36,7 @@
 		"gulp-sass": "^4.0.2",
 		"gulp-sass-unicode": "^1.0.1",
 		"gulp-sourcemaps": "^2.6.4",
-		"gulp-terser": "^1.1.7"
+		"gulp-terser": "^1.1.7",
+		"tippy.js": "^4.2.0"
 	}
 }

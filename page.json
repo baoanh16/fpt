@@ -13,9 +13,29 @@
 			"js": []
 		},
 		{
-			"name": "event",
-			"isWorking": true,
+			"name": "campus",
+			"isWorking": false,
 			"js": []
+		},
+		{
+			"name": "register",
+			"isWorking": false,
+			"js": []
+		},
+		{
+			"name": "tracuu",
+			"isWorking": true,
+			"js": ["./bower_components/Tabslet/jquery.tabslet.js"]
+		},
+		{
+			"name": "event",
+			"isWorking": false,
+			"js": [
+				"./bower_components/qtip2/jquery.qtip.min.js",
+				"./bower_components/moment/min/moment.min.js",
+				"./bower_components/fullcalendar/dist/fullcalendar.js",
+				"./bower_components/fullcalendar/dist/locale-all.js"
+			]
 		}
 	]
 }
