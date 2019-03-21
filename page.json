@@ -14,8 +14,15 @@
 		},
 		{
 			"name": "event",
-			"isWorking": true,
+			"isWorking": false,
 			"js": []
+		},
+		{
+			"name": "tintuc",
+			"isWorking": true,
+			"js": [
+				"./bower_components/fancybox/dist/jquery.fancybox.min.js"
+			]
 		}
 	]
 }
