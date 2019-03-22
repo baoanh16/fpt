@@ -61,6 +61,11 @@
 		},
 		{
 			"name": "tintuc-ct",
+			"isWorking": false,
+			"js": []
+		},
+		{
+			"name": "hoinhapquocte",
 			"isWorking": true,
 			"js": []
 		}
