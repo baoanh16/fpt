@@ -1,0 +1,81 @@
+.fpt-daotao-ct4
+	.container
+		background: #fff
+	.section-wrapper
+		padding-top: 50px
+	h2
+		text-transform: uppercase
+		font-size: 35px
+		text-align: center
+		color: #333
+		margin-bottom: 40px
+	.program-table
+		@media (max-width: 576px)
+			overflow-x: auto
+	table
+		width: 100%
+		color: #333
+		table-layout: fixed
+		border-collapse: collapse
+		@media (max-width: 576px)
+			width: 200%
+		th,td
+			border-right: 1px solid #efefef
+			&:first-child
+				border-left: 1px solid #efefef
+		thead
+			tr
+				display: flex
+			th
+				background: #f26f21
+				text-align: center
+				padding: 17px 0
+				text-transform: uppercase
+				color: #fff
+				font-size: 18px
+				&:nth-child(1)
+					width: 16.666666%
+				&:nth-child(2),&:nth-child(3)
+					width: 41.666666%
+				&:nth-child(3)
+					border-right: 0
+			@media (max-width: 576px)
+				tr
+					display: table-row
+		tbody
+			display: block
+			overflow: auto
+			height: 460px
+			width: 100%
+			&::-webkit-scrollbar
+				width: 5px
+				border-radius: 5px
+				background: #e5e5e5
+			&::-webkit-scrollbar-thumb
+				border-radius: 5px
+				background: #f7bd9b
+			tr
+				td
+					&:nth-child(1)
+						text-align: center
+						text-transform: uppercase
+						font-weight: 700
+						width: 16.666666%
+					&:nth-child(2),&:nth-child(3)
+						padding: 32px 20px
+						font-family: 'Muli'
+						font-size: 14px
+						line-height: 22px
+						font-weight: 400
+						width: 41.9%
+					ul
+						padding-left: 15px
+						li
+							color: #bdbdbd
+							p
+								color: #333
+			tr:nth-child(2n)
+				background: #fafafa
+			@media (max-width: 576px)
+				height: auto
+				display: table-row-group

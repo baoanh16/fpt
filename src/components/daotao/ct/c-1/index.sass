@@ -1,0 +1,69 @@
+.fpt-daotao-ct1
+	overflow: hidden
+	.container
+		background: #fff
+		@media (max-width: 576px)
+			padding: 0
+	.section-wrapper
+		padding-top: 30px
+	h2
+		font-size: 35px
+		color: #f26f21
+		text-transform: uppercase
+		margin-bottom: 32px
+		@media (max-width: 480px)
+			font-size: 28px
+	.prospects
+		padding-top: 20px
+		.content
+			font-family: 'Muli'
+			color: #333
+			font-size: 15px
+			max-height: 390px
+			overflow-y: auto
+			padding-right: 32px
+			&::-webkit-scrollbar
+				width: 5px
+				border-radius: 5px
+				background: #e5e5e5
+			&::-webkit-scrollbar-thumb
+				border-radius: 5px
+				background: #f7bd9b
+		@media (max-width: 992px)
+			margin-bottom: 30px
+		@media (max-width: 576px)
+			padding: 20px
+		@media (max-width: 480px)
+			.content
+				padding-right: 15px
+	.jobs
+		background: #ffeddb
+		padding: 20px 30px 62.5px
+		height: 100%
+		ul
+			list-style: none
+			counter-reset: li
+			font-family: 'Muli'
+			height: 330px
+			padding-right: 15px
+			overflow-y: auto
+			&::-webkit-scrollbar
+				width: 5px
+				border-radius: 5px
+				background: #e5e5e5
+			&::-webkit-scrollbar-thumb
+				border-radius: 5px
+				background: #f7bd9b
+			li
+				display: flex
+				align-items: center
+				font-size: 14px
+				counter-increment: li
+				&:before
+					margin-right: 13px
+					content: counter(li, decimal-leading-zero) '.'
+					font-weight: 700
+				p
+					padding: 8px 0
+					border-bottom: 1px dashed #dbccbc
+					width: 100%

@@ -1,0 +1,110 @@
+.fpt-daotao-ct3
+	margin-top: 34px
+	.container
+		padding: 0
+	h2
+		font-size: 35px
+		text-transform: uppercase
+		font-weight: 700
+		color: #333
+		margin-bottom: 18px
+		@media (max-width: 480px)
+			font-size: 28px
+	.lo-trinh-wrapper
+		padding-top: 50px
+		padding-left: 30px
+		padding-bottom: 28px
+		background-image: url('../img/nganhdaotao/bg-3.png')
+	.lo-trinh-content
+		display: flex
+	.step-wrapper
+		padding-right: 37px
+		border-right: 1px solid #e3d1be
+		flex: 0 0 75%
+	.step
+		display: flex
+		align-items: center
+		span
+			display: block
+			&:first-child
+				padding-top: 20px
+				font-size: 18px
+				text-transform: uppercase
+				color: #333
+				font-weight: 700
+			&:last-child
+				font-family: 'Muli'
+				font-size: 14px
+				color: #808080
+		&:before
+			content: ''
+			display: block
+			height: 135px
+			flex: 0 0 100px
+			margin-right: 16px
+	.step:nth-child(1)
+		&:before
+			background-image: url('../img/nganhdaotao/step/04.png')
+	.step:nth-child(2)
+		&:before
+			background-image: url('../img/nganhdaotao/step/03.png')
+	.step:nth-child(3)
+		&:before
+			background-image: url('../img/nganhdaotao/step/02.png')
+	.step:nth-child(4)
+		&:before
+			background-image: url('../img/nganhdaotao/step/01.png')
+	.step 
+		+ .step
+			margin-top: -27px
+	.summary
+		flex: 0 0 25%
+		display: flex
+		align-items: center
+		justify-content: center
+		flex-direction: column
+		font-family: 'Muli'
+		font-size: 15px
+		color: #333
+	.khac-biet-wrapper
+		height: 100%
+		background: #ffeddb
+		padding: 50px 30px 28px
+		.content
+			max-height: 440px
+			overflow-y: auto
+			padding-right: 22px
+			font-family: 'Muli'
+			font-size: 15px
+			color: #333333
+			&::-webkit-scrollbar
+				width: 5px
+				border-radius: 5px
+				background: #e5e5e5
+			&::-webkit-scrollbar-thumb
+				border-radius: 5px
+				background: #f7bd9b
+
+
+
+	@media (max-width: 1200px)
+		.step-wrapper
+			flex: 0 0 70%
+		.summary
+			flex: 0 0 30%
+	@media (max-width: 768px)
+		margin: 0
+	@media (max-width: 576px)
+		.lo-trinh-wrapper
+			padding: 30px 15px
+		.container
+			padding: 0
+		.lo-trinh-content
+			flex-direction: column-reverse
+		.step-wrapper
+			border: 0
+			padding: 0
+		.summary
+			margin-bottom: 30px
+			font-size: 18px
+	

@@ -1,0 +1,91 @@
+.fpt-daotao-ct5
+	@media (max-width: 576px)
+		background: #fff
+	.container
+		background: #fff
+	.section-wrapper
+		padding-top: 50px
+	h2
+		text-align: center
+		font-weight: 300
+		font-size: 35px
+		color: #333
+		padding-bottom: 40px
+		strong
+			font-weight: 700
+		@media (max-width: 576px)
+			font-size: 28px
+	.content-wrapper
+		position: relative
+		color: #fff
+		.container
+			background: transparent
+			display: flex
+			flex-direction: column
+			align-items: flex-end
+			justify-content: center
+			height: 100%
+		.content
+			position: absolute
+			width: 100%
+			height: 100%
+			top: 50%
+			right: 0
+			transform: translateY(-50%)
+			h3
+				width: 400px
+				color: #f26f21
+				font-size: 32px
+				text-transform: uppercase
+				font-weight: 700
+				padding-left: 15px
+				margin-top: 10px
+			p
+				font-family: 'Bai Jamjuree'
+				font-size: 22px
+				width: 385px
+				display: flex
+				align-items: center
+				span
+					display: block
+					margin-right: 12px
+			ul
+				list-style: none
+				font-family: 'Bai Jamjuree'
+				width: 385px
+				margin-bottom: 25px
+				li
+					line-height: 36px
+					font-size: 22px
+					display: flex
+					span
+						display: block
+						margin-right: 12px
+		@media (max-width: 992px)
+			.content
+				transform: translateY(-50%) scale(0.7)
+			.container
+				max-width: 100%
+		@media (max-width: 576px)
+			.img
+				height: 180px
+				img
+					height: 100%
+					width: 100%
+					object-fit: cover
+			.container
+				display: block
+			.content
+				position: static
+				transform: none
+				color: #333
+				padding: 30px 0
+				h3
+					padding-left: 0
+					width: 100%
+					font-size: 24px
+				p,ul
+					width: 100%
+				p,li
+					font-size: 18px !important
+					line-height: 26px !important

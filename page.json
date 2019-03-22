@@ -24,8 +24,18 @@
 		},
 		{
 			"name": "tracuu",
-			"isWorking": true,
+			"isWorking": false,
 			"js": ["./bower_components/Tabslet/jquery.tabslet.js"]
+		},
+		{
+			"name": "daotao-ds",
+			"isWorking": false,
+			"js": []
+		},
+		{
+			"name": "daotao-ct",
+			"isWorking": true,
+			"js": ["./bower_components/fancybox/dist/jquery.fancybox.min.js"]
 		},
 		{
 			"name": "event",
@@ -39,7 +49,7 @@
 		},
 		{
 			"name": "tintuc",
-			"isWorking": true,
+			"isWorking": false,
 			"js": [
 				"./bower_components/fancybox/dist/jquery.fancybox.min.js"
 			]
