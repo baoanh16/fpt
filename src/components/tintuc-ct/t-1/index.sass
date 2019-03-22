@@ -1,0 +1,126 @@
+.tintuc-ct-1
+    > .container
+        padding-top: 50px
+        background: #fff
+    .fw-600
+        font-weight: 600
+    .main-news
+        .title
+            margin-bottom: 16px
+            h1
+                font-size: 24px
+                line-height: 26px
+                color: #f26f21
+                font-weight: 700
+            time
+                font-family: Muli, sans-serif
+                font-size: 12px
+                font-weight: 600
+                color: #999
+        figure
+            margin-top: 16px
+            img
+                display: block
+                margin: 0 auto
+            figcaption
+                font-family: Muli, sans-serif
+                color: #666
+                font-size: 14px
+                width: 70%
+                text-align: center
+                margin: 5px auto 0
+        p
+            margin-top: 16px
+            font-size: 16px
+    .tags
+        margin-top: 16px
+        display: flex
+        flex-flow: row wrap
+        a
+            font-family: Muli, sans-serif
+            font-size: 14px
+            color: #666
+            padding: 9px 15px
+            border: 1px solid #666
+            border-radius: 5px
+            white-space: nowrap
+            margin-bottom: 10px
+            transition: all .4s ease-in-out
+            text-decoration: none
+            &:not(:last-child)
+                margin-right: 10px
+            &.active
+                background: #f26f21
+                border-color: #f26f21
+                color: #fff
+                cursor: pointer
+            @media (min-width: 992px)
+                &:hover
+                    background: #f26f21
+                    border-color: #f26f21
+                    color: #fff
+                    cursor: pointer
+    .title-lienquan
+        color: #333
+        font-size: 24px
+        font-weight: 700
+        line-height: 24px
+        margin: 16px 0
+        text-transform: uppercase
+    .tintuc-khac
+        .title
+            font-size: 24px
+            font-weight: 700
+            padding: 9px 15px
+            background: #f26f21
+            color: #fff
+            text-transform: uppercase
+            margin-bottom: 16px
+        .thumbs-item
+            padding-bottom: 15px
+            box-shadow: 0 1px 0 0 #ddd 
+            &:not(:first-child)
+                margin-top: 16px
+            figure
+                display: flex
+                .box-img
+                    flex: 0 0 50%
+                figcaption
+                    padding: 0 5px
+                h5, time
+                    font-weight: 600
+                    font-family: Muli, sans-serif
+                h5
+                    font-size: 13px
+                    +line(3)
+                time
+                    font-size: 12px
+                    color: #999
+    @media (max-width: 576px)
+        .main-news
+            .title
+                h1
+                    font-size: 16px
+                    line-height: 20px
+                time
+                    font-size: 10px
+            figure
+                figcaption
+                    width: 100%
+                    font-size: 10px
+            p
+                font-size: 13px
+                margin-top: 10px
+        .tags
+            a
+                padding: 5px 10px
+                font-size: 12px
+                &:not(:last-child)
+                    margin-right: 5px
+        .title-lienquan
+            font-size: 16px
+            margin-bottom: 10px
+        .tintuc-khac
+            .title
+                font-size: 16px
+                line-height: 16px

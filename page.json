@@ -49,13 +49,18 @@
 		},
 		{
 			"name": "tintuc",
-			"isWorking": true,
+			"isWorking": false,
 			"js": [
 				"./bower_components/fancybox/dist/jquery.fancybox.min.js"
 			]
 		},
 		{
 			"name": "tintuc-ds",
+			"isWorking": false,
+			"js": []
+		},
+		{
+			"name": "tintuc-ct",
 			"isWorking": true,
 			"js": []
 		}
