@@ -71,10 +71,15 @@
 		},
 		{
 			"name": "video",
-			"isWorking": true,
+			"isWorking": false,
 			"js": [
 				"./bower_components/fancybox/dist/jquery.fancybox.min.js"
 			]
+		},
+		{
+			"name": "tuyendung-ct",
+			"isWorking": true,
+			"js": []
 		}
 	]
 }
