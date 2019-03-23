@@ -66,8 +66,15 @@
 		},
 		{
 			"name": "hoinhapquocte",
-			"isWorking": true,
+			"isWorking": false,
 			"js": []
+		},
+		{
+			"name": "video",
+			"isWorking": true,
+			"js": [
+				"./bower_components/fancybox/dist/jquery.fancybox.min.js"
+			]
 		}
 	]
 }
