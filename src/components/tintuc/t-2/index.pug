@@ -1,18 +1,15 @@
-section.tintuc-2
-    .container
-        - for(i = 0; i < 3; i++)
-            .title
-                h4 Đời sống sinh viên
-                a(href="javascript:void(0)").more xem tất cả
-            .row
-            .swiper-container
-                .swiper-wrapper
-                    - for(j = 0; j < 3; j++)
-                        .swiper-slide
-                            .news-item
-                                figure
-                                    img(src="./img/tintuc/medium.png", alt="medium.png")
-                                    figcaption
-                                        h5
-                                            a(href="javascript:void(0)") Sinh viên ĐH FPT gửi gắm “Những điều chưa nói” qua âm nhạc Sinh viên ĐH FPT gửi gắm “Những điều chưa nói” qua âm nhạc Sinh viên ĐH FPT gửi gắm “Những điều chưa nói” qua âm nhạc
-                                        time 04/08/2018
+.tintuc-2
+    .title
+        h4 Đời sống sinh viên
+        a(href="javascript:void(0)").more xem tất cả
+    .row
+        -for(i = 0; i < 3; i++)
+            .col-12.col-sm-6.col-md-4
+                .news-item
+                    figure
+                        .box-img
+                            img(src="./img/tintuc/medium.png", alt="medium.png")
+                        figcaption
+                            h5
+                                a(href="javascript:void(0)") Sinh viên ĐH FPT gửi gắm “Những điều chưa nói” qua âm nhạc Sinh viên ĐH FPT gửi gắm “Những điều chưa nói” qua âm nhạc Sinh viên ĐH FPT gửi gắm “Những điều chưa nói” qua âm nhạc
+                            time 04/08/2018
