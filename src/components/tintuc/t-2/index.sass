@@ -1,5 +1,8 @@
-.tintuc-2,
-.tintuc-3
+.tintuc-2
+    > .container
+        padding-top: 50px
+        padding-bottom: 70px
+        background: #fff
     .title
         display: flex
         align-items: center
@@ -21,20 +24,19 @@
             line-height: 15px
             &:after
                 +mtrl('\f35f')
-        @media (max-width: 576px)
+    @media (max-width: 576px)
+        >.container
+            padding-bottom: 20px
+        .title
             h4
                 padding: 5px
                 font-size: 13px
+                line-height: 22px
                 flex: 0 0 50%
                 min-width: 50%
                 +line(1)
             .more
                 font-size: 13px
                 line-height: 13px
-.tintuc-2
-    > .container
-        padding-top: 50px
-        padding-bottom: 70px
-        background: #fff
-        @media (max-width: 576px)
-            padding-bottom: 20px
+        [class*="col-"]
+            margin-bottom: 30px

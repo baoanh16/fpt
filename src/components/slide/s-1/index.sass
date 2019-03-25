@@ -30,19 +30,31 @@
     .item
         .box-img
             position: relative
+            display: block
+            width: 100%
+            height: 200px
             &:before
                 content: ''
                 background: url(../img/play-button.png)
-                width: 80px
-                height: 80px
+                width: 60px
+                height: 60px
                 background-size: cover
                 position: absolute
                 top: 50%
                 left: 50%
                 transform: translate(-50%, -50%)
+                @media (max-width: 768px)
+                    width: 40px
+                    height: 40px
                 @media (max-width: 576px)
                     width: 30px
                     height: 30px
+            img
+                width: 100%
+                height: 100%
+                object-fit: cover
+            @media (max-width: 576px)
+                height: 250px
         figcaption
             font-family: Muli, sans-serif
             font-weight: 700

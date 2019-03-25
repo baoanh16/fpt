@@ -2,8 +2,9 @@
     > .container
         padding-top: 50px
         background: #fff
-    .fw-600
-        font-weight: 600
+    a
+        @media (max-width: 992px)
+            text-decoration: none
     .main-news
         .title
             margin-bottom: 16px
@@ -29,9 +30,11 @@
                 width: 70%
                 text-align: center
                 margin: 5px auto 0
+                @media (max-width: 992px)
+                    width: 90%
         p
-            margin-top: 16px
             font-size: 16px
+            line-height: 1.5
     .tags
         margin-top: 16px
         display: flex
@@ -77,16 +80,26 @@
             text-transform: uppercase
             margin-bottom: 16px
         .thumbs-item
-            padding-bottom: 15px
+            padding-bottom: 20px
             box-shadow: 0 1px 0 0 #ddd 
             &:not(:first-child)
-                margin-top: 16px
+                margin-top: 20px
             figure
                 display: flex
                 .box-img
-                    flex: 0 0 50%
+                    max-width: 40%
+                    flex: 0 0 40%
+                    height: 80px
+                    img
+                        width: 100%
+                        height: 100%
+                        object-fit: cover
+                    @media (max-width: 992px)
+                        height: 150px
+                    @media (max-width: 576px)
+                        height: 100px
                 figcaption
-                    padding: 0 5px
+                    padding-left: 15px
                 h5, time
                     font-weight: 600
                     font-family: Muli, sans-serif

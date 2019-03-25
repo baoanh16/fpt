@@ -12,10 +12,10 @@ var swiper = new Swiper('.slide-1 .swiper-container', {
         prevEl: '.slide-1 .lnr-chevron-left',
     },
     breakpoints: {
-        640: {
+        768: {
             slidesPerView: 2
         },
-        320: {
+        576: {
             slidesPerView: 1
         }
     }
