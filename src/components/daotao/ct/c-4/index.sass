@@ -9,16 +9,11 @@
 		text-align: center
 		color: #333
 		margin-bottom: 40px
-	.program-table
-		@media (max-width: 576px)
-			overflow-x: auto
 	table
 		width: 100%
 		color: #333
 		table-layout: fixed
 		border-collapse: collapse
-		@media (max-width: 576px)
-			width: 200%
 		th,td
 			border-right: 1px solid #efefef
 			&:first-child
@@ -39,9 +34,6 @@
 					width: 41.666666%
 				&:nth-child(3)
 					border-right: 0
-			@media (max-width: 576px)
-				tr
-					display: table-row
 		tbody
 			display: block
 			overflow: auto
@@ -76,6 +68,45 @@
 								color: #333
 			tr:nth-child(2n)
 				background: #fafafa
-			@media (max-width: 576px)
+		@media (max-width: 576px)
+			thead
+				display: none
+			tbody
 				height: auto
-				display: table-row-group
+				tr
+					display: flex !important
+					flex-direction: column
+					padding: 15px
+					margin-bottom: 20px
+					td
+						width: 100% !important
+						border: 0 !important
+						padding: 0 !important
+						display: block
+						&:nth-child(1)
+							padding: 0
+							font-size: 28px !important
+							margin-bottom: 15px
+						&:nth-child(2),&:nth-child(3)
+							margin-bottom: 30px
+							&:before
+								content: attr(data-title)
+								display: block
+								text-transform: uppercase
+								font-size: 20px
+								font-weight: 700
+								margin-bottom: 15px
+							p
+								padding-left: 15px
+								font-size: 15px
+								line-height: 23px
+								margin-bottom: 10px
+								&:before
+									content: '-'
+									display: inline-block
+									margin-right: 5px
+						&:nth-child(3)
+							ul
+								list-style: none
+								padding-left: 0
+

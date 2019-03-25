@@ -18,6 +18,11 @@
 			"js": []
 		},
 		{
+			"name": "tuyensinh",
+			"isWorking": true,
+			"js": ["./bower_components/fancybox/dist/jquery.fancybox.min.js"]
+		},
+		{
 			"name": "register",
 			"isWorking": false,
 			"js": []
@@ -34,7 +39,7 @@
 		},
 		{
 			"name": "daotao-ct",
-			"isWorking": true,
+			"isWorking": false,
 			"js": ["./bower_components/fancybox/dist/jquery.fancybox.min.js"]
 		},
 		{

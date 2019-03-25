@@ -1,0 +1,56 @@
+.fpt-tuyensinh-doitac
+	.container
+		background: #fff
+	.section-wrapper
+		padding: 50px 0
+	h2
+		display: flex
+		align-items: center
+		font-size: 18px
+		color: #333
+		max-width: 240px
+		text-transform: uppercase
+		font-weight: 700
+		height: 100%
+		span
+			display: block
+			font-size: 60px
+			color: #f26f21
+			margin-right: 20px
+		@media (max-width: 1200px)
+			flex-direction: column
+			text-align: center
+			span
+				margin-right: 0
+		@media (max-width: 992px)
+			font-size: 16px
+			span
+				font-size: 48px
+		@media (max-width: 768px)
+			max-width: none
+			margin-bottom: 20px
+	.doitac-slider
+		background: #f26f21
+		padding: 27px 40px
+		height: 100%
+		position: relative
+		.banner
+			display: flex
+			align-items: center
+			justify-content: center
+			background: #fff
+			height: 90px
+			border-radius: 5px
+		.swiper-prev,.swiper-next
+			position: absolute
+			font-size: 24px
+			top: 50%
+			transform: translateY(-50%)
+			color: #fff
+			z-index: 30
+			outline: none
+			cursor: pointer
+		.swiper-next
+			right: 12px
+		.swiper-prev
+			left: 12px
