@@ -1,0 +1,1 @@
+$('.video [data-fancybox]').fancybox();

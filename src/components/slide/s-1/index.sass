@@ -6,6 +6,8 @@
     > .container
         padding: 50px 0 70px
         position: relative
+        @media (max-width: 576px)
+            padding-bottom: 20px
     .swiper-container
         background: #fff
         padding: 30px
@@ -38,6 +40,9 @@
                 top: 50%
                 left: 50%
                 transform: translate(-50%, -50%)
+                @media (max-width: 576px)
+                    width: 30px
+                    height: 30px
         figcaption
             font-family: Muli, sans-serif
             font-weight: 700
@@ -45,24 +50,3 @@
             line-height: 20px
             margin-top: 15px
             +line(2)
-    .flex-center
-        display: flex
-        justify-content: center
-        align-items: center
-    .btn-more
-        margin-top: 30px
-        color: #fff
-        border: 1px solid #fff
-        background: transparent
-        padding: 7px 40px
-        transition: all .4s ease-in-out
-        span
-            font-weight: 700
-            text-transform: uppercase
-            font-size: 15px
-            &:after
-                +mtrl('\f35f')
-                margin-left: 4px
-        &:hover
-            background: #fff
-            color: #f26f21

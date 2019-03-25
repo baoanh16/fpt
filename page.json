@@ -58,6 +58,33 @@
 			"js": [
 				"./bower_components/fancybox/dist/jquery.fancybox.min.js"
 			]
+		},
+		{
+			"name": "tintuc-ds",
+			"isWorking": false,
+			"js": []
+		},
+		{
+			"name": "tintuc-ct",
+			"isWorking": false,
+			"js": []
+		},
+		{
+			"name": "hoinhapquocte",
+			"isWorking": false,
+			"js": []
+		},
+		{
+			"name": "video",
+			"isWorking": false,
+			"js": [
+				"./bower_components/fancybox/dist/jquery.fancybox.min.js"
+			]
+		},
+		{
+			"name": "tuyendung-ct",
+			"isWorking": true,
+			"js": []
 		}
 	]
 }

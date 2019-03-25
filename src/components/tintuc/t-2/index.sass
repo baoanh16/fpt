@@ -21,35 +21,20 @@
             line-height: 15px
             &:after
                 +mtrl('\f35f')
-
+        @media (max-width: 576px)
+            h4
+                padding: 5px
+                font-size: 13px
+                flex: 0 0 50%
+                min-width: 50%
+                +line(1)
+            .more
+                font-size: 13px
+                line-height: 13px
 .tintuc-2
     > .container
         padding-top: 50px
         padding-bottom: 70px
         background: #fff
-    .item
-        margin-bottom: 30px
-        img
-            max-width: 100%
-        h6
-            display: inline-block
-            font-size: 13px
-            font-weight: 400
-            text-transform: uppercase
-            padding: 5px 10px
-            color: #fff
-            background: #f26f21
-            margin-top: 15px
-        h4, time
-            font-family: Muli, sans-serif
-            font-weight: 700
-            font-size: 16px
-        h4
-            margin: 15px 0 10px
-            line-height: 20px
-            +line(3)
-            a
-                color: #333
-        time
-            color: #999
-                    
+        @media (max-width: 576px)
+            padding-bottom: 20px

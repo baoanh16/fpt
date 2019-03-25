@@ -1,0 +1,52 @@
+.video
+    > .container
+        padding-top: 50px
+        padding-bottom: 70px
+        background: #fff
+        @media (max-width: 576px)
+            padding-bottom: 20px
+    .title
+        font-size: 35px
+        line-height: 35px
+        margin-bottom: 30px
+        font-weight: 700
+        color: #f26f21
+        text-align: center
+        text-transform: uppercase
+        @media (max-width: 576px)
+            font-size: 24px
+            line-height: 24px
+            margin-bottom: 16px
+    .btn-more
+        color: #f26f21
+        border-color: #f26f21
+        &:hover
+            background: #f26f21
+            color: #fff
+        span
+            &:after
+                +mtrl('\f35d')
+                margin-left: 4px
+    .item
+        margin-bottom: 30px
+        .box-img
+            position: relative
+            &:before
+                content: ''
+                background: url(../img/play-button.png)
+                width: 80px
+                height: 80px
+                background-size: cover
+                position: absolute
+                top: 50%
+                left: 50%
+                transform: translate(-50%, -50%)
+    @media (max-width: 576px)
+        [class*="col-"]
+            padding: 0 7px
+        .item
+            margin-bottom: 14px
+            .box-img
+                &:before
+                    width: 30px
+                    height: 30px
