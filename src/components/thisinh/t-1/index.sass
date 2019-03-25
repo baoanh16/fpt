@@ -1,0 +1,85 @@
+.thisinh-1
+    > .container
+        padding-top: 50px
+        padding-bottom: 70px
+        background: #fef0e8
+        @media (max-width: 576px)
+            padding-bottom: 20px
+    .title
+        font-size: 35px
+        line-height: 35px
+        margin-bottom: 30px
+        font-weight: 700
+        color: #333
+        text-align: center
+        text-transform: uppercase
+        @media (max-width: 576px)
+            font-size: 24px
+            line-height: 24px
+            margin-bottom: 16px
+    .func-item
+        &.active
+            .box-img
+                background: #faae2d
+            figcaption
+                width: 100%
+                background: #f26f21
+                a
+                    color: #fff
+        a
+            text-decoration: none
+        &:not(:last-child)
+            margin-bottom: 15px
+        figure
+            display: flex
+            border: 1px solid #e3e3e3
+        .box-img
+            flex: 0 0 20%
+            max-width: 20%
+            min-height: 80px
+            background: #959595
+            display: flex
+            justify-content: center
+            align-items: center
+        figcaption
+            font-family: Muli, sans-serif
+            font-weight: 700
+            font-size: 16px
+            padding: 15px
+            text-transform: uppercase
+            a
+                color: #333
+    .btn-more
+        color: #f26f21
+        border-color: #f26f21
+        &:hover
+            background: #f26f21
+            color: #fff
+        span
+            &:after
+                margin-left: 4px
+    @media (min-width: 992px)
+        .func-item
+            &:hover
+                cursor: pointer
+                .box-img
+                    background: #faae2d
+                figcaption
+                    width: 100%
+                    background: #f26f21
+                    a
+                        color: #fff
+    @media (max-width: 576px)
+        [class*="col-"]
+            margin-bottom: 30px
+        .func-item
+            .box-img
+                flex: 0 0 25%
+                max-width: 25%
+            figcaption
+                font-size: 13px
+.comments-wrapper
+    .container
+        padding-top: 50px
+        background: #fff
+        padding-bottom: 70px
