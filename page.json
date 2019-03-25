@@ -1,5 +1,5 @@
 {
-	"buildAll": true,
+	"buildAll": false,
 	"page": [{
 			"name": "index",
 			"isWorking": false,
@@ -89,6 +89,16 @@
 		{
 			"name": "thisinh",
 			"isWorking": false,
+			"js": []
+		},
+		{
+			"name": "faq",
+			"isWorking": true,
+			"js": []
+		},
+		{
+			"name": "lienhe",
+			"isWorking": true,
 			"js": []
 		}
 	]
