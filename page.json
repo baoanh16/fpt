@@ -1,5 +1,5 @@
 {
-	"buildAll": false,
+	"buildAll": true,
 	"page": [{
 			"name": "index",
 			"isWorking": false,
@@ -19,8 +19,8 @@
 		},
 		{
 			"name": "tuyensinh",
-			"isWorking": true,
-			"js": ["./bower_components/fancybox/dist/jquery.fancybox.min.js"]
+			"isWorking": false,
+			"js": []
 		},
 		{
 			"name": "register",
@@ -61,22 +61,22 @@
 		},
 		{
 			"name": "tintuc-ds",
-			"isWorking": false,
+			"isWorking": true,
 			"js": []
 		},
 		{
 			"name": "tintuc-ct",
-			"isWorking": false,
+			"isWorking": true,
 			"js": []
 		},
 		{
 			"name": "hoinhapquocte",
-			"isWorking": false,
+			"isWorking": true,
 			"js": []
 		},
 		{
 			"name": "video",
-			"isWorking": false,
+			"isWorking": true,
 			"js": [
 				"./bower_components/fancybox/dist/jquery.fancybox.min.js"
 			]

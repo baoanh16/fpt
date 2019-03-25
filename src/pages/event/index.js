@@ -3,7 +3,7 @@ $(document).ready(function () {
 		speed: 400,
 		slidesPerView: 4,
 		spaceBetween: 30,
-		loop: true,
+		loop: false,
 		autoplay: {
 			delay: 4000
 		},
@@ -59,10 +59,7 @@ $(document).ready(function () {
 				},
 				hide: 'unfocus',
 				position: {
-					target: 'mouse',
-					adjust: {
-						mouse: true // Can be omitted (e.g. default behaviour)
-					}
+					at: 'top right'
 				}
 			});
 		},
