@@ -1,5 +1,5 @@
 {
-	"buildAll": true,
+	"buildAll": false,
 	"page": [{
 			"name": "index",
 			"isWorking": false,
@@ -20,7 +20,7 @@
 		{
 			"name": "tuyensinh",
 			"isWorking": false,
-			"js": []
+			"js": ["./bower_components/fancybox/dist/jquery.fancybox.min.js"]
 		},
 		{
 			"name": "register",
@@ -54,29 +54,29 @@
 		},
 		{
 			"name": "tintuc",
-			"isWorking": true,
+			"isWorking": false,
 			"js": [
 				"./bower_components/fancybox/dist/jquery.fancybox.min.js"
 			]
 		},
 		{
 			"name": "tintuc-ds",
-			"isWorking": true,
+			"isWorking": false,
 			"js": []
 		},
 		{
 			"name": "tintuc-ct",
-			"isWorking": true,
+			"isWorking": false,
 			"js": []
 		},
 		{
 			"name": "hoinhapquocte",
-			"isWorking": true,
+			"isWorking": false,
 			"js": []
 		},
 		{
 			"name": "video",
-			"isWorking": true,
+			"isWorking": false,
 			"js": [
 				"./bower_components/fancybox/dist/jquery.fancybox.min.js"
 			]
@@ -84,6 +84,21 @@
 		{
 			"name": "tuyendung-ct",
 			"isWorking": false,
+			"js": []
+		},
+		{
+			"name": "thisinh",
+			"isWorking": false,
+			"js": []
+		},
+		{
+			"name": "faq",
+			"isWorking": true,
+			"js": []
+		},
+		{
+			"name": "lienhe",
+			"isWorking": true,
 			"js": []
 		}
 	]

@@ -1,7 +1,10 @@
-.tintuc-ds-1
+.tintuc-ds
     > .container
         padding-top: 50px
         background: #fff
+        padding-bottom: 70px
+        @media (max-width: 576px)
+            padding-bottom: 20px
     .title
         font-size: 35px
         line-height: 35px
@@ -16,3 +19,13 @@
             line-height: 24px
             margin-bottom: 16px
             // margin: 0 auto 16px
+    .btn-more
+        color: #f26f21
+        border-color: #f26f21
+        &:hover
+            background: #f26f21
+            color: #fff
+        span
+            &:after
+                +mtrl('\f35d')
+                margin-left: 4px

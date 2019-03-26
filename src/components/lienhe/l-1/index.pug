@@ -1,0 +1,59 @@
+section.lien-he
+    .container
+        .title
+            h1 liên hệ
+            p Quý khách vui lòng điền thông tin vào mẫu bên dưới và gửi những góp ý, thắc mắc cho FPT
+            p Education chúng tôi sẽ phản hồi email của Quý khách trong thời gian sớm nhất.
+        .row
+            .col-lg-4
+                .info
+                    figure
+                        img(src="./img/logo.png", alt="logo.png")
+                        figcaption TRƯỜNG ĐẠI HỌC FPT
+                    p.lnr.lnr-map-marker
+                        strong Địa chỉ:  
+                        span Lô E2a-7, Đường D1 Khu Công nghệ cao, P.Long Thạnh Mỹ, Q.9, TP.HCM 
+                    p.lnr.lnr-bullhorn
+                        strong Văn phòng Tuyển sinh:  
+                        span Toà nhà Innovation, CVPM Quang Trung, P. Tân Chánh Hiệp, Q. 12, TP. HCM
+                    p.lnr.lnr-phone-handset
+                        strong Điện thoại:  
+                        b (028) 7300 558
+                    p.lnr.lnr-envelope
+                        strong Email:  
+                        span daihoc.hcm@fpt.edu.vn
+            .col-lg-6
+                .row
+                    .col-md-6
+                        .fill
+                            label Họ và tên *
+                            input(type="text")
+                    .col-md-6
+                        .fill
+                            label Email *
+                            input(type="text" placeholder="example@gmail.com")
+                    .col-md-6
+                        .fill
+                            label Số điện thoại *
+                            input(type="text")
+                    .col-md-6
+                        .fill
+                            label Bộ phận liên hệ
+                            select
+                                option(value="" disabled selected) Chọn bộ phận liên hệ
+                                option(value="1") 1
+                                option(value="2") 2
+                                option(value="3") 3
+                                option(value="4") 4
+                    .col-md-12
+                        .fill
+                            label Tiêu đề
+                            input(type="text")
+                    .col-md-12
+                        .fill
+                            label Nội dung
+                            textarea(placeholder="Nhập nội dung...")
+                    .col-md-12
+                        | đây là capcha
+        .maps
+            iframe(src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3918.4551572511473!2d106.627356113769!3d10.852944360746784!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31752a228e44c0f9%3A0x213883275b5eff07!2zVHLGsOG7nW5nIMSQ4bqhaSBo4buNYyBGUFQ!5e0!3m2!1svi!2s!4v1553537076627" frameborder="0" allowfullscreen="")
