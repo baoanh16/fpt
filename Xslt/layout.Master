@@ -22,14 +22,15 @@
 	<portal:Favicon ID="Favicon1" runat="server" />
 	<portal:ScriptLoader ID="ScriptLoader1" runat="server" />
 	</script>
-	<!-- <portal:SkinFolderScript ID="SkinFolderScript1" runat="server" ScriptFileName="js/plugins.min.js"
+	<portal:SkinFolderScript ID="SkinFolderScript1" runat="server" ScriptFileName="js/global.min.js"
 		AddToCombinedScript="true" />
-	<portal:SkinFolderScript ID="SkinFolderScript2" runat="server" ScriptFileName="js/customize.min.js"
+	<!-- <portal:SkinFolderScript ID="SkinFolderScript2" runat="server" ScriptFileName="js/customize.min.js"
 		AddToCombinedScript="true" />
 	<portal:SkinFolderScript ID="SkinFolderScript3" runat="server" ScriptFileName="js/canhcam.js"
 		AddToCombinedScript="true" /> -->
 	<portal:GoogleAnalyticsScript ID="GoogleAnalyticsScript1" runat="server" />
 	<link rel="stylesheet" href="/Data/Sites/1/skins/default/css/global.min.css">
+	<!-- <script src="/Data/Sites/1/skins/default/js/global.min.js"></script> -->
 	<!--*********************************************************************************************-->
 	<!-- Canh Cam - the best Web Solutions Provider - http://www.canhcam.vn                          -->
 	<!-- 156 Nguyen Van Thu, District 1, Ho Chi Minh City, Viet Nam.                                 -->
@@ -149,6 +150,7 @@
 			<div class="fixed-phone">
 				<portal:ModuleWrapper ID="mdl152" runat="server" ConfigureModuleId="152" />
 			</div>
+
 			<%--<ul>
                 <portal:welcomemessage id="WelcomeMessage" runat="server" renderaslistitem="true" listitemcss="firstnav" />
                 <portal:homelink id="HomeLink" runat="server" renderaslistitem="true" />
@@ -243,7 +245,7 @@
 					fjs.parentNode.insertBefore(js, fjs);
 				}(document, 'script', 'facebook-jssdk'));
 			</script>
-			<script src="/Data/Sites/1/skins/default/js/global.min.js"></script>
+
 		</portal:AutoHidePanel>
 		<portal:Woopra ID="woopra11" runat="server" />
 	</form>

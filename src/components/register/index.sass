@@ -3,12 +3,15 @@
 		background: #fff
 	.section-wrapper
 		padding: 72px 0 60px
-	h1
+	h1,h3
 		text-transform: uppercase
 		text-align: center
 		font-size: 35px
 		margin-bottom: 9px
-	.register-form
+		font-family: 'Roboto Slab'
+	.col-lg-6
+		max-width: 100%
+	.register-form-wrapper
 		margin: 0 auto
 		font-family: 'Muli'
 	.form-group
@@ -30,6 +33,13 @@
 			color: #999999
 		select
 			color: #999999
+		.RadPicker
+			position: relative
+			width: 100% !important
+			.rcCalPopup
+				position: absolute
+				transform: translateY(-50%)
+				right: 5px
 	.qradio
 		.label
 			font-size: 18px
@@ -94,6 +104,8 @@
 				top: 50%
 				right: 70px
 				transform: translateY(-50%)
+		.frm-btn-reset
+			display: none
 		input
 			width: 100%
 			height: 50px

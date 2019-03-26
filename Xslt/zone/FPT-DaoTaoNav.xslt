@@ -4,29 +4,19 @@
 	<xsl:output method="html" indent="yes" />
 
 	<xsl:template match="/">
-		<ul class="middle-header-menu">
-			<li>
-				<xsl:if test="IsActive='true'">
-					<xsl:attribute name="class">
-						<xsl:text>active</xsl:text>
-					</xsl:attribute>
-					<a href="/">
-						<span class="mdi-home"></span>
-					</a>
-				</xsl:if>
-				<a href="/">
-					<span class="mdi-home"></span>
-				</a>
-
-			</li>
-			<xsl:apply-templates select='/ZoneList/Zone'></xsl:apply-templates>
+		<ul class="nav">
+			<xsl:apply-templates select="/ZoneList/Zone"></xsl:apply-templates>
 		</ul>
 	</xsl:template>
-
 	<xsl:template match="Zone">
+		<xsl:if test="count(Zone) > 0 and IsActive='true' ">
+			<xsl:apply-templates select="Zone" mode="Child"></xsl:apply-templates>
+		</xsl:if>
+	</xsl:template>
+	<xsl:template match="Zone" mode="Child">
 		<li>
 			<xsl:if test="IsActive='true'">
-				<xsl:attribute name="class">
+				<xsl:attribute name='class'>
 					<xsl:text>active</xsl:text>
 				</xsl:attribute>
 			</xsl:if>
@@ -38,5 +28,7 @@
 			</a>
 		</li>
 	</xsl:template>
+
+
 
 </xsl:stylesheet>
