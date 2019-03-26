@@ -82,6 +82,13 @@
 			]
 		},
 		{
+			"name": "tuyendung",
+			"isWorking": true,
+			"js": [
+				"./bower_components/fancybox/dist/jquery.fancybox.min.js"
+			]
+		},
+		{
 			"name": "tuyendung-ct",
 			"isWorking": false,
 			"js": []
@@ -93,13 +100,14 @@
 		},
 		{
 			"name": "faq",
-			"isWorking": true,
+			"isWorking": false,
 			"js": []
 		},
 		{
 			"name": "lienhe",
-			"isWorking": true,
+			"isWorking": false,
 			"js": []
 		}
+		
 	]
 }
