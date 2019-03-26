@@ -84,7 +84,9 @@
 		{
 			"name": "tuyendung",
 			"isWorking": true,
-			"js": []
+			"js": [
+				"./bower_components/fancybox/dist/jquery.fancybox.min.js"
+			]
 		},
 		{
 			"name": "tuyendung-ct",
