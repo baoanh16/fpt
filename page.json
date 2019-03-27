@@ -54,29 +54,29 @@
 		},
 		{
 			"name": "tintuc",
-			"isWorking": false,
+			"isWorking": true,
 			"js": [
 				"./bower_components/fancybox/dist/jquery.fancybox.min.js"
 			]
 		},
 		{
 			"name": "tintuc-ds",
-			"isWorking": false,
+			"isWorking": true,
 			"js": []
 		},
 		{
 			"name": "tintuc-ct",
-			"isWorking": false,
+			"isWorking": true,
 			"js": []
 		},
 		{
 			"name": "hoinhapquocte",
-			"isWorking": false,
+			"isWorking": true,
 			"js": []
 		},
 		{
 			"name": "video",
-			"isWorking": false,
+			"isWorking": true,
 			"js": [
 				"./bower_components/fancybox/dist/jquery.fancybox.min.js"
 			]
@@ -90,22 +90,22 @@
 		},
 		{
 			"name": "tuyendung-ct",
-			"isWorking": false,
+			"isWorking": true,
 			"js": []
 		},
 		{
 			"name": "thisinh",
-			"isWorking": false,
+			"isWorking": true,
 			"js": []
 		},
 		{
 			"name": "faq",
-			"isWorking": false,
+			"isWorking": true,
 			"js": []
 		},
 		{
 			"name": "lienhe",
-			"isWorking": false,
+			"isWorking": true,
 			"js": []
 		}
 		

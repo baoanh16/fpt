@@ -1,5 +1,5 @@
 .tintuc-ct-1
-    > .container
+    .container
         padding-top: 50px
         background: #fff
     a
@@ -86,10 +86,16 @@
                 margin-top: 20px
             figure
                 display: flex
+                img
+                    transition: all .5s ease-in-out
+                &:hover
+                    img
+                        transform: scale(1.1, 1.1)
                 .box-img
                     max-width: 40%
                     flex: 0 0 40%
                     height: 80px
+                    overflow: hidden
                     img
                         width: 100%
                         height: 100%

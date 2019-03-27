@@ -18,6 +18,17 @@
     .info
         background: #f8f8f8
         padding: 30px
+        @media (max-width: 992px)
+            margin-bottom: 30px
+        @media (max-width: 576px)
+            padding: 20px
+        p
+            position: relative
+            padding-left: 25px
+            &:before
+                position: absolute
+                top: 5px
+                left: 0
         figure
             figcaption
                 margin: 15px 0
