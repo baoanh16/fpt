@@ -19,7 +19,31 @@
 
 	<portal:StyleSheetCombiner ID="StyleSheetCombiner" runat="server" IncludejQueryUI="false"
 		JQueryUIThemeName="smoothness" />
-	<portal:Favicon ID="Favicon1" runat="server" />
+	<link rel="apple-touch-icon" sizes="57x57" href="/Data/Sites/1/skins/default/favicon/apple-icon-57x57.png">
+	<link rel="apple-touch-icon" sizes="60x60" href="/Data/Sites/1/skins/default/favicon/apple-icon-60x60.png">
+	<link rel="apple-touch-icon" sizes="72x72" href="/Data/Sites/1/skins/default/favicon/apple-icon-72x72.png">
+	<link rel="apple-touch-icon" sizes="76x76" href="/Data/Sites/1/skins/default/favicon/apple-icon-76x76.png">
+	<link rel="apple-touch-icon" sizes="114x114" href="/Data/Sites/1/skins/default/favicon/apple-icon-114x114.png">
+	<link rel="apple-touch-icon" sizes="120x120" href="/Data/Sites/1/skins/default/favicon/apple-icon-120x120.png">
+	<link rel="apple-touch-icon" sizes="144x144" href="/Data/Sites/1/skins/default/favicon/apple-icon-144x144.png">
+	<link rel="apple-touch-icon" sizes="152x152" href="/Data/Sites/1/skins/default/favicon/apple-icon-152x152.png">
+	<link rel="apple-touch-icon" sizes="180x180" href="/Data/Sites/1/skins/default/favicon/apple-icon-180x180.png">
+	<link rel="icon" type="image/png" sizes="192x192"
+		href="/Data/Sites/1/skins/default/favicon/android-icon-192x192.png">
+	<link rel="icon" type="image/png" sizes="32x32"
+		href="/Data/Sites/1/skins/default/favicon//Data/Sites/1/skins/default/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="96x96"
+		href="/Data/Sites/1/skins/default/favicon//Data/Sites/1/skins/default/favicon-96x96.png">
+	<link rel="icon" type="image/png" sizes="16x16"
+		href="/Data/Sites/1/skins/default/favicon//Data/Sites/1/skins/default/favicon-16x16.png">
+	<link rel="manifest" href="/Data/Sites/1/skins/default/favicon/manifest.json">
+	<meta name="msapplication-TileColor">
+	<meta name="msapplication-TileImage" content="/Data/Sites/1/skins/default/favicon/ms-icon-144x144.png">
+	<meta name="theme-color">
+	<!-- ////////////// Mobile title color ////////////// -->
+	<meta name="theme-color" content="#000000">
+	<meta name="msapplication-navbutton-color" content="#000000">
+	<meta name="apple-mobile-web-app-status-bar-style" content="#000000">
 	<portal:ScriptLoader ID="ScriptLoader1" runat="server" />
 	</script>
 	<portal:SkinFolderScript ID="SkinFolderScript1" runat="server" ScriptFileName="js/global.min.js"
