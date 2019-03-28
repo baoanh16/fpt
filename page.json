@@ -1,5 +1,5 @@
 {
-	"buildAll": true,
+	"buildAll": false,
 	"page": [{
 			"name": "index",
 			"isWorking": false,
@@ -54,7 +54,7 @@
 		},
 		{
 			"name": "tintuc",
-			"isWorking": true,
+			"isWorking": false,
 			"js": [
 				"./bower_components/fancybox/dist/jquery.fancybox.min.js"
 			]

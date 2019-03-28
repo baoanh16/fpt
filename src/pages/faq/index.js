@@ -25,6 +25,6 @@ function toggleTabsItem() {
 }
 
 $(document).ready(function () {
-    toggleTabsWrapper()
+    // toggleTabsWrapper()
     toggleTabsItem()
 });

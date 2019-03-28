@@ -226,3 +226,27 @@ img
 			font-size: 10px
 		.box-img
 			height: 150px
+
+.modulepager
+	display: flex
+	justify-content: center
+	.pagination
+		list-style: none
+		display: flex
+		li
+			padding: 5px 14px
+			border: 1px solid #f26f21
+			border-radius: 4px
+			font-weight: 700
+			color: #f26f21
+			background: #ffffff
+			a
+				text-decoration: none
+			&:not(:first-child)
+				margin-left: 15px
+			&.active,
+			&:hover
+				color: #fff
+				background: #f26f21
+				a
+					color: #fff

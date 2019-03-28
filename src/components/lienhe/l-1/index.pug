@@ -23,21 +23,18 @@ section.lien-he
                         strong Email:  
                         span daihoc.hcm@fpt.edu.vn
             .col-lg-8
-                .row
-                    .col-md-6
-                        .fill
-                            label Họ và tên *
-                            input(type="text")
-                    .col-md-6
-                        .fill
+                .wrap-form
+                    .row
+                        .col-md-6.form-group
+                                label Họ và tên *
+                                input(type="text")
+                        .col-md-6.form-group
                             label Email *
                             input(type="text" placeholder="example@gmail.com")
-                    .col-md-6
-                        .fill
+                        .col-md-6.form-group
                             label Số điện thoại *
                             input(type="text")
-                    .col-md-6
-                        .fill
+                        .col-md-6.form-group
                             label Bộ phận liên hệ
                             select
                                 option(value="" disabled selected) Chọn bộ phận liên hệ
@@ -45,26 +42,32 @@ section.lien-he
                                 option(value="2") 2
                                 option(value="3") 3
                                 option(value="4") 4
-                    .col-md-12
-                        .fill
+                        .col-md-12.form-group
                             label Tiêu đề
                             input(type="text")
-                    .col-md-12
-                        .fill
+                        .col-md-12.form-group
                             label Nội dung
                             textarea(placeholder="Nhập nội dung...")
-                    .col-md-12
-                        .frm-captcha
-                            label Nhập mã xác nhận *
-                            .RadCaptcha
-                                img(alt="" src="./img/capcha.jpg")
-                                a(title="Hình ảnh mới" href="javascript:void(0)") Hình ảnh mới
-                            .frm-captcha-input
-                                input(name="" type="text" maxlength="5" placeholder="Nhập mã hiển thị")
-                                input(name="" type="hidden")
-                                span(style="visibility:hidden;") Mã không đúng.
-                            .send
-                                input(type="submit", value="gửi")
+                .form-group.frm-captcha
+                    .frm-captcha-input
+                        label.label
+                            | Nhập mã hiển thị
+                        input(name="ctl00$mainContent$ctl02$txtCaptcha" type="text" maxlength="5")
+                    .RadCaptcha.RadCaptcha_Default(style="width:50%;")
+                        span(style="visibility:hidden;") Mã không đúng.
+                        #ctl00_mainContent_ctl02_captcha_SpamProtectorPanel
+                            #ctl00_mainContent_ctl02_captcha_ctl01
+                                img#ctl00_mainContent_ctl02_captcha_CaptchaImageUP(alt="" src="./img/capcha.jpg" style="height:50px;width:180px;display:block;")
+                                a#ctl00_mainContent_ctl02_captcha_CaptchaLinkButton.rcRefreshImage(title="Hình ảnh mới" href="javascript:__doPostBack('ctl00$mainContent$ctl02$captcha$CaptchaLinkButton','')" style="display:block;") Hình ảnh mới
+                        input#ctl00_mainContent_ctl02_captcha_ClientState(name="ctl00_mainContent_ctl02_captcha_ClientState" type="hidden")
+                .form-group.frm-btnwrap
+                    label.label  
+                    .frm-btn
+                        input#ctl00_mainContent_ctl02_btnSubmit.btn.btn-default.frm-btn-submit(type="submit" name="ctl00$mainContent$ctl02$btnSubmit" value="Gửi" onclick='javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions("ctl00$mainContent$ctl02$btnSubmit", "", true, "formwizardb7b45a64-2047-490e-91a0-edf774856238", "", false, false))')
+                        input#ctl00_mainContent_ctl02_btnReset.btn.btn-default.frm-btn-reset(name="ctl00$mainContent$ctl02$btnReset" type="reset" value="Xóa")
+                        input#ctl00_mainContent_ctl02_hdnResponseSetGuid(type="hidden" name="ctl00$mainContent$ctl02$hdnResponseSetGuid")
+
+
 
 
         .maps
