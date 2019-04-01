@@ -28,8 +28,8 @@
 						<xsl:value-of select='Url'></xsl:value-of>
 					</xsl:attribute>
 					<div class="img">
-						<img>
-						<xsl:attribute name='src'>
+						<img class="lazyload">
+						<xsl:attribute name='data-src'>
 							<xsl:value-of select='SecondImageUrl'></xsl:value-of>
 						</xsl:attribute>
 						<xsl:attribute name='alt'>
@@ -37,11 +37,27 @@
 						</xsl:attribute>
 						</img>
 					</div>
-					<figcaption>
-						<xsl:value-of select='Title'></xsl:value-of>
-					</figcaption>
 				</a>
+				<figcaption>
+					<h4>
+						<xsl:value-of select='Title'></xsl:value-of>
+					</h4>
+					<ul>
+						<xsl:apply-templates select='Zone' mode='ZoneChild'></xsl:apply-templates>
+					</ul>
+				</figcaption>
+
 			</figure>
 		</div>
+	</xsl:template>
+	<xsl:template match='Zone' mode='ZoneChild'>
+		<li>
+			<a>
+				<xsl:attribute name='href'>
+					<xsl:value-of select='Url'></xsl:value-of>
+				</xsl:attribute>
+				<xsl:value-of select='Title'></xsl:value-of>
+			</a>
+		</li>
 	</xsl:template>
 </xsl:stylesheet>

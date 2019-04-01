@@ -5,37 +5,38 @@
 
 	<xsl:template match="/">
 		<ul class="middle-header-menu">
-			<li>
-				<xsl:if test="IsActive='true'">
-					<xsl:attribute name="class">
-						<xsl:text>active</xsl:text>
-					</xsl:attribute>
-					<a href="/">
-						<span class="mdi-home"></span>
-					</a>
-				</xsl:if>
-				<a href="/">
-					<span class="mdi-home"></span>
-				</a>
-
-			</li>
 			<xsl:apply-templates select='/ZoneList/Zone'></xsl:apply-templates>
 		</ul>
 	</xsl:template>
 
 	<xsl:template match="Zone">
 		<li>
-			<xsl:if test="IsActive='true'">
-				<xsl:attribute name="class">
-					<xsl:text>active</xsl:text>
-				</xsl:attribute>
+			<xsl:if test="position()=1">
+				<xsl:if test="IsActive='true'">
+					<xsl:attribute name="class">
+						<xsl:text>active</xsl:text>
+					</xsl:attribute>
+				</xsl:if>
+				<a>
+					<xsl:attribute name='href'>
+						<xsl:value-of select='Url'></xsl:value-of>
+					</xsl:attribute>
+					<span class="mdi-home"></span>
+				</a>
 			</xsl:if>
-			<a>
-				<xsl:attribute name='href'>
-					<xsl:value-of select='Url'></xsl:value-of>
-				</xsl:attribute>
-				<xsl:value-of select='Title'></xsl:value-of>
-			</a>
+			<xsl:if test="position()>1">
+				<xsl:if test="IsActive='true'">
+					<xsl:attribute name="class">
+						<xsl:text>active</xsl:text>
+					</xsl:attribute>
+				</xsl:if>
+				<a>
+					<xsl:attribute name='href'>
+						<xsl:value-of select='Url'></xsl:value-of>
+					</xsl:attribute>
+					<xsl:value-of select='Title'></xsl:value-of>
+				</a>
+			</xsl:if>
 		</li>
 	</xsl:template>
 

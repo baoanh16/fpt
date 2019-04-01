@@ -41,9 +41,29 @@
 			position: absolute
 			bottom: 15px
 			left: 20px
-			text-transform: uppercase
-			font-weight: 700
-			color: #fff
+			h4
+				text-transform: uppercase
+				font-weight: 700
+				color: #fff
+			ul
+				list-style: none
+				color: #fff
+				display: none
+				transform: scaleY(0)
+				transition: 0.3s all
+				transform-origin: top
+				li
+					font-size: 13px
+					a
+						&:hover
+							color: #fff
+		&:hover
+			figcaption
+				ul
+					display: block
+					transform: scaleY(1)
+					transform-origin: bottom
+					transition: 0.3s all
 		.img
 			height: 100%
 			position: relative

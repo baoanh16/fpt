@@ -2,7 +2,7 @@
 	"buildAll": false,
 	"page": [{
 			"name": "index",
-			"isWorking": false,
+			"isWorking": true,
 			"js": [
 				"./src/components/banner/home/index.js"
 			]
@@ -19,7 +19,7 @@
 		},
 		{
 			"name": "tuyensinh",
-			"isWorking": false,
+			"isWorking": true,
 			"js": ["./bower_components/fancybox/dist/jquery.fancybox.min.js"]
 		},
 		{

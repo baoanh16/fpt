@@ -1,128 +1,132 @@
 .tuyendung-ct
-    > .container
-        padding-top: 50px
-        padding-bottom: 70px
-        background: #fff
-    .fw-700
-        font-weight: 700
-    .title
-        color: #f26f21
-        font-size: 24px
-        font-weight: 700
-        line-height: 24px
-        margin-bottom: 20px
-    .table
-        margin: 10px 0
-        overflow-x: auto
-        font-size: 15px
-        table
-            width: 100%
-            tr
-                white-space: nowrap
-            td
-                padding: 8px 15px
-                padding-left: 0
-                font-family: Muli, sans-serif
-    .sub-title
-        color: #f26f21
-        font-size: 18px
-        font-weight: 500
-        line-height: 18px
-        margin: 35px 0 20px
-        text-transform: uppercase
-    .flex-center
-        justify-content: flex-start
-    hr
-        margin: 0
-        border: .5px solid #e0e0e0
-    .main-content
-        p,strong, span
-            font-family: Muli, sans-serif
-            font-size: 15px
-        p
-            display: flex
-            margin-bottom: 10px
-            // &.color
-            //     color: #666666
-            &:before
-                color: #c5c5c5
-                margin-right: 10px
-                +mtrl('\f9dd')
-            &.strong
-                display: block
-                &:before
-                    content: none
-            strong
-                margin-right: 5px
-    .btn-nop
-        color: #999
-        border: 1px solid #999
-        padding: 7px 65px
-        background: #ffffff
-        border-radius: 99px
-        position: relative
-        margin: 20px 0
-        span
-            text-transform: uppercase
-            font-size: 15px
-        &:after
-            +mtrl('\f142')
-            color: #fff
-            border-radius: 100%
-            background: #f26f21
-            position: absolute
-            right: 3px
-            top: 50%
-            transform: translateY(-50%)
-            padding: 8px
-    .vitri-khac
-        .title
-            margin: 0
-            color: #fff
-            padding: 20px
-            background: #f26f21
-            text-transform: uppercase
-        .item
-            padding: 20px
-            padding-right: 10px
-            background: #f5f5f5
-            &:not(:last-child)
-                border-bottom: 1px solid #e1e1e1
-            a
-                text-decoration: none
-            p
-                color: #333 
-                +line(2)
-                font-size: 15px
-            p, time
-                font-family: Muli, sans-serif
-            time
-                color: #666
-                font-size: 14px
-    @media (max-width: 576px)
-        > .container
-            padding-bottom: 50px
-        .title
-            font-size: 18px 
-            line-height: 18px
-            margin-bottom: 16px
-        .table
-            margin: 5px 0
-            font-size: 13px
-        .sub-title
-            margin: 25px 0 10px
-        .main-content
-            p, strong, span
-                margin-bottom: 5px
-        .flex-center
-            justify-content: center
-        .vitri-khac
-            .title
-                padding: 10px
-                padding-left: 15px
-            .item
-                padding: 10px 10px 10px 15px
-                p
-                    font-size: 13px
-                time
-                    font-size: 10px
+	> .container
+		padding-top: 50px
+		padding-bottom: 70px
+		background: #fff
+	.fw-700
+		font-weight: 700
+	.title
+		color: #f26f21
+		font-size: 24px
+		font-weight: 700
+		line-height: 24px
+		margin-bottom: 20px
+	.new-attributes
+		display: flex
+		padding: 15px 0 0
+		width: 100%
+		font-family: 'Muli'
+		color: #333
+		.row
+			width: 100%
+		.attributes
+			display: flex
+			margin-bottom: 15px
+		.attr-title,.attr-content
+			flex: 0 0 50%
+			max-width: 50%
+			font-size: 15px
+		.attr-title
+			font-weight: 700
+	p
+		color: #f26f21
+		font-size: 18px
+		font-weight: 500
+		line-height: 18px
+		margin: 35px 0 20px
+		text-transform: uppercase
+	.flex-center
+		justify-content: flex-start
+	hr
+		margin: 0
+		border: .5px solid #e0e0e0
+	.main-content
+		p,strong, span
+			font-family: Muli, sans-serif
+			font-size: 15px
+		li
+			display: flex
+			margin-bottom: 10px
+			&:before
+				color: #c5c5c5
+				margin-right: 10px
+				+mtrl('\f9dd')
+			&.strong
+				display: block
+				&:before
+					content: none
+			strong
+				margin-right: 5px
+	.btn-nop
+		color: #999
+		border: 1px solid #999
+		padding: 7px 65px
+		background: #ffffff
+		border-radius: 99px
+		position: relative
+		margin: 20px 0
+		span
+			text-transform: uppercase
+			font-size: 15px
+		&:after
+			+mtrl('\f142')
+			color: #fff
+			border-radius: 100%
+			background: #f26f21
+			position: absolute
+			right: 3px
+			top: 50%
+			transform: translateY(-50%)
+			padding: 8px
+	.vitri-khac
+		.title
+			margin: 0
+			color: #fff
+			padding: 20px
+			background: #f26f21
+			text-transform: uppercase
+		.item
+			padding: 20px
+			padding-right: 10px
+			background: #f5f5f5
+			&:not(:last-child)
+				border-bottom: 1px solid #e1e1e1
+			a
+				text-decoration: none
+			p
+				color: #333 
+				+line(2)
+				font-size: 15px
+				margin: 0
+			p, time
+				font-family: Muli, sans-serif
+			time
+				color: #666
+				font-size: 14px
+	@media (max-width: 576px)
+		> .container
+			padding-bottom: 50px
+		.title
+			font-size: 18px 
+			line-height: 18px
+			margin-bottom: 16px
+		.table
+			margin: 5px 0
+			font-size: 13px
+		.sub-title
+			margin: 25px 0 10px
+		.main-content
+			p, strong, span
+				margin-bottom: 5px
+		.flex-center
+			justify-content: center
+		.vitri-khac
+			.title
+				padding: 10px
+				padding-left: 15px
+			.item
+				padding: 10px 10px 10px 15px
+				p
+					font-size: 13px
+				time
+					font-size: 10px

@@ -56,35 +56,37 @@
 		</xsl:if>
 	</xsl:template>
 	<xsl:template match='News' mode='ZoneNews1'>
-		<div class="col-12 col-sm-6 col-md-4">
-			<div class="news-item">
-				<figure>
-					<div class="box-img">
-						<img>
-						<xsl:attribute name='src'>
-							<xsl:value-of select='ImageUrl'></xsl:value-of>
-						</xsl:attribute>
-						<xsl:attribute name='alt'>
-							<xsl:value-of select='Title'></xsl:value-of>
-						</xsl:attribute>
-						</img>
-					</div>
-					<figcaption>
-						<h5>
-							<a>
-								<xsl:attribute name='href'>
-									<xsl:value-of select='Url'></xsl:value-of>
-								</xsl:attribute>
+		<xsl:if test='position() &lt; 4'>
+			<div class="col-12 col-sm-6 col-md-4">
+				<div class="news-item">
+					<figure>
+						<div class="box-img">
+							<img>
+							<xsl:attribute name='src'>
+								<xsl:value-of select='ImageUrl'></xsl:value-of>
+							</xsl:attribute>
+							<xsl:attribute name='alt'>
 								<xsl:value-of select='Title'></xsl:value-of>
-							</a>
-						</h5>
-						<time>
-							<xsl:value-of select='CreatedDate'></xsl:value-of>
-						</time>
-					</figcaption>
-				</figure>
+							</xsl:attribute>
+							</img>
+						</div>
+						<figcaption>
+							<h5>
+								<a>
+									<xsl:attribute name='href'>
+										<xsl:value-of select='Url'></xsl:value-of>
+									</xsl:attribute>
+									<xsl:value-of select='Title'></xsl:value-of>
+								</a>
+							</h5>
+							<time>
+								<xsl:value-of select='CreatedDate'></xsl:value-of>
+							</time>
+						</figcaption>
+					</figure>
+				</div>
 			</div>
-		</div>
+		</xsl:if>
 	</xsl:template>
 	<xsl:template match='News' mode='ZoneNews2'>
 		<div class="col-md-6 col-lg-3">

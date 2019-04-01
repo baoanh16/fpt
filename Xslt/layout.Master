@@ -53,7 +53,10 @@
 	<portal:SkinFolderScript ID="SkinFolderScript3" runat="server" ScriptFileName="js/canhcam.js"
 		AddToCombinedScript="true" /> -->
 	<portal:GoogleAnalyticsScript ID="GoogleAnalyticsScript1" runat="server" />
-	<link rel="stylesheet" href="/Data/Sites/1/skins/default/css/global.min.css">
+
+	<!-- <link rel="stylesheet" href="/Data/Sites/1/skins/default/css/global.min.css"> -->
+	<link href="/Data/Sites/1/skins/default/css/select2.min.css" rel="stylesheet">
+
 	<!-- <script src="/Data/Sites/1/skins/default/js/global.min.js"></script> -->
 	<!--*********************************************************************************************-->
 	<!-- Canh Cam - the best Web Solutions Provider - http://www.canhcam.vn                          -->
@@ -269,7 +272,6 @@
 					fjs.parentNode.insertBefore(js, fjs);
 				}(document, 'script', 'facebook-jssdk'));
 			</script>
-
 		</portal:AutoHidePanel>
 		<portal:Woopra ID="woopra11" runat="server" />
 	</form>

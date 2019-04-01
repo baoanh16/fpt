@@ -1,0 +1,50 @@
+.fpt-home-1
+	.ModuleContent
+		height: 100%
+	.container
+		@media (max-width: 576px)
+			padding: 0
+	h2
+		font-size: 35px
+		text-transform: uppercase
+		margin-bottom: 30px
+	.tuyensinh-wrapper
+		padding: 50px 30px
+		background: #fff2e4
+	.cauhoi-wrapper
+		padding: 50px 30px
+		background: #fff
+		height: 100%
+	.news-item
+		h4
+			color: #333
+	ul
+		list-style: none
+		counter-reset: li
+		font-family: 'Muli'
+		height: 330px
+		padding-right: 15px
+		overflow-y: auto
+		&::-webkit-scrollbar
+			width: 5px
+			border-radius: 5px
+			background: #e5e5e5
+		&::-webkit-scrollbar-thumb
+			border-radius: 5px
+			background: #f7bd9b
+		li
+			display: flex
+			align-items: center
+			font-size: 14px
+			counter-increment: li
+			&:before
+				margin-right: 13px
+				content: counter(li, decimal-leading-zero) '.'
+				font-weight: 700
+			p
+				padding: 8px 0
+				border-bottom: 1px dashed #dbccbc
+				width: 100%
+	.btn-more
+		border: 1px solid #f38d27
+		color: #f38d27

@@ -2,14 +2,16 @@
 <xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
 	xmlns:msxsl="urn:schemas-microsoft-com:xslt" exclude-result-prefixes="msxsl">
 	<xsl:output method="html" indent="yes" />
-
+  
 	<xsl:template match="/">
-		<h2>categories</h2>
+		<h2>categories </h2>
 		<div id="calendar"></div>
-		<div class="event-calendar">
+    <!--<select id="cates" class="form-control" multiple="multiple"></select>-->
+    <select id="tags" class="form-control" multiple="multiple"></select>
+    <div class="event-calendar">
 			<xsl:apply-templates select='/NewsList/News'></xsl:apply-templates>
 		</div>
-
+    
 	</xsl:template>
 
 	<xsl:template match="News">
@@ -39,3 +41,4 @@
 		</div>
 	</xsl:template>
 </xsl:stylesheet>
+
