@@ -21,15 +21,13 @@
                             </div>
                             <xsl:value-of select="/NewsDetail/FullContent" disable-output-escaping="yes"></xsl:value-of>
 
-                            <div class="tags"><a href="javascript:void(0)">Tuyển sinh</a><a href="javascript:void(0)">Tư
-                                    vấn tuyển sinh</a><a href="javascript:void(0)">Trường đại học FPT</a><a
-                                    href="javascript:void(0)">Đại học FPT</a><a class="active"
-                                    href="javascript:void(0)">Trường đại học FPT</a><a href="javascript:void(0)">Đại học
-                                    FPT</a><a href="javascript:void(0)">Sinh viên đại học FPT</a><a
-                                    href="javascript:void(0)">Trường đại học FPT</a><a href="javascript:void(0)">Đại học
-                                    FPT</a><a href="javascript:void(0)">Sinh viên đại học FPT</a><a
-                                    href="javascript:void(0)">Trường đại học FPT<a href="javascript:void(0)">Đại học
-                                        FPT</a></a></div>
+                            <div class="tags">
+                                <a href="javascript:void(0)">Tuyển sinh</a>
+                                <a href="javascript:void(0)">Tư vấn tuyển sinh</a>
+                                <a href="javascript:void(0)">Trường đại học FPT</a>
+                                <a class="active" href="javascript:void(0)">Trường đại học FPT</a>
+                                <a href="javascript:void(0)">Đại học FPT</a>
+                            </div>
                         </div>
                         <h3 class="title-lienquan">
                             <xsl:value-of select="/NewsDetail/NewsOtherText"></xsl:value-of>

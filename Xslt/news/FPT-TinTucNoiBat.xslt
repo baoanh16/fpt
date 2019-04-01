@@ -17,14 +17,16 @@
 			<div class="col-lg-6">
 				<div class="news-item">
 					<figure>
-						<img class="lazyload">
-						<xsl:attribute name='data-src'>
-							<xsl:value-of select='ImageUrl'></xsl:value-of>
-						</xsl:attribute>
-						<xsl:attribute name='alt'>
-							<xsl:value-of select='Title'></xsl:value-of>
-						</xsl:attribute>
-						</img>
+						<div class="big-img">
+							<img class="lazyload">
+							<xsl:attribute name='data-src'>
+								<xsl:value-of select='ImageUrl'></xsl:value-of>
+							</xsl:attribute>
+							<xsl:attribute name='alt'>
+								<xsl:value-of select='Title'></xsl:value-of>
+							</xsl:attribute>
+							</img>
+						</div>
 						<figcaption>
 							<h6>tên chuyên mục</h6>
 							<h4>
@@ -72,9 +74,6 @@
 									<xsl:value-of select='Title'></xsl:value-of>
 								</a>
 							</h5>
-							<time>
-								<xsl:value-of select='CreatedDate'></xsl:value-of>
-							</time>
 						</figcaption>
 					</figure>
 				</div>

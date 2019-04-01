@@ -137,7 +137,39 @@ img
 		padding: 5px 25px
 		span
 			font-size: 13px
-		
+.tags
+	margin-top: 16px
+	display: flex
+	flex-flow: row wrap
+	a
+		font-family: Muli, sans-serif
+		font-size: 14px
+		color: #666
+		padding: 9px 15px
+		border: 1px solid #666
+		border-radius: 5px
+		white-space: nowrap
+		margin-bottom: 10px
+		transition: all .4s ease-in-out
+		text-decoration: none
+		&:not(:last-child)
+			margin-right: 10px
+		&.active
+			background: #f26f21
+			border-color: #f26f21
+			color: #fff
+			cursor: pointer
+		@media (min-width: 992px)
+			&:hover
+				background: #f26f21
+				border-color: #f26f21
+				color: #fff
+				cursor: pointer
+		@media (max-width: 576px)
+			padding: 5px 10px
+			font-size: 12px
+			&:not(:last-child)
+				margin-right: 5px
 .news-item
 	margin-bottom: 30px
 	figure
@@ -259,3 +291,6 @@ img
 				background: #f26f21
 				a
 					color: #fff
+.comments
+	background: #fff
+	padding: 50px 30px 70px
