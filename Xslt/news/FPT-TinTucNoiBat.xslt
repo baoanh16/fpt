@@ -10,6 +10,9 @@
 		<div class="row">
 			<xsl:apply-templates select="/NewsList/News"></xsl:apply-templates>
 		</div>
+		<a class="btn-more" href="/tin-tuc-1">
+			<span>xem tất cả</span>
+		</a>
 	</xsl:template>
 
 	<xsl:template match="News">
@@ -40,6 +43,9 @@
 							<p>
 								<xsl:value-of select='BriefContent' disable-output-escaping='yes'></xsl:value-of>
 							</p>
+							<time>
+								<xsl:value-of select='CreatedDate'></xsl:value-of>
+							</time>
 						</figcaption>
 					</figure>
 				</div>
@@ -74,6 +80,9 @@
 									<xsl:value-of select='Title'></xsl:value-of>
 								</a>
 							</h5>
+							<time>
+								<xsl:value-of select='CreatedDate'></xsl:value-of>
+							</time>
 						</figcaption>
 					</figure>
 				</div>

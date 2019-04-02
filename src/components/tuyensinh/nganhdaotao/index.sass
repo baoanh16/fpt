@@ -11,7 +11,7 @@
 			font-size: 28px
 	.description
 		background: #f5f5f5
-		padding-right: 40px
+		padding: 20px 40px 20px 20px
 		height: 270px
 		h3
 			text-transform: uppercase
@@ -32,18 +32,20 @@
 				color: #fff
 		@media (max-width: 1200px)
 			height: 225px
-			padding-right: 25px
+			padding: 20px 25px 20px 20px
 			h3
 				font-size: 24px
 				margin-bottom: 20px
 			p
-				font-size: 15px
+				font-size: 13.5px
 			.btn-more
 				margin-top: 10px
 		@media (max-width: 992px)
 			height: auto
 			padding: 0
 			padding-bottom: 30px
+			p
+				font-size: 14px
 			.btn-more
 				margin-top: 20px
 	.item
@@ -84,14 +86,27 @@
 					transform: scaleY(1)
 					transform-origin: bottom
 					transition: 0.3s all
+			.img:after
+				animation: shine .75s
 		.img
 			height: 100%
 			position: relative
 			width: 100%
+			overflow: hidden
 			&:before
 				content: ''
 				display: block
 				padding-top: 100%
+			&:after
+				position: absolute
+				top: 0
+				left: -175%
+				z-index: 2
+				content: ''
+				width: 50%
+				height: 100%
+				background: linear-gradient(to right, rgba(255,255,255,0) 0%, rgba(255,255,255,.3) 100%)
+				transform: skewX(-30deg)
 			img
 				position: absolute
 				left: 0
@@ -102,3 +117,8 @@
 			figcaption
 				left: 10px
 				bottom: 10px
+	@keyframes shine 
+		100% 
+			left: 125%
+	
+

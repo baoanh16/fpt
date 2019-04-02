@@ -16,6 +16,12 @@
 		<div class="col-lg-6">
 			<div class="description">
 				<xsl:value-of select='Description' disable-output-escaping='yes'></xsl:value-of>
+				<a class="btn-more">
+					<xsl:attribute name='href'>
+						<xsl:value-of select='Url'></xsl:value-of>
+					</xsl:attribute>
+					<span>xem tất cả</span>
+				</a>
 			</div>
 		</div>
 		<xsl:apply-templates select='Zone' mode='Child'></xsl:apply-templates>

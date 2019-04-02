@@ -1,106 +1,111 @@
 .FAQs
-    .container
-        padding-top: 50px
-        padding-bottom: 70px
-        background: #ffffff
-    .tabs
-        background: #f8f8f8
-        padding: 10px 30px
-        transition: all .3s ease-in-out
-        a
-            text-decoration: none
-            color: #333
-        @media (min-width: 992px)
-            &:hover
-                cursor: pointer
-                background: #F26F21
-                color: #fff
-                a
-                    color: #fff
-        &.active
-            background: #F26F21
-            a
-                color: #fff
-        &:not(:last-child)
-            border-bottom: 1px solid #EDEDED
-    .title
-        color: #F26F21
-        font-weight: 700
-        font-size: 24px
-        margin-bottom: 15px
-        border-bottom: 1px solid #E0E0E0
-    .tabs-title
-        display: flex
-        align-items: center
-        padding: 17px 20px
-        span
-            font-size: 24px
-            color: #999999
-        p
-            color: #333333
-            font-family: Muli, sans-serif
-            font-weight: 600
-            font-size: 16px
-            margin: 0 20px
-        i
-            font-size: 18px
-            margin-left: auto
-            transition: all .3s ease-in-out
-    .tabs-item
-        transition: all .5s ease-in-out
-        &:hover
-            cursor: pointer
-        p
-            font-family: Muli, sans-serif
-            font-size: 15px
-            color: #666666
-        &.active
-            .tabs-title
-                span, p, i
-                    color: #f26f21
-                span, p
-                    font-weight: 700
-                i
-                    &:before
-                        content: '\e873'
-            .tabs-content
-                display: block
-    .tabs-content
-        transition: all .5s ease-in-out
-        display: none
-        padding-left: 65px
-        padding-right: 20px
-    .tabs-wrapper
-        transition: all .5s ease-in-out
-    .btn-more
-        color: #f26f21
-        border-color: #f26f21
-        &:hover
-            background: #f26f21
-            color: #fff
-        span
-            &:after
-                +mtrl('\f35d')
-                margin-left: 4px
-    @media (max-width: 992px)
-        .title
-            font-size: 16px
-        .tabs
-            &:last-child
-                margin-bottom: 30px
-        .tabs-title
-            padding: 15px
-            span
-                font-size: 16px
-            p, i
-                font-size: 13px
-            p
-                margin: 0 10px
-    @media (min-width: 992px)
-        .tabs-title
-            &:hover
-                box-shadow: 0 0 5px 1px #DADADA
-                span, p, i
-                    color: #f26f21
-                span, p
-                    font-weight: 700
+	.container
+		padding-top: 50px
+		padding-bottom: 70px
+		background: #ffffff
+	.tabs-wrapper
+		counter-reset: tabs-item
+	.tabs
+		background: #f8f8f8
+		padding: 10px 30px
+		transition: all .3s ease-in-out
+		a
+			text-decoration: none
+			color: #333
+		@media (min-width: 992px)
+			&:hover
+				cursor: pointer
+				background: #F26F21
+				color: #fff
+				a
+					color: #fff
+		&.active
+			background: #F26F21
+			a
+				color: #fff
+		&:not(:last-child)
+			border-bottom: 1px solid #EDEDED
+	.title
+		color: #F26F21
+		font-weight: 700
+		font-size: 24px
+		margin-bottom: 15px
+		border-bottom: 1px solid #E0E0E0
+	.tabs-title
+		display: flex
+		align-items: center
+		padding: 17px 20px
+		span
+			font-size: 24px
+			color: #999999
+			&:before
+				counter-increment: tabs-item
+				content: counter(tabs-item, decimal-leading-zero)
+		p
+			color: #333333
+			font-family: Muli, sans-serif
+			font-weight: 600
+			font-size: 16px
+			margin: 0 20px
+		i
+			font-size: 18px
+			margin-left: auto
+			transition: all .3s ease-in-out
+	.tabs-item
+		transition: all .5s ease-in-out
+		&:hover
+			cursor: pointer
+		p
+			font-family: Muli, sans-serif
+			font-size: 15px
+			color: #666666
+		&.active
+			.tabs-title
+				span, p, i
+					color: #f26f21
+				span, p
+					font-weight: 700
+				i
+					&:before
+						content: '\e873'
+			.tabs-content
+				display: block
+	.tabs-content
+		transition: all .5s ease-in-out
+		display: none
+		padding-left: 65px
+		padding-right: 20px
+	.tabs-wrapper
+		transition: all .5s ease-in-out
+	.btn-more
+		color: #f26f21
+		border-color: #f26f21
+		&:hover
+			background: #f26f21
+			color: #fff
+		span
+			&:after
+				+mtrl('\f35d')
+				margin-left: 4px
+	@media (max-width: 992px)
+		.title
+			font-size: 16px
+		.tabs
+			&:last-child
+				margin-bottom: 30px
+		.tabs-title
+			padding: 15px
+			span
+				font-size: 16px
+			p, i
+				font-size: 13px
+			p
+				margin: 0 10px
+	@media (min-width: 992px)
+		.tabs-title
+			&:hover
+				box-shadow: 0 0 5px 1px #DADADA
+				span, p, i
+					color: #f26f21
+				span, p
+					font-weight: 700

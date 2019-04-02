@@ -11,6 +11,9 @@
 			<div class="row">
 				<xsl:apply-templates select="/NewsList/News"></xsl:apply-templates>
 			</div>
+			<a class="btn-more" href="/tin-tuc-1/su-kien">
+				<span>xem tất cả</span>
+			</a>
 		</div>
 	</xsl:template>
 
