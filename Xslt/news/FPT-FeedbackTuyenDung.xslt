@@ -71,6 +71,7 @@
 					</div>
 					<div class="feedback">
 						<xsl:value-of select='BriefContent' disable-output-escaping='yes'></xsl:value-of>
+						<xsl:value-of select='FullContent' disable-output-escaping='yes'></xsl:value-of>
 					</div>
 				</div>
 			</div>

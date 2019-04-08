@@ -59,7 +59,7 @@
 				display: flex
 				align-items: center
 				label
-					flex: 0 0 20%
+					flex: 0 0 25%
 				input
 					height: 40px
 					width: 440px
@@ -79,3 +79,46 @@
 					flex: 0 0 25% !important
 				input
 					width: 280px !important
+	.btn-success
+		display: block
+		padding: 12px 37px
+		margin-top: 40px
+		background: #f26f21
+		color: #ffffff
+		text-transform: uppercase
+		text-decoration: none
+		border: 0
+		font-family: 'Muli'
+	.results
+		overflow-x: auto
+	table
+		border-collapse: separate
+		background: #fff
+		border-radius: 5px
+		margin: 50px auto
+		thead
+			border-radius: 5px
+		thead td
+			font-size: 16px
+			font-weight: 400
+			color: #fff
+			text-align: left
+			padding: 20px
+			background: #f26f21
+			&:first-child
+				border-top-left-radius: 5px
+			&:last-child
+				border-top-right-radius: 5px
+		tbody tr td
+			font-weight: 400
+			color: #5f6062
+			font-size: 14px
+			padding: 20px
+		tbody tr:nth-child(2n)
+			background: #f0f3f5
+		tbody tr:last-child td
+			border-bottom: 0
+			&:first-child
+				border-bottom-left-radius: 5px
+			&:last-child
+				border-bottom-right-radius: 5px

@@ -46,13 +46,13 @@
 									</a>
 								</div>
 							</div>
-              <div>
-                <xsl:apply-templates select='/NewsDetail/Tags'>
-                </xsl:apply-templates>
-              </div>
+							<div class="tags">
+								<xsl:apply-templates select='/NewsDetail/Tags'>
+								</xsl:apply-templates>
+							</div>
 							<div class="contact">
 								<xsl:apply-templates select='/NewsDetail/NewsAttributes' mode="Contact">
-								</xsl:apply-templates> 
+								</xsl:apply-templates>
 							</div>
 						</div>
 					</div>
@@ -66,11 +66,11 @@
 			</div>
 		</div>
 	</xsl:template>
-  <xsl:template match="Tags">
-    <span>
-      <xsl:value-of select="Tag"/>
-    </span>
-  </xsl:template>
+	<xsl:template match="Tags">
+		<a>
+			<xsl:value-of select="Tag" />
+		</a>
+	</xsl:template>
 	<xsl:template match="NewsOther">
 		<div class="col-md-6 col-lg-3">
 			<article class="event-item">

@@ -56,7 +56,17 @@
 
 	<!-- <link rel="stylesheet" href="/Data/Sites/1/skins/default/css/global.min.css"> -->
 	<link href="/Data/Sites/1/skins/default/css/select2.min.css" rel="stylesheet">
-
+	<div id="fb-root"></div>
+	<script>
+		(function (d, s, id) {
+			var js, fjs = d.getElementsByTagName(s)[0];
+			if (d.getElementById(id)) return;
+			js = d.createElement(s);
+			js.id = id;
+			js.src = "https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v3.0";
+			fjs.parentNode.insertBefore(js, fjs);
+		}(document, 'script', 'facebook-jssdk'));
+	</script>
 	<!-- <script src="/Data/Sites/1/skins/default/js/global.min.js"></script> -->
 	<!--*********************************************************************************************-->
 	<!-- Canh Cam - the best Web Solutions Provider - http://www.canhcam.vn                          -->
@@ -261,19 +271,42 @@
 					$('.fa-chevron-circle-right').removeClass('fa-rotate-180');
 				}
 			</script>
-			<div id="fb-root"></div>
-			<script>
-				(function (d, s, id) {
-					var js, fjs = d.getElementsByTagName(s)[0];
-					if (d.getElementById(id)) return;
-					js = d.createElement(s);
-					js.id = id;
-					js.src = "https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v3.0";
-					fjs.parentNode.insertBefore(js, fjs);
-				}(document, 'script', 'facebook-jssdk'));
+
+			<script type="text/javascript">
+				$(".fb-comments").attr("data-href", window.location.href);
 			</script>
 		</portal:AutoHidePanel>
 		<portal:Woopra ID="woopra11" runat="server" />
+		<script>
+			$(document).ready(function () {
+				$("body").on("click", '.ajaxsearchbutton', function (e) {
+					var cont = $(this).parents('.search-container');
+					var url = $(this).attr('data-url');
+					var hasValue = false;
+					cont.find('.search-box').each(function () {
+						if ($(this).val().length > 0) {
+							url += '&' + $(this).attr('id') + '=' + encodeURIComponent($(this).val());
+							hasValue = true;
+						}
+					})
+					if (hasValue == false)
+						return false;
+
+					$.ajax({
+						url: url,
+						data: {
+							isajax: true
+						},
+						success: function (data) {
+							$('.ajaxfilterresponse').html($(data).find('.ajaxfilterresponse')
+								.html());
+						}
+					});
+
+					return false;
+				})
+			})
+		</script>
 	</form>
 </body>
 

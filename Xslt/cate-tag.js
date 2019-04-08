@@ -100,7 +100,9 @@ function CovertToDTOCalendar(datas) {
 		}
 		eventFPT.push(event);
 	});
+	console.log(moment(eventFPT[0].start))
 	loadCanlendar(eventFPT);
+	$('#calendar').fullCalendar('gotoDate', moment(eventFPT[0].start))
 }
 
 

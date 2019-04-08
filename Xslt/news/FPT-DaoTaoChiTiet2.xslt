@@ -132,7 +132,7 @@
 				<xsl:value-of select='ImageUrl'></xsl:value-of>
 			</xsl:attribute>
 			<xsl:attribute name='alt'>
-				<xsl:value-of select='Title'></xsl:value-of>
+				<xsl:value-of select='Title' disable-output-escaping='yes'></xsl:value-of>
 			</xsl:attribute>
 			</img>
 		</div>
@@ -140,7 +140,7 @@
 			<div class="container">
 				<xsl:value-of select='FullContent' disable-output-escaping='yes'></xsl:value-of>
 				<h3>
-					<xsl:value-of select='Title'></xsl:value-of>
+					<xsl:value-of select='Title' disable-output-escaping='yes'></xsl:value-of>
 					<xsl:value-of select='EditLink' disable-output-escaping='yes'></xsl:value-of>
 				</h3>
 			</div>
@@ -162,12 +162,13 @@
 				<div class="content">
 					<div class="name">
 						<xsl:value-of select='Title'></xsl:value-of>
+						<xsl:value-of select='EditLink' disable-output-escaping='yes'></xsl:value-of>
 					</div>
 					<div class="job">
 						<xsl:value-of select='SubTitle'></xsl:value-of>
 					</div>
 					<div class="feedback">
-						<xsl:value-of select='FullContent' disable-output-escaping='yes'></xsl:value-of>
+						<xsl:value-of select='BriefContent' disable-output-escaping='yes'></xsl:value-of>
 					</div>
 					<a class="view-more" href="javascript:;" data-fancybox="feedback">
 						<xsl:attribute name='data-src'>
@@ -199,6 +200,7 @@
 						<xsl:value-of select='SubTitle'></xsl:value-of>
 					</div>
 					<div class="feedback">
+						<xsl:value-of select='BriefContent' disable-output-escaping='yes'></xsl:value-of>
 						<xsl:value-of select='FullContent' disable-output-escaping='yes'></xsl:value-of>
 					</div>
 				</div>

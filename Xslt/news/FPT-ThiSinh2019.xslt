@@ -117,7 +117,7 @@
 				&lt;div class="col-md-4"&gt;
 			</xsl:text>
 		</xsl:if>
-		<xsl:if test='position() > 2'>
+		<xsl:if test='position() > 1'>
 			<div class="news-item">
 				<figure>
 					<div class="box-img">
@@ -151,7 +151,7 @@
 				</figure>
 			</div>
 		</xsl:if>
-		<xsl:if test='position()=3'>
+		<xsl:if test='position()= last()'>
 			<xsl:text disable-output-escaping='yes'>
 				&lt;/div&gt;
 			</xsl:text>

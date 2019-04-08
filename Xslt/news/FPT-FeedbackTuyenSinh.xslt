@@ -29,12 +29,13 @@
 				<div class="content">
 					<div class="name">
 						<xsl:value-of select='Title'></xsl:value-of>
+						<xsl:value-of select='EditLink' disable-output-escaping='yes'></xsl:value-of>
 					</div>
 					<div class="job">
 						<xsl:value-of select='SubTitle'></xsl:value-of>
 					</div>
 					<div class="feedback">
-						<xsl:value-of select='FullContent' disable-output-escaping='yes'></xsl:value-of>
+						<xsl:value-of select='BriefContent' disable-output-escaping='yes'></xsl:value-of>
 					</div>
 					<a class="view-more" href="javascript:;" data-fancybox="feedback">
 						<xsl:attribute name='data-src'>
@@ -66,6 +67,7 @@
 						<xsl:value-of select='SubTitle'></xsl:value-of>
 					</div>
 					<div class="feedback">
+						<xsl:value-of select='BriefContent' disable-output-escaping='yes'></xsl:value-of>
 						<xsl:value-of select='FullContent' disable-output-escaping='yes'></xsl:value-of>
 					</div>
 				</div>
