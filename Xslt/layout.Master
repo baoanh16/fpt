@@ -143,7 +143,7 @@
 							<div class="footer-item">
 								<portal:ModuleWrapper ID="mdl143" runat="server" ConfigureModuleId="143" />
 								<div class="copyright">
-									<p>© 2018 thuộc về FPT Education.</p>
+									<p>© 2018 thuộc về FPT University.</p>
 									<p>All right reserved. Designed by Cánh Cam.</p>
 								</div>
 							</div>

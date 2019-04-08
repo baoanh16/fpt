@@ -1,5 +1,5 @@
 {
-	"buildAll": true,
+	"buildAll": false,
 	"page": [{
 			"name": "index",
 			"isWorking": true,

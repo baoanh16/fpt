@@ -23,3 +23,22 @@ $(function () {
 		return false;
 	});
 });
+
+function mainPaddingTopXSLT() {
+	let headerOuterHeight = $('header').outerHeight();
+	$('.altcontent1').css({
+		'padding-top': headerOuterHeight + 'px'
+	})
+}
+
+function mainPaddingTop() {
+	let headerOuterHeight = $('main').outerHeight();
+	$('main').css({
+		'padding-top': headerOuterHeight + 'px'
+	})
+}
+
+$(document).ready(function () {
+	// mainPaddingTop();
+	mainPaddingTopXSLT();
+});

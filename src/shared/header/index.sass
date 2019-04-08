@@ -1,8 +1,17 @@
 .fpt-header
 	background: #fff
+	position: fixed
+	top: 0
+	left: 0
+	width: 100%
+	z-index: 99
+	box-shadow: 0px 0 10px 0px #666
 	.top-header
 		padding: 10px 0
 		font-family: 'Muli'
+		@media (max-width: 576px)
+			.container
+				padding: 0 10px
 		.top-header-menu
 			display: flex
 			justify-content: flex-end
@@ -10,21 +19,34 @@
 			width: 100%
 			font-size: 0.8125rem
 			li
-				+ li
-					margin-left: 40px
+				padding: 0 20px
+				border-left: 1px solid #f26f21
+				&:nth-child(3)
+					border-right: 1px solid #f26f21
+				@media (min-width: 768px)
+					&:before
+						margin-right: 8px
+					&:nth-child(1)
+						&:before
+							+faws('\f0c0','Font Awesome 5 Free', 900)
+					&:nth-child(2)
+						&:before
+							+faws('\f501','Font Awesome 5 Free', 900)
+					&:nth-child(3)
+						&:before
+							+faws('\f508','Font Awesome 5 Free', 900)
 				&.active
 					color: #f26f21
-			@media (max-width: 576px)
+			a
+				text-decoration: none
+			@media (max-width: 768px)
 				justify-content: center
+				text-align: center
 				li
-					text-align: center
-					+ li
-						margin-left: 20px
+					padding: 0 10px
 			@media (max-width: 380px)
 				li
 					font-size: 11px
-					+ li
-						margin-left: 12px
 	.middle-header
 		background: #f26f21
 		.middle-header-wrapper

@@ -15,11 +15,11 @@
 		align-items: center
 		img
 			margin-right: 11px
+			animation: pulse 1.5s infinite
 		span
 			display: block
-			max-width: 80px
 	@media (max-width: 992px)
-		right: -91px
+		right: -125px
 		a
 			padding: 10px
 .fixed-chat
@@ -209,3 +209,23 @@
 
 	100%
 		transform: rotate(0) scale(1) skew(1deg)
+
+@keyframes pulse 
+	// 0%
+	// 	transform: rotate(0) scale(1) skew(1deg)
+	// 25%
+	// 	transform: rotate(20deg) scale(1) skew(1deg)
+	// 50%
+	// 	transform: rotate(0) scale(1) skew(1deg)
+	// 75%
+	// 	transform: rotate(-20deg) scale(1) skew(1deg)
+	0%
+		transform: scale(1) rotate(10deg)
+	25%
+		transform: scale(1.1) rotate(0)
+	50% 
+		transform: scale(1) rotate(-10deg)
+	75%
+		transform: scale(1) rotate(0deg)
+	100%
+		transform: scale(1) rotate(10deg)
