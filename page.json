@@ -39,7 +39,7 @@
 		},
 		{
 			"name": "daotao-ct",
-			"isWorking": false,
+			"isWorking": true,
 			"js": ["./bower_components/fancybox/dist/jquery.fancybox.min.js"]
 		},
 		{
