@@ -109,6 +109,10 @@
 	display: flex
 	z-index: 99
 	align-items: center
+	.ModuleContent
+		display: flex
+		flex-flow: row-reverse
+		align-items: center
 	.phone-icon
 		border-radius: 50%
 		width: 70px
@@ -135,7 +139,7 @@
 		opacity: 0
 		background: #f26f21
 		padding: 5px 14px
-		margin-left: 21px
+		margin-right: 21px
 		border-radius: 5px
 		position: relative
 		transition: 0.3s all
@@ -143,8 +147,9 @@
 		&:before
 			position: absolute
 			content: ''
-			left: -3.5px
 			top: 50%
+			right: -3.5px
+			left: auto
 			transform:  translateY(-50%) rotate(45deg)
 			width: 7px
 			height: 7px
@@ -162,17 +167,15 @@
 		transform: scale(0.8)
 		right: 20px
 		bottom: 90px
-	@media (max-width: 1200px)
-		flex-direction: row-reverse
-		.phone-number
-			margin-left: 0
-			margin-right: 21px
-			&:before
-				right: -3.5px
-				left: auto
+	// @media (max-width: 1200px)
+	// 	.phone-number
+	// 		&:before
+	// 			right: -3.5px
+	// 			left: auto
 	@media (max-width: 768px)
 		transform: scale(0.6)
-		right: -40px
+		right: 0px
+		bottom: 50px
 
 @keyframes circle-animation
 	0% 
@@ -210,15 +213,7 @@
 	100%
 		transform: rotate(0) scale(1) skew(1deg)
 
-@keyframes pulse 
-	// 0%
-	// 	transform: rotate(0) scale(1) skew(1deg)
-	// 25%
-	// 	transform: rotate(20deg) scale(1) skew(1deg)
-	// 50%
-	// 	transform: rotate(0) scale(1) skew(1deg)
-	// 75%
-	// 	transform: rotate(-20deg) scale(1) skew(1deg)
+@keyframes pulse
 	0%
 		transform: scale(1) rotate(10deg)
 	25%

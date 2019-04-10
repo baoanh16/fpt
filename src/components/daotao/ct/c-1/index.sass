@@ -41,8 +41,8 @@
 		padding: 20px 30px 62.5px
 		height: 100%
 		ul
-			list-style: none
-			counter-reset: li
+			// list-style: none
+			// counter-reset: li
 			font-family: 'Muli'
 			height: 330px
 			padding-right: 15px
@@ -58,11 +58,13 @@
 				display: flex
 				align-items: center
 				font-size: 14px
-				counter-increment: li
+				// counter-increment: li
 				&:before
-					margin-right: 13px
-					content: counter(li, decimal-leading-zero) '.'
-					font-weight: 700
+					margin-right: 8px
+					// content: counter(li, decimal-leading-zero) '.'
+					// font-weight: 700
+					+mtrl('\f9dd')
+					color: #BDBDBD
 				p
 					padding: 8px 0
 					border-bottom: 1px dashed #dbccbc
