@@ -92,7 +92,7 @@
 body
 	font-size: 16px
 	font-family: 'Roboto Slab', serif !important
-	background-image: url('.././img/main-bg.png')
+	background: url('.././img/main-bg.png')
 	@media (max-width: 992px)
 		font-size: 15px
 	@media (max-width: 768px)
@@ -195,15 +195,13 @@ img
 			object-fit: cover
 	a
 		text-decoration: none
-		&:hover
-			color: inherit
 	p, h4, h5, time
 		font-family: Muli, sans-serif
 	p
 		color: #808080
 		font-size: 15px
 		margin: 5px 0 10px
-		+line(4)
+		+line(3)
 	h4
 		font-size: 18px
 		font-weight: 700
@@ -225,33 +223,15 @@ img
 		background: #f26f21
 		margin-top: 15px
 	time
-		font-size: 16px
+		font-size: 14px
 		font-weight: 700
 		color: #999
-	.link
-		color: #808080
-		font-weight: 700
-		font-size: 14px
-		padding-left: 15px
-		padding-bottom: 2px
-		position: relative
-		&:before
-			content: ''
-			display: block
-			width: 8px
-			height: 8px
-			background: #b7b7b7
-			position: absolute
-			top: 5px
-			left: 0
-		&:hover
-			color: #808080
-			@media (min-width: 992px)
-				box-shadow: 0 1px 0 0px
+
 	@media (max-width: 576px)
-		// margin-bottom: 10px
+		margin-bottom: 25px
 		p, .link
 			font-size: 13px
+			margin-bottom: 0
 		h4
 			font-size: 15px
 			line-height: 18px
@@ -269,7 +249,35 @@ img
 			font-size: 10px
 		.box-img
 			height: 150px
-
+.news-link
+	color: #808080
+	font-size: 14px
+	padding-left: 15px
+	padding-bottom: 2px
+	position: relative
+	text-decoration: none
+	font-family: 'Muli'
+	+line(1)
+	&:before
+		content: ''
+		display: block
+		width: 8px
+		height: 8px
+		background: #b7b7b7
+		position: absolute
+		top: 5px
+		left: 0
+	&:hover
+		color: #808080
+		text-decoration: none
+		@media (min-width: 992px)
+			box-shadow: 0 1px 0 0px
+	@media (max-width: 576px)
+		display: none
+.tintuc-2
+	.news-item
+		.box-img
+			height: 180px
 .modulepager
 	display: flex
 	justify-content: center

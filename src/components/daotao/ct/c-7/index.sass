@@ -3,18 +3,17 @@
 		background: #fff
 		padding: 0
 	.section-wrapper
-		padding-top: 50px
+		padding-top: 25px
 	h2
 		font-size: 35px
-		color: #fff
 		text-align: center
 		font-weight: 300
 		text-transform: uppercase
-		margin-bottom: 30px
+		margin-bottom: 25px
 		strong
 			font-weight: 700
 		@media (max-width: 576px)
-			font-size: 28px
+			font-size: 18px
 			padding: 0 15px
 	h3
 		font-size: 20px
@@ -23,6 +22,8 @@
 		text-align: center
 		margin-bottom: 30px
 		font-family: 'Roboto Slab' !important
+		@media (max-width: 576px)
+			margin-bottom: 0
 	.luachon-wrapper
 		background: #ffeddb
 		padding: 30px
@@ -52,18 +53,15 @@
 				height: 180px
 				padding: 59px 25px
 				text-align: center
-		@media (max-width: 450px)
+		@media (max-width: 576px)
 			.item
-				flex: 0 0 50%
-				margin-bottom: 17px
-				font-size: 15px
-		@media (max-width: 375px)
-			.item
+				font-size: 12px
+				padding: 0 2.5px
 				.icon
-					transform: scale(0.9)
+					transform: scale(0.7)
 				figcaption
-					padding: 50px 15px 30px
-					height: 150px
+					padding: 29px 9px
+					height: 120px
 	.register-form
 		margin: 0 auto
 		font-family: 'Muli'
@@ -96,7 +94,7 @@
 		appearance: none
 		display: none
 	.form-group
-		margin-bottom: 26px
+		margin-bottom: 12px
 		label
 			display: block
 			color: #fff
@@ -114,6 +112,8 @@
 			color: #ffffff
 		select
 			color: #ffffff
+			option
+				background: #f26f21
 		.RadPicker
 			position: relative
 			width: 100% !important
@@ -121,57 +121,71 @@
 				position: absolute
 				transform: translateY(-50%)
 				right: 5px
-	.qradio
-		.label
-			font-size: 18px
-			font-weight: 700
-			text-transform: uppercase
-		.cf
-			list-style: none
-			display: flex
-			li
-				flex: auto
+		table#ctl00_mainContent_ctl06_rblCampus,table#ctl00_mainContent_ctl10_rblCampus
+			width: 100%
+			tr
 				display: flex
-			input
-				display: none
-			label
-				position: relative
-				padding-left: 20px
-				font-size: 13px
-				&:before
-					content: ''
-					position: absolute
-					width: 13px
-					height: 13px
-					border-radius: 50%
-					border: 1px solid #903c0a
-					background: transparent
-					left: 0
-					top: 50%
-					transform: translateY(-60%)
-				&:after
-					content: ''
-					position: absolute
-					width: 6.5px
-					height: 6.5px
-					border-radius: 50%
-					background: #ffffff
-					margin-right: 13px
-					left: 0
-					top: 50%
-					transform: translate(50%, -65%)
+				@media (max-width: 768px)
+					flex-wrap: wrap
+					td
+						flex: 0 0 50% !important
+				@media (max-width: 350px)
+					td
+						flex: 0 0 100% !important
+			td
+				display: flex
+				flex: auto
+				input
 					display: none
-			input:checked ~ label:before
-				border: 1px solid #ffffff
-			input:checked ~ label:after
-				display: block
-			@media (max-width: 768px)
-				flex-wrap: wrap
-				li
-					flex: 0 0 50%
-			@media (max-width: 350px)
-				li
-					flex: 0 0 100%
+				label
+					margin: 0
+					position: relative
+					padding-left: 20px
+					font-size: 13px
+					&:before
+						content: ''
+						position: absolute
+						width: 13px
+						height: 13px
+						border-radius: 50%
+						border: 1px solid #903c0a
+						background: transparent
+						left: 0
+						top: 50%
+						transform: translateY(-60%)
+					&:after
+						content: ''
+						position: absolute
+						width: 6.5px
+						height: 6.5px
+						border-radius: 50%
+						background: #ffffff
+						margin-right: 13px
+						left: 0
+						top: 50%
+						transform: translate(50%, -65%)
+						display: none
+				input:checked ~ label:before
+					border: 1px solid #ffffff
+				input:checked ~ label:after
+					display: block
+	// .qradio
+	// 	.label
+	// 		font-size: 18px
+	// 		font-weight: 700
+	// 		text-transform: uppercase
+	// 	.cf
+	// 		list-style: none
+	// 		display: flex
+
+
+	// 		@media (max-width: 768px)
+	// 			flex-wrap: wrap
+	// 			li
+	// 				flex: 0 0 50%
+	// 		@media (max-width: 350px)
+	// 			li
+	// 				flex: 0 0 100%
 	.frm-btnwrap
 		width: 271px
 		margin: 0 auto
@@ -196,3 +210,6 @@
 			font-family: 'Roboto Slab'
 			color: #fff
 			text-transform: uppercase
+	.fa-exclamation-triangle
+		color: #ff0000
+		margin-top: 6px

@@ -1,64 +1,80 @@
 @import ../../../bower_components/swiper/dist/css/swiper.min.css
 @import ../../../bower_components/fancybox/dist/jquery.fancybox.min.css
 .slide-1
-    background: url(../img/tintuc/slide.jpg)
-    background-size: cover
-    > .container
-        padding: 50px 0 70px
-        position: relative
-        @media (max-width: 576px)
-            padding-bottom: 20px
-    .swiper-container
-        background: #fff
-        padding: 30px
-    .navigation
-        font-size: 30px
-        .lnr
-            z-index: 99
-            position: absolute
-            top: 40%
-            transform: translateY(-50%)
-            outline: none
-            transition: all .4s ease-in-out
-            color: #999
-            &:hover
-                color: #f26f21
-        .lnr-chevron-left
-            left: 0
-        .lnr-chevron-right
-            right: 0
-    .item
-        .box-img
-            position: relative
-            display: block
-            width: 100%
-            height: 200px
-            &:before
-                content: ''
-                background: url(../img/play-button.png)
-                width: 60px
-                height: 60px
-                background-size: cover
-                position: absolute
-                top: 50%
-                left: 50%
-                transform: translate(-50%, -50%)
-                @media (max-width: 992px)
-                    width: 40px
-                    height: 40px
-                @media (max-width: 576px)
-                    width: 30px
-                    height: 30px
-            img
-                width: 100%
-                height: 100%
-                object-fit: cover
-            @media (max-width: 576px)
-                height: 250px
-        figcaption
-            font-family: Muli, sans-serif
-            font-weight: 700
-            font-size: 16px
-            line-height: 20px
-            margin-top: 15px
-            +line(2)
+	background: url(../img/tintuc/slide.jpg)
+	background-size: cover
+	> .container
+		padding: 50px 0 70px
+		position: relative
+		@media (max-width: 576px)
+			padding-bottom: 20px
+	.swiper-container
+		background: #fff
+		padding: 30px
+	.navigation
+		font-size: 30px
+		.lnr
+			z-index: 99
+			position: absolute
+			top: 40%
+			transform: translateY(-50%)
+			outline: none
+			transition: all .4s ease-in-out
+			color: #999
+			&:hover
+				color: #f26f21
+		.lnr-chevron-left
+			left: 0
+		.lnr-chevron-right
+			right: 0
+	.item
+		.box-img
+			position: relative
+			display: block
+			width: 100%
+			height: 200px
+			&:after
+				position: absolute
+				content: ''
+				top: 0
+				left: 0
+				right: 0
+				bottom: 0
+				background: rgba(#000000, 0.5)
+				z-index: 2
+				opacity: 0
+				transition: 0.3s all
+			&:before
+				content: ''
+				background: url(../img/play-button.png)
+				width: 60px
+				height: 60px
+				background-size: cover
+				position: absolute
+				top: 50%
+				left: 50%
+				transform: translate(-50%, -50%)
+				z-index: 3
+				@media (max-width: 992px)
+					width: 40px
+					height: 40px
+				@media (max-width: 576px)
+					width: 30px
+					height: 30px
+			&:hover
+				&:after
+					opacity: 1
+					transition: 0.3s all
+			img
+				width: 100%
+				height: 100%
+				object-fit: cover
+			@media (max-width: 576px)
+				height: 250px
+		figcaption
+			font-family: Muli, sans-serif
+			font-weight: 700
+			font-size: 16px
+			line-height: 20px
+			margin-top: 15px
+			+line(2)

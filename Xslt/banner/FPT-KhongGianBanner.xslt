@@ -14,10 +14,10 @@
 						<xsl:apply-templates select='/BannerList/Banner'></xsl:apply-templates>
 					</div>
 				</div>
-			</div>
-			<div class="swiper-navigation">
-				<div class="swiper-prev"><span class="mdi-chevron-left"></span></div>
-				<div class="swiper-next"><span class="mdi-chevron-right"></span></div>
+								<div class="swiper-navigation">
+					<div class="swiper-prev"><span class="mdi-chevron-left"></span></div>
+					<div class="swiper-next"><span class="mdi-chevron-right"></span></div>
+				</div>
 			</div>
 		</xsl:if>
 	</xsl:template>

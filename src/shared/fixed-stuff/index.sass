@@ -1,9 +1,10 @@
 .fixed-register
 	position: fixed
 	right: 0
-	top: 30%
+	top: 60%
 	z-index: 100
-	a
+	height: 0
+	.phone-number
 		display: flex
 		padding: 17px
 		color: #fff
@@ -13,6 +14,8 @@
 		font-weight: 700
 		border-radius: 5px 0 0 5px
 		align-items: center
+		opacity: 0
+		z-index: -10
 		img
 			margin-right: 11px
 			animation: pulse 1.5s infinite
@@ -24,7 +27,7 @@
 			padding: 10px
 .fixed-chat
 	position: fixed
-	bottom: 0
+	bottom: -2px
 	z-index: 99
 	width: 100%
 	.fixed-chat-wrapper
@@ -32,25 +35,39 @@
 		justify-content: space-between
 		align-items: flex-end
 	.register
-		height: 40px
-		width: 298px
-		border-radius: 5px 5px 0 0
+		height: 49px
+		width: 280px
+		background-image: url('.././img/register-bg.png')
+		background-repeat: no-repeat
 		display: flex
 		align-items: center
-		background: #f26f21
 		padding: 9px 0 9px 21px
 		color: #fff
 		font-size: 14px
 		text-transform:  uppercase
 		position: relative
+		img
+			position: absolute
+			top: 62%
+			transform:  translateY(-50%)
+			left: 20px
+		span
+			position: absolute
+			color: #fff
+			text-transform:  uppercase
+			font-weight: 700
+			top: 62%
+			transform:  translateY(-50%)
+			right: 45px
 		.icon
 			position: absolute
 			bottom: 15px
-			right: -58px
-		span
-			font-weight: 700
-			margin-left: 11px
-			display: block
+			transform: none
+			top: auto
+			left: auto
+			right: -42px
+			z-index: -1
+			animation: slide-top 55s ease-in-out 0s infinite both
 	.online-status
 		background-image: url('.././img/online-bg.png')
 		height: 49px
@@ -70,24 +87,25 @@
 			color: #fff
 			text-transform:  uppercase
 			font-weight: 700
-			top: 64%
+			top: 61%
 			transform:  translateY(-50%)
-			right: 24px
-
+			right: 54px
+	.online-status,.register
+		&:hover
+			span
+				text-decoration: underline
 	@media (max-width: 768px)
 		.container
 			max-width: 95% !important
 	@media (max-width: 640px)
 		.online-status,.register
 			font-size: 11px !important
-		.online-status
 			background-image: none
-			background-color: #4fca00
 			height: 40px
 			border-radius: 5px 5px 0 0
 			display: flex
 			align-items: center
-			padding: 9px 0 9px 21px
+			padding: 9px 12px 9px 21px !important
 			img
 				position: static
 				transform:  none
@@ -96,33 +114,63 @@
 				right: 10%
 				transform:  none
 				margin-left: 11px
+				font-size: 9px
+		.online-status
+			background-color: #4fca00
+		.register
+			background-color: #f26f21
+			.icon
+				display: none
 	@media (max-width: 576px)
+		bottom: 19px
 		.container
 			max-width: 100% !important
+			padding: 0
 		.online-status
 			span
 				max-width: 103px
-.fixed-phone
+				font-size: 9px
+		.online-status,.register
+			width: 100%
+		.register
+			width: 119px
+			display: flex
+			align-items: center
+			padding: 5px 0 5px 12px !important
+			border-radius: 20px
+			margin-right: 15px
+			img
+				transform: scale(0.8)
+			span
+				font-size: 0
+				display: inline-block
+				margin-left: 2px
+				&:before
+					display: inline-block
+					content: 'Đăng ký'
+					font-size: 15px
+.fixed-phone,.fixed-register
 	position: fixed
 	right: 5%
 	bottom: 30%
 	display: flex
-	z-index: 99
+	z-index: 10
 	align-items: center
 	.ModuleContent
 		display: flex
-		flex-flow: row-reverse
+		flex-direction: row-reverse
 		align-items: center
-	.phone-icon
+	.phone-icon,.register-icon
 		border-radius: 50%
-		width: 70px
-		height: 70px
+		width: 80px
+		height: 80px
 		background: #0a67b0
 		display: flex
 		align-items: center
 		justify-content: center
 		cursor: pointer
 		position: relative
+		z-index: 20
 		img
 			width: 40px
 			animation: ringing-animation 1s infinite
@@ -135,15 +183,24 @@
 			width: 120px
 			height: 120px
 			animation: circle-animation 3s infinite
+	
+	.register-icon
+		background: #0db14b
+		&:after
+			background: #0db14b
+		img
+			width: 30px
 	.phone-number
 		opacity: 0
 		background: #f26f21
 		padding: 5px 14px
-		margin-right: 21px
+		margin-right: 12px
 		border-radius: 5px
 		position: relative
 		transition: 0.3s all
 		text-decoration: none
+		transform: translateX(100px)
+		z-index: -10
 		&:before
 			position: absolute
 			content: ''
@@ -157,25 +214,49 @@
 		span
 			text-transform:  uppercase
 			font-weight: 700
-			font-family: 'Muli'
 			color: #fff
-			font-size: 18px
-		&.show
-			opacity: 1
-			transition: 0.3s all
+			font-size: 16px
+	&:hover
+		.phone-number
+			opacity: 1 !important
+			transform: translateX(0)
+			z-index: 1
 	@media (max-width: 1600px)
 		transform: scale(0.8)
-		right: 20px
-		bottom: 90px
-	// @media (max-width: 1200px)
-	// 	.phone-number
-	// 		&:before
-	// 			right: -3.5px
-	// 			left: auto
+		right: 2.5%
+		bottom: 100px
+	@media (max-width: 1440px)
+		right: 1%
+	@media (max-width: 992px)
+		.ModuleContent
+			flex-direction: row-reverse
+		.phone-number
+			margin-right: 10px
+			&:before
+				right: -3.5px
+				left: auto
 	@media (max-width: 768px)
 		transform: scale(0.6)
-		right: 0px
-		bottom: 50px
+		right: -35px
+		bottom: 35px
+	@media (max-width: 576px)
+		right: 0
+		.phone-number
+			display: none
+.fixed-phone
+	.phone-number
+		background: #0a67b0
+		&:before
+			background: #0a67b0
+	@media (max-width: 576px)
+		bottom: 40% !important
+.fixed-register
+	.phone-number
+		background: #0db14b
+		&:before
+			background: #0db14b
+	@media (max-width: 576px)
+		display: none !important
 
 @keyframes circle-animation
 	0% 
@@ -224,3 +305,12 @@
 		transform: scale(1) rotate(0deg)
 	100%
 		transform: scale(1) rotate(10deg)
+
+@keyframes slide-top 
+	0% 
+		transform: translateY(100px)
+	2.5% 
+		transform: translateY(0px)
+	100% 
+		transform: translateY(0px)
+	

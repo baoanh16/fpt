@@ -28,7 +28,15 @@
 			</div>
 			<div class="content">
 				<h6>
-					<a href="javascript:void(0)">tên chuyên mục</a>
+					<a>
+						<xsl:attribute name="href">
+							<xsl:value-of select="ZoneUrl"></xsl:value-of>
+						</xsl:attribute>
+						<xsl:attribute name="target">
+							<xsl:value-of select="Title"></xsl:value-of>
+						</xsl:attribute>
+						<xsl:value-of select="ZoneTitle"></xsl:value-of>
+					</a>
 				</h6>
 				<h4>
 					<a>

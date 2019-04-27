@@ -1,7 +1,8 @@
 .fpt-home-2
 	margin: 5px 0
+	background: url(../img/main-bg.png)
 	.container
-		@media (max-width: 576px)
+		@media (min-width: 576px)
 			padding: 0
 	.list-nav
 		display: flex
@@ -34,7 +35,7 @@
 			img
 				filter: brightness(0) invert(1)
 		&:hover
-			background: #F26F21
+			background: #faae2d
 			color: #fff
 			transition: 0.3s all
 			img
@@ -54,9 +55,26 @@
 				flex: 0 0 calc(50% - 2.5px)
 				max-width: calc(50% - 2.5px)
 		@media (max-width: 576px)
-			flex: 0 0 100% !important
-			max-width: 100% !important
-			+ .nav-item
-				margin-top: 5px
+			flex: 0 0 calc(50% - 2px) !important
+			max-width: calc(50% - 2px) !important
+			margin-top: 0 !important
+			&:nth-child(2),&:nth-child(3)
+				background: #F26F21 !important
+				img
+					filter: brightness(0) invert(1)
+				span
+					color: #fff
+			&:nth-child(1),&:nth-child(4)
+				background: #ffffff !important
+				img
+					filter: none
+				span
+					color: #333
+			&:nth-child(1),&:nth-child(2)
+				margin-bottom: 4px
+			&:nth-child(5)
+				display: none
+			// + .nav-item
+			// 	margin-top: 5px
 			span
 				font-size: 14px

@@ -3,18 +3,20 @@
 		background: #fff
 	.section-wrapper
 		padding: 32px 0 50px
+		@media (max-width: 576px)
+			padding-bottom: 10px !important
 	h1
 		text-align: center
 		text-transform: uppercase
 		font-size: 35px
-		max-width: 80%
+		max-width: 82%
 		margin: 0 auto
 		color: #f26f21
 		font-weight: 700
 		margin-bottom: 32px
 		@media (max-width: 576px)
 			max-width: 100%
-			font-size: 24px
+			font-size: 17px
 	.statistic-col
 		&:nth-child(1)
 			.statistic-item
@@ -48,6 +50,12 @@
 				.statistic-item
 					max-width: 50%
 					margin: 0 auto
+		@media (max-width: 576px)
+			&:nth-child(1),&:nth-child(2)
+				.statistic-item
+					padding: 16px
+				.statistic-title
+					flex-direction: column
 	.statistic-item
 		background: #f26f21
 		max-width: 75%
@@ -90,3 +98,14 @@
 			max-width: 75% !important
 		@media (max-width: 576px)
 			max-width: 100% !important
+			.statistic-title
+				margin-left: 0
+				span
+					font-size: 12px
+					margin-left: 0
+			.statistic-body
+				.statistic-number
+					.number 
+						font-size: 19px
+					.unit
+						font-size: 12px

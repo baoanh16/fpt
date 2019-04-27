@@ -7,6 +7,7 @@ var cates;
 $(document).ready(function () {
 	$('#tags').select2({
 		width: "100%",
+		placeholder: "Tag",
 		ajax: {
 			url: siteRoot + "/News/Services/NewsService.aspx",
 			type: 'post',
@@ -60,7 +61,7 @@ function loadCanlendar(datas) {
 		header: {
 			left: 'prevYear, prev, title, next, nextYear',
 			center: '',
-			right: 'month,agendaWeek,agendaDay'
+			right: ''
 		},
 		locale: 'vi',
 		eventRender: function (event, element) {

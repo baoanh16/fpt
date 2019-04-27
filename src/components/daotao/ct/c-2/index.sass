@@ -1,11 +1,10 @@
 .fpt-daotao-ct2
 	background-image: url(../img/nganhdaotao/bg-2.jpg)
-	padding: 54px 0
+	padding: 54px 0 4px
 	margin-bottom: -34px
 	@media (max-width: 768px)
 		margin-bottom: 0
 		padding-bottom: 14px
-
 	h2
 		text-align: center
 		font-weight: 300
@@ -16,7 +15,7 @@
 		strong
 			font-weight: 700
 		@media (max-width: 480px)
-			font-size: 28px
+			font-size: 18px
 	.reason-item
 		display: flex
 		margin-bottom: 50px
@@ -44,9 +43,9 @@
 					display: inline-block
 				&:last-child
 					font-family: 'Muli'
-					font-size: 18px
-					font-weight: 700
+					font-size: 18px 
 					color: #f6e7df
+					line-height: 26px
 		@media (max-width: 768px)
 			margin-bottom: 40px
 			.icon
@@ -55,16 +54,27 @@
 				img
 					transform: scale(0.7)
 			.content
-				span:first-child
+				span:first-child,span:nth-child(2)
 					font-size: 40px
 					margin-bottom: 8px
 				span:last-child
 					font-size: 15px
-		// @media (max-width: 576px)
-		// 	justify-content: center
-		@media (max-width: 375px)
+		@media (max-width: 576px)
+			margin-bottom: 24px !important
+			align-items: center
+			.icon
+				flex: 0 0 50px !important
+				height: 50px !important
+				img
+					transform: scale(0.5) !important
 			.content
-				span:first-child
-					font-size: 32px
+				display: flex
+				align-items: center
+				margin-left: 10px
+				span:first-child,span:nth-child(2)
+					font-size: 30px !important
+					margin-bottom: 0 !important
 				span:last-child
-					font-size: 14px
+					margin-left: 5px
+					font-size: 15px !important
+					line-height: 17px

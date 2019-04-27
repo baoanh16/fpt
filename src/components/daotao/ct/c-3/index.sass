@@ -9,17 +9,19 @@
 		color: #333
 		margin-bottom: 18px
 		@media (max-width: 480px)
-			font-size: 28px
+			font-size: 18px
 	.lo-trinh-wrapper
-		padding-top: 50px
+		padding-top: 25px
 		padding-left: 30px
-		padding-bottom: 28px
+		padding-bottom: 10px
 		background-image: url('../img/nganhdaotao/bg-3.png')
 	.lo-trinh-content
 		display: flex
+		flex-direction: row-reverse
 	.step-wrapper
-		padding-right: 37px
-		border-right: 1px solid #e3d1be
+		padding-right: 20px
+		padding-left: 20px
+		border-left: 1px solid #e3d1be
 		flex: 0 0 75%
 	.step
 		display: flex
@@ -69,7 +71,7 @@
 	.khac-biet-wrapper
 		height: 100%
 		background: #ffeddb
-		padding: 50px 30px 28px
+		padding: 25px 30px 10px
 		.content
 			max-height: 440px
 			overflow-y: auto
@@ -95,8 +97,8 @@
 	@media (max-width: 768px)
 		margin: 0
 	@media (max-width: 576px)
-		.lo-trinh-wrapper
-			padding: 30px 15px
+		.lo-trinh-wrapper,.khac-biet-wrapper
+			padding: 20px
 		.container
 			padding: 0
 		.lo-trinh-content

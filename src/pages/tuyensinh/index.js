@@ -1,3 +1,23 @@
+function roundUp(num, precision) {
+	precision = Math.pow(10, precision);
+	return Math.ceil(num * precision) / precision;
+}
+
+$('.fpt-daotao-ct2 .reason-item .content span:first-child').each(function () {
+	$(this).prop('Counter', 0).animate({
+		Counter: $(this).text()
+	}, {
+		duration: 5000,
+		easing: 'swing',
+		step: function (now) {
+			// $(this).text(Math.ceil(now));
+			$(this).text(roundUp(now, 1));
+			// $(this).text(Math.round10(now, -1));
+		}
+	});
+});
+
+
 var smallCampusSwiper = new Swiper('.fpt-tuyensinh-campus .small-slider .swiper-container', {
 	speed: 2100,
 	spaceBetween: 15,
@@ -12,8 +32,14 @@ var smallCampusSwiper = new Swiper('.fpt-tuyensinh-campus .small-slider .swiper-
 		480: {
 			slidesPerView: 2
 		}
+	},
+	on: {
+		init: function () {
+			$('.small-slider .swiper-slide-thumb-active').next().trigger('click')
+		},
 	}
 });
+
 
 var bigCampusSwiper = new Swiper('.fpt-tuyensinh-campus .big-slider .swiper-container', {
 	speed: 2100,
@@ -21,6 +47,10 @@ var bigCampusSwiper = new Swiper('.fpt-tuyensinh-campus .big-slider .swiper-cont
 	loop: true,
 	autoplay: {
 		delay: 3500
+	},
+	navigation: {
+		nextEl: '.big-slider .swiper-next',
+		prevEl: '.big-slider .swiper-prev'
 	},
 	thumbs: {
 		swiper: smallCampusSwiper
@@ -49,9 +79,8 @@ var doiTacSwiper = new Swiper('.fpt-tuyensinh-doitac .swiper-container', {
 	spaceBetween: 15,
 	loop: true,
 	speed: 2100,
-	navigation: {
-		nextEl: '.fpt-tuyensinh-doitac .swiper-next',
-		prevEl: '.fpt-tuyensinh-doitac .swiper-prev',
+	autoplay: {
+		delay: 500
 	},
 	breakpoints: {
 		1200: {
@@ -63,8 +92,10 @@ var doiTacSwiper = new Swiper('.fpt-tuyensinh-doitac .swiper-container', {
 		576: {
 			slidesPerView: 2
 		},
-		420: {
+		360: {
 			slidesPerView: 1
 		}
 	}
 })
+
+$(document).ready(function () {});

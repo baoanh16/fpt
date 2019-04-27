@@ -49,7 +49,7 @@
 			.btn-more
 				margin-top: 20px
 	.item
-		@media (max-width: 440px)
+		@media (max-width: 350px)
 			flex: 0 0 100%
 			max-width: 100%
 	figure
@@ -63,32 +63,33 @@
 				text-transform: uppercase
 				font-weight: 700
 				color: #fff
+				margin-bottom: 10px
 			ul
-				transition: all .5s ease-in-out
 				list-style: none
 				color: #fff
-				display: none
-				transform: scaleY(0)
-				transform-origin: top
+				max-height: 0
+				opacity: 0
+				transition: all .75s
 				li
 					font-size: 13px
+					background: #f26f21
+					padding: 5px
+					transition: 0.3s all
+					+ li
+						margin-top: 5px
 					a
 						text-decoration: none
-						&:hover
+					&:hover
+						background: #388abc
+						transition: 0.3s all
+						a
 							color: #fff
 		&:hover
 			figcaption
-				h4
-					margin-bottom: 20px
 				ul
-					display: block
-					transform: scaleY(1)
-					transform-origin: bottom
-					transition: 0.3s all
-					li
-						margin: 0 0 5px -20px
-						background: #f26f21
-						padding: 5px
+					max-height: 300px
+					opacity: 1
+					transition: all .75s
 				@media (max-width: 440px)
 					left: 10px
 					bottom: 10px
@@ -122,7 +123,9 @@
 				top: 0
 				width: 100%
 				height: 100%
-		
+		@media (max-width: 576px)
+			figcaption
+				left: 9px
 	@keyframes shine 
 		100% 
 			left: 125%

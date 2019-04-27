@@ -6,22 +6,24 @@
 	.tabs-wrapper
 		counter-reset: tabs-item
 	.tabs
-		background: #f8f8f8
-		padding: 10px 30px
 		transition: all .3s ease-in-out
 		a
 			text-decoration: none
+			background: #f8f8f8
 			color: #333
+			padding: 10px 30px
+			width: 100%
+			display: block
 		@media (min-width: 992px)
 			&:hover
 				cursor: pointer
-				background: #F26F21
 				color: #fff
 				a
+					background: #F26F21
 					color: #fff
 		&.active
-			background: #F26F21
 			a
+				background: #F26F21
 				color: #fff
 		&:not(:last-child)
 			border-bottom: 1px solid #EDEDED
@@ -52,6 +54,9 @@
 			font-size: 18px
 			margin-left: auto
 			transition: all .3s ease-in-out
+		&.active
+			i
+				transform: rotate(180deg)
 	.tabs-item
 		transition: all .5s ease-in-out
 		&:hover
@@ -74,8 +79,11 @@
 	.tabs-content
 		transition: all .5s ease-in-out
 		display: none
-		padding-left: 65px
+		padding-left: 20px
 		padding-right: 20px
+		padding-top: 30px
+		table
+			width: 100% !important
 	.tabs-wrapper
 		transition: all .5s ease-in-out
 	.btn-more

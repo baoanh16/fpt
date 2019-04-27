@@ -24,5 +24,9 @@ var bigCampusSwiper = new Swiper('.fpt-campus .big-slider .swiper-container', {
 	},
 	thumbs: {
 		swiper: smallCampusSwiper
+	},
+	navigation: {
+		nextEl: '.big-slider .swiper-next',
+		prevEl: '.big-slider .swiper-prev'
 	}
 });

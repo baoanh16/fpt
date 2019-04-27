@@ -2,13 +2,15 @@
 	.container
 		background: #fff
 	.section-wrapper
-		padding-top: 50px
+		padding-top: 25px
 	h2
 		text-transform: uppercase
 		font-size: 35px
 		text-align: center
 		color: #333
-		margin-bottom: 40px
+		margin-bottom: 20px
+		@media (max-width: 480px)
+			font-size: 18px
 	table
 		width: 100%
 		color: #333
@@ -69,6 +71,16 @@
 			tr:nth-child(2n)
 				background: #fafafa
 		@media (max-width: 576px)
+			display: block
+			max-height: 500px
+			overflow: auto
+			&::-webkit-scrollbar
+				width: 5px
+				border-radius: 5px
+				background: #e5e5e5
+			&::-webkit-scrollbar-thumb
+				border-radius: 5px
+				background: #f7bd9b
 			thead
 				display: none
 			tbody

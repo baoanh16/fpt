@@ -12,6 +12,14 @@
 							<xsl:apply-templates select='/BannerList/Banner' mode='BigThumb'></xsl:apply-templates>
 						</div>
 					</div>
+					<div class="swiper-navigation">
+						<div class="swiper-prev">
+							<span class="mdi mdi-chevron-left"></span>
+						</div>
+						<div class="swiper-next">
+							<span class="mdi mdi-chevron-right"></span>
+						</div>
+					</div>
 				</div>
 				<div class="small-slider">
 					<div class="swiper-container">
@@ -34,6 +42,9 @@
 				<xsl:value-of select='Title'></xsl:value-of>
 			</xsl:attribute>
 			</img>
+			<div class="description">
+				<xsl:value-of select="Description" disable-output-escaping="yes"></xsl:value-of>
+			</div>
 		</div>
 	</xsl:template>
 	<xsl:template match="Banner" mode="SmallThumb">

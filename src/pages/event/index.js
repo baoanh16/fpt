@@ -45,7 +45,7 @@ $(document).ready(function () {
 		header: {
 			left: 'prevYear, prev, title, next, nextYear',
 			center: '',
-			right: 'month,agendaWeek,agendaDay'
+			right: ''
 		},
 		locale: 'vi',
 		eventRender: function (event, element) {

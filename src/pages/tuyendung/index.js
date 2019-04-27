@@ -7,6 +7,10 @@ var doiTacSwiper = new Swiper('.fpt-tuyensinh-doitac .swiper-container', {
 		nextEl: '.fpt-tuyensinh-doitac .swiper-next',
 		prevEl: '.fpt-tuyensinh-doitac .swiper-prev',
 	},
+	autoplay: {
+		delay: 500,
+		disableOnInteraction: false
+	},
 	breakpoints: {
 		1200: {
 			slidesPerView: 4
@@ -17,8 +21,8 @@ var doiTacSwiper = new Swiper('.fpt-tuyensinh-doitac .swiper-container', {
 		576: {
 			slidesPerView: 2
 		},
-		420: {
+		360: {
 			slidesPerView: 1
 		}
-	}
+	},
 })

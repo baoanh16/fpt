@@ -64,57 +64,69 @@
 				position: absolute
 				transform: translateY(-50%)
 				right: 5px
-	.qradio
-		.label
-			font-size: 18px
-			font-weight: 700
-			text-transform: uppercase
-		.cf
-			list-style: none
-			display: flex
-			li
-				flex: auto
+		table#ctl00_mainContent_ctl01_rblCampus
+			width: 100%
+			tr
 				display: flex
-			input
-				display: none
-			label
-				position: relative
-				padding-left: 26px
-				&:before
-					content: ''
-					position: absolute
-					width: 13px
-					height: 13px
-					border-radius: 50%
-					border: 1px solid #999999
-					background: #fff
-					margin-right: 13px
-					left: 0
-					top: 50%
-					transform: translateY(-60%)
-				&:after
-					content: ''
-					position: absolute
-					width: 6.5px
-					height: 6.5px
-					border-radius: 50%
-					background: #f26f21
-					margin-right: 13px
-					left: 0
-					top: 50%
-					transform: translate(50%, -65%)
+				@media (max-width: 768px)
+					flex-wrap: wrap
+					td
+						flex: 0 0 50% !important
+				@media (max-width: 350px)
+					td
+						flex: 0 0 100% !important
+			td
+				display: flex
+				flex: auto
+				input
 					display: none
-			input:checked ~ label:before
-				border: 1px solid #f26f21
-			input:checked ~ label:after
-				display: block
-			@media (max-width: 768px)
-				flex-wrap: wrap
-				li
-					flex: 0 0 50%
-			@media (max-width: 350px)
-				li
-					flex: 0 0 100%
+				label
+					position: relative
+					padding-left: 26px
+					&:before
+						content: ''
+						position: absolute
+						width: 13px
+						height: 13px
+						border-radius: 50%
+						border: 1px solid #999999
+						background: #fff
+						margin-right: 13px
+						left: 0
+						top: 50%
+						transform: translateY(-60%)
+					&:after
+						content: ''
+						position: absolute
+						width: 6.5px
+						height: 6.5px
+						border-radius: 50%
+						background: #f26f21
+						margin-right: 13px
+						left: 0
+						top: 50%
+						transform: translate(50%, -65%)
+						display: none
+				input:checked ~ label:before
+					border: 1px solid #f26f21
+				input:checked ~ label:after
+					display: block
+
+	// .qradio
+	// 	.label
+	// 		font-size: 18px
+	// 		font-weight: 700
+	// 		text-transform: uppercase
+	// 	.cf
+	// 		list-style: none
+	// 		display: flex
+	// 		li
+	// 			flex: auto
+	// 			display: flex
+	// 		input
+	// 			display: none
+			
+
 	.frm-btnwrap
 		width: 271px
 		margin: 0 auto
@@ -138,3 +150,6 @@
 			font-family: 'Roboto Slab'
 			color: #fff
 			text-transform: uppercase
+	.fa-exclamation-triangle
+		color: #ff0000
+		margin-top: 6px

@@ -5,20 +5,21 @@
 
 <head id="Head1" runat="server">
 	<title></title>
+	<meta name="viewport" content="width=device-width,initial-scale=1,shrink-to-fit=no">
 	<portal:MetaContent ID="MetaContent" runat="server" />
+	<meta property="og:image" content="/Data/Sites/1/skins/default/img/og-image.png" />
+
 	<%-- JQueryUIThemeName themes: 
 	base, black-tie, blitzer, cupertino, dark-hive, dot-luv, eggplant, excite-bike, flick, hot-sneaks,
 	humanity, le-frog, mint-choc, overcast, pepper-grinder,
 	redmond, smoothness, south-street, start, sunny, swanky-purse, trontastic, ui-darkness, ui-lightness, vader
     --%>
-	<meta name="viewport"
-		content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
 	<!--[if lt IE 9]>
         <script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
 
-	<portal:StyleSheetCombiner ID="StyleSheetCombiner" runat="server" IncludejQueryUI="false"
-		JQueryUIThemeName="smoothness" />
+
 	<link rel="apple-touch-icon" sizes="57x57" href="/Data/Sites/1/skins/default/favicon/apple-icon-57x57.png">
 	<link rel="apple-touch-icon" sizes="60x60" href="/Data/Sites/1/skins/default/favicon/apple-icon-60x60.png">
 	<link rel="apple-touch-icon" sizes="72x72" href="/Data/Sites/1/skins/default/favicon/apple-icon-72x72.png">
@@ -44,16 +45,17 @@
 	<meta name="theme-color" content="#000000">
 	<meta name="msapplication-navbutton-color" content="#000000">
 	<meta name="apple-mobile-web-app-status-bar-style" content="#000000">
-	<portal:ScriptLoader ID="ScriptLoader1" runat="server" />
-	</script>
+	<portal:StyleSheetCombiner ID="StyleSheetCombiner" runat="server" IncludejQueryUI="false"
+		JQueryUIThemeName="smoothness" />
 	<portal:SkinFolderScript ID="SkinFolderScript1" runat="server" ScriptFileName="js/global.min.js"
 		AddToCombinedScript="true" />
+
+	<portal:ScriptLoader ID="ScriptLoader1" runat="server" />
 	<!-- <portal:SkinFolderScript ID="SkinFolderScript2" runat="server" ScriptFileName="js/customize.min.js"
 		AddToCombinedScript="true" />
 	<portal:SkinFolderScript ID="SkinFolderScript3" runat="server" ScriptFileName="js/canhcam.js"
 		AddToCombinedScript="true" /> -->
 	<portal:GoogleAnalyticsScript ID="GoogleAnalyticsScript1" runat="server" />
-
 	<!-- <link rel="stylesheet" href="/Data/Sites/1/skins/default/css/global.min.css"> -->
 	<link href="/Data/Sites/1/skins/default/css/select2.min.css" rel="stylesheet">
 	<div id="fb-root"></div>
@@ -79,6 +81,8 @@
 <body id="Body" runat="server" class="canhcam">
 	<portal:FacebookSdk ID="fbsdk" runat="server" />
 	<portal:LayoutDisplaySettings ID="LayoutDisplaySettings1" runat="server" />
+	<portal:ModuleWrapper ID="mdl264" runat="server" ConfigureModuleId="264" />
+	<portal:ModuleWrapper ID="mdl265" runat="server" ConfigureModuleId="265" />
 	<form id="frmMain" runat="server">
 		<asp:SiteMapDataSource ID="SiteMapData" runat="server" ShowStartingNode="false" />
 		<asp:SiteMapDataSource ID="PageMapDataSource" runat="server" ShowStartingNode="false" />
@@ -99,6 +103,7 @@
 							<div class="language">
 								<portal:ModuleWrapper ID="mdl140" runat="server" ConfigureModuleId="140" />
 							</div>
+							<div class="search-toggle"><span class="mdi-magnify"></span></div>
 						</div>
 					</div>
 				</section>
@@ -298,14 +303,45 @@
 							isajax: true
 						},
 						success: function (data) {
+							console.log(data);
 							$('.ajaxfilterresponse').html($(data).find('.ajaxfilterresponse')
 								.html());
+							$('.error').show();
+							$('.form-tabs').tabslet({
+								active: 1,
+								animation: true
+							});
+						},
+						error: function (error) {
+							console.log(error)
 						}
 					});
 
 					return false;
 				})
 			})
+		</script>
+		<script type='text/javascript'>
+			$(document).ready(function () {
+				$('.online-status').click(function (e) {
+					e.preventDefault();
+					$('#button_compress').trigger('click')
+				});
+			})
+		</script>
+		<script type="text/javascript">
+			window._sbzq || function (e) {
+				e._sbzq = [];
+				var t = e._sbzq;
+				t.push(["_setAccount", 76601]);
+				var n = e.location.protocol == "https:" ? "https:" : "http:";
+				var r = document.createElement("script");
+				r.type = "text/javascript";
+				r.async = true;
+				r.src = n + "//static.subiz.com/public/js/loader.js";
+				var i = document.getElementsByTagName("script")[0];
+				i.parentNode.insertBefore(r, i)
+			}(window);
 		</script>
 	</form>
 </body>

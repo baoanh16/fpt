@@ -1,5 +1,5 @@
 {
-	"buildAll": true,
+	"buildAll": false,
 	"page": [{
 			"name": "index",
 			"isWorking": true,
@@ -10,7 +10,7 @@
 		{
 			"name": "about",
 			"isWorking": false,
-			"js": []
+			"js": ["./bower_components/countup-coffee/dist/counter.js"]
 		},
 		{
 			"name": "campus",
@@ -19,8 +19,8 @@
 		},
 		{
 			"name": "tuyensinh",
-			"isWorking": true,
-			"js": ["./bower_components/fancybox/dist/jquery.fancybox.min.js"]
+			"isWorking": false,
+			"js": []
 		},
 		{
 			"name": "register",
@@ -39,8 +39,10 @@
 		},
 		{
 			"name": "daotao-ct",
-			"isWorking": true,
-			"js": ["./bower_components/fancybox/dist/jquery.fancybox.min.js"]
+			"isWorking": false,
+			"js": [
+				"./src/plugins/scrollClass.js"
+			]
 		},
 		{
 			"name": "event",
@@ -54,10 +56,8 @@
 		},
 		{
 			"name": "tintuc",
-			"isWorking": false,
-			"js": [
-				"./bower_components/fancybox/dist/jquery.fancybox.min.js"
-			]
+			"isWorking": true,
+			"js": []
 		},
 		{
 			"name": "tintuc-ds",
@@ -77,16 +77,12 @@
 		{
 			"name": "video",
 			"isWorking": false,
-			"js": [
-				"./bower_components/fancybox/dist/jquery.fancybox.min.js"
-			]
+			"js": []
 		},
 		{
 			"name": "tuyendung",
-			"isWorking": false,
-			"js": [
-				"./bower_components/fancybox/dist/jquery.fancybox.min.js"
-			]
+			"isWorking": true,
+			"js": []
 		},
 		{
 			"name": "tuyendung-ct",

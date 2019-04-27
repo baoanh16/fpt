@@ -1,36 +1,40 @@
 .tintuc-2
-    .title
-        display: flex
-        align-items: center
-        box-shadow: 0 1px 0 0 #f26f21
-        margin-bottom: 20px
-        h4
-            font-size: 15px
-            font-weight: 400
-            background: #f26f21
-            color: #fff
-            text-transform: uppercase
-            padding: 13px 20px
-        .more
-            color: #f26f21
-            margin-left: auto
-            text-transform: uppercase
-            font-weight: 700
-            font-size: 15px
-            line-height: 15px
-            &:after
-                +mtrl('\f35f')
-    @media (max-width: 576px)
-        .title
-            h4
-                padding: 5px
-                font-size: 13px
-                line-height: 22px
-                flex: 0 0 50%
-                min-width: 50%
-                +line(1)
-            .more
-                font-size: 13px
-                line-height: 13px
-        [class*="col-"]
-            margin-bottom: 30px
+	padding-bottom: 50px
+	.title
+		display: flex
+		align-items: center
+		box-shadow: 0 1px 0 0 #f26f21
+		margin-bottom: 20px
+		h4
+			font-size: 15px
+			font-weight: 400
+			background: #f26f21
+			color: #fff
+			text-transform: uppercase
+		.more
+			color: #f26f21
+			margin-left: auto
+			text-transform: uppercase
+			font-weight: 700
+			font-size: 15px
+			line-height: 15px
+			display: flex
+			align-items: center
+			span:before
+				+mtrl('\f35f')
+				font-size: 20px
+				text-decoration: none
+	@media (max-width: 576px)
+		.title
+			h4
+				padding: 5px
+				font-size: 13px
+				line-height: 22px
+				flex: 0 0 50%
+				min-width: 50%
+				+line(1)
+			.more
+				font-size: 13px
+				line-height: 13px
+		[class*="col-"]
+			margin-bottom: 30px

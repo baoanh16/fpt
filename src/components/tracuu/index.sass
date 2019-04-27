@@ -20,6 +20,14 @@
 				color: #f26f21
 				text-transform: none
 				font-weight: 400
+			@media (max-width: 992px)
+				margin-left: 0
+	.search-container
+		margin-left: 8.333333%
+		@media (max-width: 992px)
+			margin-left: 0
+			.wrap-form
+				margin-left: 0 !important
 	.form-tabs
 		ul
 			margin-left: 8.333333%
@@ -35,7 +43,7 @@
 						color: #fff
 				a
 					display: block
-					padding: 12px 37px
+					padding: 12px 35px
 					border: 1px solid #eea579
 					color: #f26f21
 					text-transform: uppercase
@@ -44,6 +52,8 @@
 				li
 					a
 						padding: 12px 20px
+			@media (max-width: 992px)
+				margin-left: 0
 			@media (max-width: 375px)
 				li
 					a
@@ -79,16 +89,34 @@
 					flex: 0 0 25% !important
 				input
 					width: 280px !important
+	.btn-wrap
+		margin-top: 40px
+		display: flex
+		&:hover
+			.btn-success
+				background: #00528e
+				transition: 0.3s all
 	.btn-success
 		display: block
 		padding: 12px 37px
-		margin-top: 40px
-		background: #f26f21
+		background: #0066b2
 		color: #ffffff
 		text-transform: uppercase
 		text-decoration: none
 		border: 0
-		font-family: 'Muli'
+		font-family: 'Roboto Slab'
+		transition: 0.3s all
+		@media (max-width: 576px)
+			padding: 12px 28px
+	.btn-append
+		width: 50px
+		display: flex
+		align-items: center
+		justify-content: center
+		background: #00528e
+		font-size: 25px
+		span
+			color: #ffffff !important
 	.results
 		overflow-x: auto
 	table

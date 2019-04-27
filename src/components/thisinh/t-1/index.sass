@@ -1,88 +1,102 @@
 .thisinh-1
-    .container
-        padding-top: 50px
-        padding-bottom: 70px
-        background: #fef0e8
-        @media (max-width: 576px)
-            padding-bottom: 20px
-    .title
-        font-size: 35px
-        line-height: 35px
-        margin-bottom: 30px
-        font-weight: 700
-        color: #333
-        text-align: center
-        text-transform: uppercase
-        @media (max-width: 576px)
-            font-size: 24px
-            line-height: 24px
-            margin-bottom: 16px
-    .func-item
-        &.active
-            .box-img
-                background: #faae2d
-            figcaption
-                width: 100%
-                background: #f26f21
-                a
-                    color: #fff
-        a
-            text-decoration: none
-        &:not(:last-child)
-            margin-bottom: 15px
-        figure
-            display: flex
-            border: 1px solid #e3e3e3
-            background: #fff
-        .box-img
-            flex: 0 0 20%
-            max-width: 20%
-            min-height: 80px
-            background: #959595
-            display: flex
-            justify-content: center
-            align-items: center
-            @media (max-width: 576px)
-                padding: 20px
-        figcaption
-            font-family: Muli, sans-serif
-            font-weight: 700
-            font-size: 16px
-            padding: 15px
-            text-transform: uppercase
-            a
-                color: #333
-    .btn-more
-        color: #f26f21
-        border-color: #f26f21
-        &:hover
-            background: #f26f21
-            color: #fff
-        span
-            &:after
-                margin-left: 4px
-    @media (min-width: 992px)
-        .func-item
-            &:hover
-                cursor: pointer
-                .box-img
-                    background: #faae2d
-                figcaption
-                    width: 100%
-                    background: #f26f21
-                    a
-                        color: #fff
-    @media (max-width: 576px)
-        [class*="col-"]
-            margin-bottom: 30px
-        .func-item
-            .box-img
-                flex: 0 0 25%
-                max-width: 25%
-            figcaption
-                font-size: 13px
+	.container
+		padding-top: 50px
+		padding-bottom: 70px
+		background: #fef0e8
+		@media (max-width: 576px)
+			padding-bottom: 20px
+			padding-top: 25px !important
+	.title
+		font-size: 35px
+		line-height: 35px
+		margin-bottom: 30px
+		font-weight: 700
+		color: #333
+		text-align: center
+		text-transform: uppercase
+		@media (max-width: 576px)
+			font-size: 24px
+			line-height: 24px
+			margin-bottom: 16px
+	.func-item
+		text-decoration: none
+		display: block
+		width: 100%
+		&.active,&:hover
+			.box-img
+				background: #faae2d
+			figcaption
+				width: 100%
+				background: #f26f21
+				color: #fff
+		&:not(:last-child)
+			margin-bottom: 15px
+		figure
+			display: flex
+		.box-img
+			flex: 0 0 20%
+			max-width: 20%
+			min-height: 80px
+			display: flex
+			justify-content: center
+			align-items: center
+			@media (max-width: 576px)
+				padding: 20px
+		figcaption
+			font-weight: 700
+			font-size: 16px
+			width: 100%
+			text-transform: uppercase
+			padding: 15px
+			color: #ffffff
+			display: flex
+			align-items: center
+		&:nth-child(2n-1)
+			.box-img
+				background: #f26f21
+			figcaption
+				background: lighten(#f26f21,10%)
+		&:nth-child(2n)
+			.box-img
+				background: #005799
+			figcaption
+				background: lighten(#005799,10%)
+	.btn-more
+		color: #f26f21
+		border-color: #f26f21
+		margin-top: 0 !important
+		&:hover
+			background: #f26f21
+			color: #fff
+		span
+			&:after
+				margin-left: 4px
+	@media (max-width: 992px)
+		.col-md-4
+			margin-top: 60px
+	@media (min-width: 992px)
+		.func-item
+			&:hover
+				cursor: pointer
+				.box-img
+					background: #faae2d
+				figcaption
+					width: 100%
+					background: #f26f21
+					a
+						color: #fff
+
+	@media (max-width: 576px)
+		.col-lg-9
+			margin-bottom: 0 !important
+		.func-item
+			.box-img
+				flex: 0 0 25%
+				max-width: 25%
+			figcaption
+				font-size: 13px
 .comments-wrapper
-    .container
-        padding-top: 50px
-        background: #fff
-        padding-bottom: 70px
+	.container
+		padding-top: 50px
+		background: #fff
+		padding-bottom: 70px

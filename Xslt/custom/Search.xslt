@@ -1,8 +1,7 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8" ?>
 <xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
 	xmlns:msxsl="urn:schemas-microsoft-com:xslt" exclude-result-prefixes="msxsl">
 	<xsl:output method="html" indent="yes" />
-
 	<xsl:template match="/">
 		<section class="fpt-tracuu">
 			<div class="container">
@@ -16,16 +15,13 @@
 						<div class="col-lg-8">
 							<div class="tracuu-form">
 								<h1>
-									TRA CỨU KẾT QUẢ THI TIẾNG ANH K14<span>(Đang cập nhật)</span>
+									TRA CỨU KẾT QUẢ
 								</h1>
 								<div class="form-tabs">
-									<div>
-										<ul>
-											<xsl:apply-templates select="/Group/Group"></xsl:apply-templates>
-										</ul>
-										<xsl:apply-templates select="/Group/Group" mode="Content"></xsl:apply-templates>
-
-									</div>
+									<ul>
+										<xsl:apply-templates select="/Group/Group"></xsl:apply-templates>
+									</ul>
+									<xsl:apply-templates select="/Group/Group" mode="Content"></xsl:apply-templates>
 								</div>
 							</div>
 						</div>
@@ -44,13 +40,21 @@
 									</table>
 								</div>
 							</xsl:if>
+							<xsl:if test="count(/Group/Student) = 0">
+								<div class="row">
+									<div class="col-md-4"></div>
+									<div class="col-md-8">
+										<p class="error" style="display: none;margin-left: 8.333333%;margin-top: 30px;">
+											Không tìm thấy kết quả!</p>
+									</div>
+								</div>
+							</xsl:if>
 						</div>
 					</div>
 				</div>
 			</div>
 		</section>
 	</xsl:template>
-
 	<xsl:template match="Col">
 		<td>
 			<xsl:if test="RTL='1'">
@@ -58,7 +62,7 @@
 					<xsl:text>text-align:right</xsl:text>
 				</xsl:attribute>
 			</xsl:if>
-			<xsl:value-of select="Name"></xsl:value-of>
+			<xsl:value-of select="Name" disable-output-escaping='yes'></xsl:value-of>
 		</td>
 	</xsl:template>
 	<xsl:template match="Student">
@@ -76,14 +80,8 @@
 			<xsl:value-of select="Value"></xsl:value-of>
 		</td>
 	</xsl:template>
-
 	<xsl:template match="Group" mode="Content">
-		<div style="display:none" class="search-container">
-			<xsl:if test="position()=1">
-				<xsl:attribute name="style">
-					<xsl:text></xsl:text>
-				</xsl:attribute>
-			</xsl:if>
+		<div class="search-container">
 			<xsl:attribute name="id">
 				<xsl:text>tab-</xsl:text>
 				<xsl:value-of select="position()"></xsl:value-of>
@@ -91,17 +89,19 @@
 			<div class="wrap-form">
 				<xsl:apply-templates select="Option"></xsl:apply-templates>
 			</div>
-			<div class="wrap-form">
+			<div class="wrap-form btn-wrap">
 				<button class="ajaxsearchbutton btn btn-success">
 					<xsl:attribute name="data-url">
 						<xsl:value-of select="Url"></xsl:value-of>
 					</xsl:attribute>
-					<xsl:text>Tìm kiếm</xsl:text>
+					<xsl:text>TRA CỨU THÔNG TIN</xsl:text>
 				</button>
+				<div class="btn-append">
+					<span class="mdi-magnify"></span>
+				</div>
 			</div>
 		</div>
 	</xsl:template>
-
 	<xsl:template match="Group">
 		<li>
 			<xsl:if test="position()=1">
@@ -117,7 +117,6 @@
 				<xsl:value-of select="Title"></xsl:value-of>
 			</a>
 		</li>
-
 		<!--<div class="filter-group clearfix">
       <div class="filter-title">
         <xsl:value-of select="Title"></xsl:value-of>
@@ -136,11 +135,10 @@
       </xsl:choose>
     </div>-->
 	</xsl:template>
-
 	<xsl:template match="Option">
 		<div class="form-group">
 			<label>
-				<xsl:value-of select="Title"></xsl:value-of>
+				<xsl:value-of select="Title" disable-output-escaping='yes'></xsl:value-of>
 			</label>
 			<input type="text" class="search-box">
 			<xsl:attribute name="id">
@@ -172,5 +170,4 @@
       </a>
     </div>-->
 	</xsl:template>
-
 </xsl:stylesheet>

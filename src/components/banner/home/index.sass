@@ -1,11 +1,12 @@
 .fpt-banner-home
 	position: relative
+	@media (max-width: 576px)
 	.swiper-pagination-wrapper
 		position: absolute
 		width: 100%
 		bottom: 10%
 	.swiper-navigation-wrapper
-		width: 100%
+		width: 80%
 		position: absolute
 		top: 50%
 		left: 50%
@@ -21,10 +22,14 @@
 			cursor: pointer
 			span
 				font-size: 40px
-		@media (max-width: 576px)
+			&:hover
+				color: #f26f21
+		@media (max-width: 768px)
 			.swiper-prev,.swiper-next
 				span
 					font-size: 28px
+		@media (max-width: 576px)
+			width: 100%
 	.swiper-pagination-wrapper
 		z-index: 20
 		.scroll-to-section
@@ -40,7 +45,18 @@
 		.swiper-pagination-bullet-active
 			background: #f26f21
 		@media (max-width: 576px)
-			display: none
+			bottom: -5px
+			.swiper-pagination-bullet
+				width: 5px
+				height: 5px
+				margin-left: 5px
+				&:first-child
+					margin-left: 0
+			.swiper-pagination
+				left: 50%
+				transform: translateX(-50%)
+			.scroll-to-section
+				display: none
 	.slogan
 		position: absolute
 		bottom: 0
@@ -49,3 +65,5 @@
 		z-index: 20
 		@media (max-width: 576px)
 			max-width: 12rem
+			img
+				max-height: 1rem

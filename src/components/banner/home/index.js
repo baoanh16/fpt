@@ -1,13 +1,14 @@
 var homeBannerSwiper = new Swiper('.fpt-banner-home .swiper-container', {
 	speed: 2500,
 	spaceBetween: 100,
-	effect: 'fade',
+	effect: 'coverflow',
 	loop: true,
 	autoplay: {
-		delay: 3000
+		delay: 5000
 	},
-	fadeEffect: {
-		crossFade: true
+	coverflowEffect: {
+		rotate: 30,
+		slideShadows: false,
 	},
 	navigation: {
 		nextEl: '.fpt-banner-home .swiper-next',

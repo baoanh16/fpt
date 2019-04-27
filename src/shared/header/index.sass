@@ -1,11 +1,6 @@
 .fpt-header
 	background: #fff
-	position: fixed
-	top: 0
-	left: 0
-	width: 100%
-	z-index: 99
-	box-shadow: 0px 0 10px 0px #666
+
 	.top-header
 		padding: 10px 0
 		font-family: 'Muli'
@@ -49,6 +44,8 @@
 					font-size: 11px
 	.middle-header
 		background: #f26f21
+		&.is_stuck
+			z-index: 999
 		.middle-header-wrapper
 			display: flex
 		.middle-header-menu
@@ -58,7 +55,7 @@
 			li
 				a
 					display: block
-					padding: 15px 22px
+					padding: 13px 22px
 					color: #fff
 					text-decoration: none
 					border-left: 1px solid rgba(white,20%)
@@ -69,14 +66,15 @@
 					line-height: 23px
 					display: flex
 					align-items: center
-					span
-						font-size: 24px
+					.mdi-home
+						font-size: 20px
 				&:last-child
 					a
 						border-right: 1px solid rgba(white,20%)
 				&:hover,&.active
-					a
+					> a
 						background: #faae2d
+						color: #fff
 		.language
 			display: flex
 			align-items: center
@@ -86,18 +84,22 @@
 			.middle-header-wrapper
 				padding: 12px 0
 				justify-content: space-between
+				position: relative
 			.middle-header-menu
 				position: absolute
 				top: 100%
 				flex-direction: column
 				background: #f26f21
-				left: 0
 				transform: translateY(-2rem)
 				transform-origin: top
 				z-index: -1
 				opacity: 0
 				visibility: hidden
 				transition: 0.3s all
+				width: 250px
+				overflow-y: auto
+				height: 80vh
+				left: 0
 				li
 					a
 						border-left: 0
@@ -106,6 +108,7 @@
 						max-width: 930px
 						margin: 0 auto
 						padding-left: 8px
+						height: auto
 				&.open
 					visibility: visible
 					opacity: 1
@@ -161,51 +164,123 @@
 				a
 					max-width: 510px !important
 		@media (max-width: 576px)
+			.middle-header-wrapper
+				align-items: center
+				justify-content: flex-start
+				padding: 6px 0
 			.middle-header-menu
 				a
 					padding-left: 20px !important
+			.language
+				margin-left: 16px
+				img
+					height: 22px
+			.search-wrapper
+				margin-left: auto
 	.bottom-header
-		padding: 13px 0
+		padding: 7px 0 6px
 		.bottom-header-wrapper
 			display: flex
 			align-items: center
 			justify-content: space-between
-		.search-wrapper
-			.searchbox
-				display: flex
-			input
-				height: 2.375rem
-				border: 1px solid #e1e1e1
-				border-right: 0
-				border-radius: 5px 0 0 5px
-				padding: 0 5px 0 19px
-				font-family: 'Muli'
-				&::placeholder
-					font-size: 13px
-					font-style: italic
-					color: #c5c5c5
-			button
-				height: 2.375rem
-				width: 2.375rem
-				border: 0
-				background: #f26f21
-				color: #fff
-				font-size: 25px
-				border-radius: 0 5px 5px 0
 		@media (max-width: 768px)
 			.logo-wrapper
 				img
 					max-width: 8rem
 		@media (max-width: 576px)
+			.bottom-header-wrapper
+				justify-content: center
 			.logo-wrapper
 				img
-					max-width: 7rem
-		@media  (max-width: 375px)
+					max-width: 9rem
+		
+	.search-wrapper
+		.searchbox
+			display: flex
+			align-items: center
+		input
+			height: 2.375rem
+			border: 1px solid #e1e1e1
+			border-right: 0
+			border-radius: 5px 0 0 5px
+			padding: 0 5px 0 19px
+			font-family: 'Muli'
+			&::placeholder
+				font-size: 13px
+				color: #c5c5c5
+		button
+			height: 2.375rem
+			width: 2.375rem
+			border: 0
+			background: #f26f21
+			color: #fff
+			font-size: 25px
+			border-radius: 0 5px 5px 0
+		@media  (max-width: 576px)
+			position: absolute
+			top: 100%
+			right: 0
+			left: 0
+			padding: 10px
+			background: #f26f21
+			display: none
 			input
 				height: 32px !important
-				width: 120px
+				width: 100%
 				padding-left: 5px !important
+				border-radius: 0 !important
 			button
 				height: 32px !important
 				width: 32px !important
-				font-size: 18px !important
+				font-size: 20px !important
+				border-radius: 0 !important
+				display: flex
+				align-items: center
+	.has-sub
+		position: relative
+		.mdi-chevron-down
+			display: none
+		.sub-menu
+			position: absolute
+			list-style: none
+			background-color: rgb(255, 255, 255)
+			box-shadow: 0px 3px 10px 0px rgba(0, 0, 0, 0.2)
+			min-width: 243px
+			z-index: 220
+			@media (min-width: 1200px)
+				display: none !important
+			li
+				> a
+					color: #333333 !important
+					font-size: 13.5px
+					border-bottom: 1px solid #f1f1f1
+					text-transform: none
+					font-weight: 400
+					padding: 6px 22px
+					
+				&.active, &:hover
+					> a
+						color: #ffffff !important
+		@media (min-width: 1200px)
+			&:hover
+				.sub-menu
+					display: block !important
+		@media (max-width: 1199.98px)
+			.mdi-chevron-down
+				display: inline-block
+				margin-left: auto
+				font-size: 24px
+				color: #fff
+			.sub-menu
+				position: static
+				box-shadow: none
+				display: none
+	.search-toggle
+		margin-left: auto
+		display: none
+		span
+			font-size: 24px
+			color: #fff
+		@media (max-width: 576px)
+			display: block
+

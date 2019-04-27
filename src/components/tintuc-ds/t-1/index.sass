@@ -1,31 +1,127 @@
 .tintuc-ds
-    .container
-        padding-top: 50px
-        background: #fff
-        padding-bottom: 70px
-        @media (max-width: 576px)
-            padding-bottom: 20px
-    .title
-        font-size: 35px
-        line-height: 35px
-        margin-bottom: 30px
-        font-weight: 700
-        color: #f26f21
-        text-align: center
-        text-transform: uppercase
-        @media (max-width: 576px)
-            // width: 80%
-            font-size: 24px
-            line-height: 24px
-            margin-bottom: 16px
-            // margin: 0 auto 16px
-    .btn-more
-        color: #f26f21
-        border-color: #f26f21
-        &:hover
-            background: #f26f21
-            color: #fff
-        span
-            &:after
-                +mtrl('\f35d')
-                margin-left: 4px
+	.newspager
+		display: none
+	.container
+		padding-top: 50px
+		background: #fff
+		padding-bottom: 70px
+		&:after
+			content: ''
+			display: block
+			clear: both
+		@media (max-width: 576px)
+			padding-bottom: 20px
+	.title
+		font-size: 35px
+		line-height: 35px
+		margin-bottom: 30px
+		font-weight: 700
+		color: #333333
+		text-align: center
+		text-transform: uppercase
+		@media (max-width: 576px)
+			// width: 80%
+			font-size: 24px
+			line-height: 24px
+			margin-bottom: 16px
+			// margin: 0 auto 16px
+	.btn-more
+		color: #f26f21
+		border-color: #f26f21
+		&:hover
+			background: #f26f21
+			color: #fff
+		span
+			&:after
+				+mtrl('\f35d')
+				margin-left: 4px
+	.flex-center
+		float: left
+		display: block
+		width: 100%
+		margin: 0 auto
+		text-align: center
+	.news-item-wrapper
+		float: left
+		width: 33.333333%
+		padding: 0 15px
+		h4
+			font-size: 15px
+		p
+			display: none
+		&:nth-child(3n)
+			padding-left: 0
+		&:nth-child(4n)
+			padding-right: 0
+		&:nth-child(1)
+			float: left
+			width: 50%
+			margin-top: 0
+			height: 521px
+			padding: 0
+			margin-bottom: 1px
+			@media (max-width: 1600px)
+				margin-bottom: 2.4px
+			@media (max-width: 1441px)
+				margin-bottom: 0
+			figcaption
+				display: flex
+				flex-direction: column
+			h4
+				font-size: 18px
+			p
+				display: -webkit-box
+				order: 3
+				margin-bottom: 0 !important
+				margin-top: 18px !important
+			time
+				order: 2
+				margin-top: 4px
+			.box-img
+				height: 342px
+				img
+					width: 100%
+					height: auto	
+		&:nth-child(2),&:nth-child(3),&:nth-child(4),&:nth-child(5)
+			float: right
+			width: calc(25% - 30px)
+			margin-top: 0
+			padding: 0
+		&:nth-child(3),&:nth-child(5)
+			margin-right: 30px
+		&:nth-child(4)
+			&:after
+				content: ''
+				display: block
+				clear: both
+		@media (max-width: 992px)
+			&:nth-child(1)
+				width: 100%
+				height: auto
+				.box-img
+					height: auto
+			&:nth-child(2),&:nth-child(3),&:nth-child(4),&:nth-child(5)
+				width: 50%
+				float: left
+				margin: 0
+				padding: 0 15px
+			&:nth-child(2),&:nth-child(4)
+				padding-left: 0
+			&:nth-child(3),&:nth-child(5)
+				padding-right: 0
+		@media (max-width: 768px)
+			width: 50% !important
+			padding: 0 15px !important
+			&:nth-child(1)
+				width: 100% !important
+				height: auto !important
+				padding: 0 !important
+			&:nth-child(2n)
+				padding-left: 0 !important
+			&:nth-child(2n-1)
+				padding-right: 0 !important
+		@media (max-width: 480px)
+			width: 100% !important
+			padding: 0 !important
+			.box-img
+				height: 200px

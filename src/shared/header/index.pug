@@ -19,8 +19,17 @@ header.fpt-header
 					li
 						a(href="#")
 							span.mdi-home
-					li
-						a(href="#") Giới thiệu
+					li.has-sub
+						a(href="#") 
+							span Giới thiệu
+							span.mdi-chevron-down
+						ul.sub-menu
+							li
+								a(href="#") Giới thiệu 1
+							li
+								a(href="#") Giới thiệu 2
+							li
+								a(href="#") Giới thiệu 3
 					li
 						a(href="#") Ngành đào tạo 
 					li
@@ -34,6 +43,8 @@ header.fpt-header
 				.language
 					a(href="#")
 						img(src="./img/flag.png", alt="")
+				.search-toggle
+					span.mdi-magnify
 	section.bottom-header
 		.container
 			.bottom-header-wrapper

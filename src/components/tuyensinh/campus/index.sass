@@ -13,6 +13,8 @@
 			font-weight: 300
 	strong
 		font-weight: 900
+	.description
+		width: 100%
 	p
 		color: #333333
 		font-family: 'Muli'
@@ -23,6 +25,7 @@
 		@media (max-width: 576px)
 			max-width: 100%
 	.big-slider
+		position: relative
 		.swiper-slide
 			border-radius: 5px
 			overflow: hidden
@@ -35,6 +38,19 @@
 					color: #fff
 					text-align: center
 					margin: 0 auto
+		.swiper-prev,.swiper-next
+			position: absolute
+			top: 50%
+			transform: translateY(-50%)
+			color: #fff
+			font-size: 50px
+			z-index: 40
+			outline: none
+			cursor: pointer
+			@media (max-width: 576px)
+				display: none
+		.swiper-next
+			right: 0
 		@media (max-width: 992px)
 			.swiper-slide
 				.description
