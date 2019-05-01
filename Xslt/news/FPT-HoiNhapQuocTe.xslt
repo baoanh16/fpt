@@ -128,7 +128,7 @@
 			</xsl:text>
 		</xsl:if>
 		<xsl:if test="position() &gt; 6">
-			<div class="col-12 col-md-3">
+			<div class="col-12 col-md-6 col-lg-3">
 				<div class="news-item">
 					<h5 class="mobile-title">
 						<a>
