@@ -5,7 +5,6 @@
 
 <head id="Head1" runat="server">
 	<title></title>
-	<meta name="viewport" content="width=device-width,initial-scale=1,shrink-to-fit=no">
 	<portal:MetaContent ID="MetaContent" runat="server" />
 	<meta property="og:image" content="/Data/Sites/1/skins/default/img/og-image.png" />
 
@@ -45,6 +44,14 @@
 	<meta name="theme-color" content="#000000">
 	<meta name="msapplication-navbutton-color" content="#000000">
 	<meta name="apple-mobile-web-app-status-bar-style" content="#000000">
+	<!-- ////////////// Responsive Config ////////////// -->
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta name="viewport" content="width=device-width,initial-scale=1,shrink-to-fit=no">
+	<meta name="format-detection" content="telephone=no">
+	<meta name="msapplication-tap-highlight" content="no">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<link href="https://fonts.googleapis.com/css?family=Muli:300,400,600,700&amp;subset=vietnamese" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Roboto+Slab:300,400,700&amp;subset=vietnamese" rel="stylesheet">
 	<portal:StyleSheetCombiner ID="StyleSheetCombiner" runat="server" IncludejQueryUI="false"
 		JQueryUIThemeName="smoothness" />
 	<portal:SkinFolderScript ID="SkinFolderScript1" runat="server" ScriptFileName="js/global.min.js"
@@ -58,7 +65,7 @@
 	<portal:GoogleAnalyticsScript ID="GoogleAnalyticsScript1" runat="server" />
 	<!-- <link rel="stylesheet" href="/Data/Sites/1/skins/default/css/global.min.css"> -->
 	<link href="/Data/Sites/1/skins/default/css/select2.min.css" rel="stylesheet">
-	<div id="fb-root"></div>
+
 	<script>
 		(function (d, s, id) {
 			var js, fjs = d.getElementsByTagName(s)[0];
@@ -83,6 +90,7 @@
 	<portal:LayoutDisplaySettings ID="LayoutDisplaySettings1" runat="server" />
 	<portal:ModuleWrapper ID="mdl264" runat="server" ConfigureModuleId="264" />
 	<portal:ModuleWrapper ID="mdl265" runat="server" ConfigureModuleId="265" />
+	<div id="fb-root"></div>
 	<form id="frmMain" runat="server">
 		<asp:SiteMapDataSource ID="SiteMapData" runat="server" ShowStartingNode="false" />
 		<asp:SiteMapDataSource ID="PageMapDataSource" runat="server" ShowStartingNode="false" />
@@ -147,10 +155,7 @@
 						<div class="col-sm-6 col-lg-3">
 							<div class="footer-item">
 								<portal:ModuleWrapper ID="mdl143" runat="server" ConfigureModuleId="143" />
-								<div class="copyright">
-									<p>© 2018 thuộc về FPT University.</p>
-									<p>All right reserved. Designed by Cánh Cam.</p>
-								</div>
+
 							</div>
 						</div>
 						<div class="col-sm-6 col-lg-3">
@@ -342,6 +347,8 @@
 				var i = document.getElementsByTagName("script")[0];
 				i.parentNode.insertBefore(r, i)
 			}(window);
+			var viewPort = "width=device-width,initial-scale=1,shrink-to-fit=no, user-scalable=0"
+			$('meta[name="viewport"]').attr('content', viewPort)
 		</script>
 	</form>
 </body>

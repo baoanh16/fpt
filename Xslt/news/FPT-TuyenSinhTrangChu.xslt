@@ -9,7 +9,7 @@
 			<xsl:apply-templates select="/NewsList/News"></xsl:apply-templates>
 			<div class="flex-center">
 				<a class="btn-more" href="/hoat-dong-huong-nghiep">
-					<span>xem tất cả</span>
+				<span><xsl:value-of select="/NewsList/ViewAllText" disable-output-escaping="yes"></xsl:value-of></span>
 				</a>
 			</div>
 		</div>

@@ -19,6 +19,10 @@
 			max-width: 100%
 			font-size: 17px
 	.statistic-col
+		margin-bottom: 20px
+		height: 100%
+		.statistic-item
+			margin: 0 auto!important
 		&:nth-child(1)
 			.statistic-item
 				margin-left: auto
@@ -84,10 +88,19 @@
 				font-family: 'Roboto Slab'
 				color: #fff
 				font-weight: 700
+				display: inline-block
 			.unit
 				font-weight: 700
 				font-size: 18px
 				color: #f6e7df
+				display: block
+			.unit-2
+				display: inline-block
+				font-family: 'Roboto Slab'
+				color: #fff
+				font-size: 46px
+				width: 50%
+				text-align: left
 		@media (max-width: 1200px)
 			margin-bottom: 30px
 			.statistic-title
@@ -102,6 +115,8 @@
 					display: inline
 				.number
 					font-size: 30px
+				.unit-2
+					font-size: 30px
 		@media (max-width: 576px)
 			max-width: 100% !important
 			.statistic-title
@@ -113,5 +128,13 @@
 				.statistic-number
 					.number 
 						font-size: 19px
+					.unit-2
+						font-size: 19px
 					.unit
 						font-size: 12px
+
+.organize-education-fpt
+	p,ul
+		margin-bottom: 10px
+	ul
+		padding-left: 15px

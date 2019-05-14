@@ -10,7 +10,7 @@
 		</div>
 		<div class="flex-center">
 			<a class="btn-more" href="/tin-tuc-1">
-				<span>xem tất cả</span>
+				<span><xsl:value-of select="/NewsList/ViewAllText" disable-output-escaping="yes"></xsl:value-of></span>
 			</a>
 		</div>
 	</xsl:template>

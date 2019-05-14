@@ -5,7 +5,7 @@
 		<section class="tuyendung-ct">
 			<div class="container">
 				<div class="row">
-					<div class="col-lg-9">
+					<div class="col-lg-8 col-xl-9">
 						<div class="main-content">
 							<div class="title">
 								<xsl:value-of select="/NewsDetail/Title"></xsl:value-of>
@@ -24,14 +24,16 @@
 									<span>nộp hồ sơ</span>
 								</a>
 							</div>
-							<iframe>
-								<xsl:attribute name="src">
-									<xsl:value-of select="/NewsDetail/ApplyUrl" disable-output-escaping="yes"></xsl:value-of>
-								</xsl:attribute>
-							</iframe>
+							<div class="job-apply-wrapper" style="overflow-x: scroll">
+								<iframe>
+									<xsl:attribute name="src">
+										<xsl:value-of select="/NewsDetail/ApplyUrl" disable-output-escaping="yes"></xsl:value-of>
+									</xsl:attribute>
+								</iframe>
+							</div>
 						</div>
 					</div>
-					<div class="col-lg-3">
+					<div class="col-lg-4 col-xl-3">
 						<div class="row">
 							<div class="col">
 								<div class="vitri-khac">

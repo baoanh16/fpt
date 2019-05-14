@@ -7,7 +7,7 @@
 			<xsl:value-of select="/NewsList/ZoneTitle"></xsl:value-of>
 		</h1>
 		<div class="ajaxresponse">
-			<div class="news-list ajaxresponsewrap">
+			<div class="news-list ajaxresponsewrap clearfix">
 				<xsl:apply-templates select="/NewsList/News"></xsl:apply-templates>
 				<xsl:if test="/NewsList/NextPageUrl!=''">
 					<div class="flex-center col-12">

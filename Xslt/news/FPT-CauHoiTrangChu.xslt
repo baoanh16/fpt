@@ -11,7 +11,7 @@
 			</ul>
 			<div class="flex-center">
 				<a class="btn-more" href="/tuyen-sinh/hoi-dap">
-					<span>xem tất cả</span>
+				<span><xsl:value-of select="/NewsList/ViewAllText" disable-output-escaping="yes"></xsl:value-of></span>
 				</a>
 			</div>
 		</div>

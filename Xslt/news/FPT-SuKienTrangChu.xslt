@@ -10,7 +10,7 @@
 				<xsl:apply-templates select="/NewsList/News"></xsl:apply-templates>
 			</div>
 			<a class="btn-more" href="/tin-tuc-1/su-kien">
-				<span>xem tất cả</span>
+				<span><xsl:value-of select="/NewsList/ViewAllText" disable-output-escaping="yes"></xsl:value-of></span>
 			</a>
 		</div>
 	</xsl:template>

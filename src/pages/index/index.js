@@ -26,16 +26,33 @@ function roundUp(num, precision) {
 	return Math.ceil(num * precision) / precision;
 }
 
-$('.fpt-daotao-ct2 .reason-item .content span:first-child').each(function () {
-	$(this).prop('Counter', 0).animate({
-		Counter: $(this).text()
-	}, {
-		duration: 5000,
-		easing: 'swing',
-		step: function (now) {
-			// $(this).text(Math.ceil(now));
-			$(this).text(roundUp(now, 1));
-			// $(this).text(Math.round10(now, -1));
+if ($('.fpt-daotao-ct2').length > 0) {
+	var scroll = false;
+	$(window).on('scroll', function () {
+		if (scroll == false) {
+
+			if ($(window).scrollTop() > $('.fpt-daotao-ct2').offset().top - $(window).height())
+				$('.animated').scrollClass({
+					delay: 300
+				});
+			$('.fpt-daotao-ct2 .reason-item .content span:first-child').each(function () {
+				$(this).prop('Counter', 0).animate({
+					Counter: $(this).text()
+				}, {
+						duration: 5000,
+						easing: 'swing',
+						step: function (now) {
+							// $(this).text(Math.ceil(now));
+							$(this).text(roundUp(now, 1));
+							// $(this).text(Math.round10(now, -1));
+						}
+					});
+			});
 		}
+		scroll = true;
 	});
-});
+	$('.event-item img').height($('.event-item img').width() / (270 / 171))
+	$(window).on('resize', function () {
+		$('.event-item img').height($('.event-item img').width() / (270 / 171))
+	})
+}

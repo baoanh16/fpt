@@ -12,6 +12,13 @@
 						<h1>
 							<xsl:value-of select="Title"></xsl:value-of>
 						</h1>
+						<xsl:if test="Description != ''">
+							<div class="row" style="justify-content: center; margin-bottom: 20px; text-align: center;">
+								<div class="col-lg-10 col-xl-8">
+									<p><xsl:value-of select="Description" disable-output-escaping="yes"></xsl:value-of></p>
+								</div>
+							</div>
+						</xsl:if>
 						<div class="row">
 							<xsl:apply-templates select="News" mode="ZoneNews1"></xsl:apply-templates>
 						</div>

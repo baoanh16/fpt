@@ -40,9 +40,13 @@
 			display: -ms-flexbox 
 			display: flex 
 			flex-wrap: wrap 
+			@media (max-width: 1199.98px)
+				width: 100%
 			.form-group 
 				width: 50% 
 		.col-right 
+			@media (max-width: 1199.98px)
+				width: 100%
 			.form-group 
 				textarea 
 					height: 250px 
@@ -72,10 +76,16 @@
 .dialogpage .container-fluid .col-left .form-group:nth-child(4) 
 	padding-left: 15px 
 .dialogpage
+	.apply-frm
+		width: 315px
+		
 	@media (max-width: 768px)
 		#ctl00_phMain_jobApply_pnlNewComment
 			overflow-x: hidden
+			max-width: 100%
+			width: 100%
 		#ctl00_phMain_jobApply_upContact
+			max-width: 100%
 			width: 100%
 		.form-group
 			width: 100% !important
@@ -87,13 +97,19 @@
 		display: none
 	main
 		margin-top: 40px
+.clearfix:before
+	content: ''
+	visibility: hidden
+	display: block 
+	clear: both
 .fpt-news-child
 	.mobile-title
 		display: none
 	.Module-155,.Module-156
 		display: none
 	.flex-center
-		display: none !important
+		@media (max-width: 991.98px)
+			display: none !important
 	.tintuc-ds
 		.container
 			padding-bottom: 0 !important
@@ -606,7 +622,7 @@
 		margin-top: 0
 	.tuyendung-1
 		.container
-			padding-top: 35px
+			padding-top: 36px
 			padding-bottom: 25px
 	.tuyendung-2
 		.container
@@ -615,10 +631,10 @@
 	.fpt-daotao-ct6
 		h2
 			margin-bottom: 0 !important
-	@media (max-width: 768px)
-		.tuyendung-1
-			.container
-				padding-top: 20px !important
+	// @media (max-width: 768px)
+	// 	.tuyendung-1
+	// 		.container
+	// 			padding-top: 20px !important
 .fpt-daotao-ct7 
 	.frm-btnwrap
 		width: 180px !important
@@ -812,3 +828,20 @@
 		.Module-211
 			display: none
 
+.news-item-wrapper:nth-child(1) .news-item a
+	-webkit-line-clamp: 1
+	-webkit-box-orient: vertical
+	display: -webkit-box
+	overflow: hidden
+	text-decoration: none
+	text-overflow: ellipsis
+
+.tintuc-1 .col-lg-6:nth-child(1) .news-item
+	margin-bottom: 25px
+
+.fpt-about .statistic-item .statistic-body
+	display: flex
+.fpt-about .statistic-item .statistic-body .statistic-number
+	margin: 0 auto
+.statistic-title img
+	height: 60px

@@ -1,6 +1,5 @@
 .fpt-header
 	background: #fff
-
 	.top-header
 		padding: 10px 0
 		font-family: 'Muli'
@@ -52,10 +51,13 @@
 			display: flex
 			list-style: none
 			width: 100%
+			>li
+				>a
+					text-align: center
 			li
 				a
 					display: block
-					padding: 13px 22px
+					padding: 13px 14px
 					color: #fff
 					text-decoration: none
 					border-left: 1px solid rgba(white,20%)
@@ -68,6 +70,10 @@
 					align-items: center
 					.mdi-home
 						font-size: 20px
+						@media (max-width: 991.98px)
+							font-size: 36px
+							&:before
+								line-height: 23px
 				&:last-child
 					a
 						border-right: 1px solid rgba(white,20%)
@@ -79,6 +85,8 @@
 			display: flex
 			align-items: center
 			margin-left: auto
+		.Module-139
+			margin-right: 25px
 		@media (max-width: 1200px)
 			position: relative
 			.middle-header-wrapper

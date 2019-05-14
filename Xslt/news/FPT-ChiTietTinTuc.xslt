@@ -90,6 +90,10 @@
 	</xsl:template>
 	<xsl:template match="Tags">
 		<a>
+		
+      <xsl:attribute name="href">
+        <xsl:value-of select="Url"/>
+      </xsl:attribute>
 			<xsl:value-of select="Tag" />
 		</a>
 	</xsl:template>
