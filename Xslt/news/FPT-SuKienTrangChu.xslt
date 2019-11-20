@@ -9,7 +9,10 @@
 			<div class="row">
 				<xsl:apply-templates select="/NewsList/News"></xsl:apply-templates>
 			</div>
-			<a class="btn-more" href="/tin-tuc-1/su-kien">
+			<a class="btn-more">
+			<xsl:attribute name='href'>
+				<xsl:value-of select='/NewsList/EventLink'></xsl:value-of>
+			</xsl:attribute>
 				<span><xsl:value-of select="/NewsList/ViewAllText" disable-output-escaping="yes"></xsl:value-of></span>
 			</a>
 		</div>

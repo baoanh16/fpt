@@ -5,6 +5,7 @@
 		position: absolute
 		width: 100%
 		bottom: 10%
+		pointer-events: none
 	.swiper-navigation-wrapper
 		width: 80%
 		position: absolute
@@ -12,6 +13,7 @@
 		left: 50%
 		transform: translate(-50%, -50%)
 		z-index: 20
+		pointer-events: none
 		.swiper-navigation
 			width: 100%
 			display: flex
@@ -20,6 +22,7 @@
 			color: white
 			outline: none
 			cursor: pointer
+			pointer-events: auto
 			span
 				font-size: 40px
 			&:hover
@@ -36,6 +39,9 @@
 			margin-left: 45px
 			margin-bottom: 21px
 			cursor: pointer
+			display: inline-block
+		.swiper-pagination
+			pointer-events: auto
 		.swiper-pagination-bullet
 			margin-left: 10px
 			background: #cdcacc

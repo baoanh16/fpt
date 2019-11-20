@@ -19,11 +19,6 @@
 							</div>
 							<hr />
 							<xsl:value-of select="/NewsDetail/FullContent" disable-output-escaping="yes"></xsl:value-of>
-							<div class="flex-center">
-								<a class="btn-nop">
-									<span>nộp hồ sơ</span>
-								</a>
-							</div>
 							<div class="job-apply-wrapper" style="overflow-x: scroll">
 								<iframe>
 									<xsl:attribute name="src">

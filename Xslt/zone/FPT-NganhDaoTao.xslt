@@ -37,7 +37,7 @@
 					<h4>
 						<xsl:value-of select='Title'></xsl:value-of>
 					</h4>
-					<xsl:if test="count(Zone) > 1">
+					<xsl:if test="count(Zone) = 2">
 						<ul>
 							<xsl:apply-templates select='Zone' mode="Child-2"></xsl:apply-templates>
 						</ul>

@@ -76,6 +76,12 @@
 			fjs.parentNode.insertBefore(js, fjs);
 		}(document, 'script', 'facebook-jssdk'));
 	</script>
+	<script>
+		$(window).on('load', function () {
+
+			$(".fb-comments").attr("data-width", $(".fb-comments").parent().width());
+		})
+	</script>
 	<!-- <script src="/Data/Sites/1/skins/default/js/global.min.js"></script> -->
 	<!--*********************************************************************************************-->
 	<!-- Canh Cam - the best Web Solutions Provider - http://www.canhcam.vn                          -->
@@ -155,7 +161,11 @@
 						<div class="col-sm-6 col-lg-3">
 							<div class="footer-item">
 								<portal:ModuleWrapper ID="mdl143" runat="server" ConfigureModuleId="143" />
-
+								<div class="copyright">
+									<portal:ModuleWrapper ID="mdl279" runat="server" ConfigureModuleId="279" />
+									<!-- <p>© 2019 thuộc về FPT University</p>
+									<p>All right reserved. Designed by Cánh Cam</p> -->
+								</div>
 							</div>
 						</div>
 						<div class="col-sm-6 col-lg-3">

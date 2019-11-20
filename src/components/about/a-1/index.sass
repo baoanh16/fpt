@@ -17,7 +17,7 @@
 		margin-bottom: 32px
 		@media (max-width: 576px)
 			max-width: 100%
-			font-size: 17px
+			font-size: 15px !important
 	.statistic-col
 		margin-bottom: 20px
 		height: 100%
@@ -56,9 +56,11 @@
 					max-width: 50%
 					margin: 0 auto
 		@media (max-width: 576px)
+			.statistic-item
+				max-height: 196px !important
 			&:nth-child(1),&:nth-child(2)
 				.statistic-item
-					padding: 16px
+					padding: 16px 8px
 				.statistic-title
 					flex-direction: column
 	.statistic-item
@@ -105,11 +107,9 @@
 			margin-bottom: 30px
 			.statistic-title
 				justify-content: center
-		@media (max-width: 992px)
-			max-width: 50% !important
 		@media (max-width: 768px)
 			&:nth-child(1),&:nth-child(2)
-				max-width: 75% !important
+				max-width: 75% 
 			.statistic-body
 				span
 					display: inline
@@ -118,7 +118,10 @@
 				.unit-2
 					font-size: 30px
 		@media (max-width: 576px)
+			padding: 12px
 			max-width: 100% !important
+			&:nth-child(1),&:nth-child(2)
+				max-width: 100% !important
 			.statistic-title
 				margin-left: 0
 				span

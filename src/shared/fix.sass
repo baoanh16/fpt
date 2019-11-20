@@ -112,6 +112,7 @@
 			display: none !important
 	.tintuc-ds
 		.container
+			padding-top: 80px
 			padding-bottom: 0 !important
 	@media (max-width: 768px)
 		.tintuc-ds
@@ -179,10 +180,6 @@
 			[class*=col-]
 				margin-bottom: 0
 .daotao-chitiet
-	ol.breadcrumb
-		li
-			&:last-child
-				display: none
 	h2
 		font-size: 30px !important
 	.fpt-nav
@@ -197,6 +194,7 @@
 	.khac-biet-wrapper
 		ul
 			padding-left: 16px !important
+			list-style: disc
 	@media (max-width: 768px)
 		.fpt-nav .nav-wrapper
 			padding-top: 40px
@@ -265,6 +263,7 @@
 		.fpt-daotao-banner
 			h1
 				font-size: 24px !important
+			
 		.fpt-nav
 			.container
 				padding: 0 20px
@@ -279,9 +278,8 @@
 				font-size: 14px
 				align-items: flex-end
 				margin-top: -15px
-	@media (max-width: 768px)
-		.fpt-daotao-ct6 .feedback-item .img 
-			flex: auto
+		.fpt-daotao-banner .banner
+			height: 280px !important
 .homepage
 	.fpt-tuyensinh-nganhdaotao 
 		.description
@@ -313,6 +311,11 @@
 			.news-item
 				p
 					+line(2)
+			&:first-child
+				.news-item
+					margin-bottom: 28px
+					a
+						+line(2)
 		.col-sm-6
 			.news-item
 				margin-bottom: 25px
@@ -340,7 +343,7 @@
 			h2
 				margin-bottom: 10px !important
 	.fpt-home-event
-		padding: 35px 0 40px
+		padding: 25px 0 40px
 		h2
 			margin-bottom: 20px !important
 		@media (max-width: 768px)
@@ -355,15 +358,13 @@
 	.icon-list
 		margin-left: 20px
 		display: flex
-		align-items: center
+		align-items: flex-start
+		line-height: 0
 		width: 100%
-		justify-content: space-around
 		span
-			font-size: 44px
+			font-size: 67px
 			color: #f26f21 
-			&.mdi-youtube
-				font-size: 56px
-		@media (min-width: 992px)
+		@media (min-width: 768px)
 			display: none
 	@media (max-width: 768px)
 		background-size: contain
@@ -551,6 +552,7 @@
 	.fpt-about,.fpt-campus
 		.section-wrapper 
 			padding-top: 50px
+
 .fpt-news-list
 	.tintuc-1
 		padding-bottom: 0 !important
@@ -575,6 +577,13 @@
 .fpt-thisinh
 	.thisinh-1 .container
 		padding-bottom: 30px
+	.news-item p
+		+line(2)
+		margin-bottom: 0 !important
+	.news-link
+		margin-top: -16px
+	.thisinh-1 .func-item:not(:last-child)
+		margin-bottom: 26px !important
 	@media (max-width: 992px)
 		.col-lg-3
 			margin-top: 20px
@@ -672,6 +681,8 @@
 		.section-wrapper
 			padding-top: 20px !important
 	.fpt-event-detail
+		.event-item
+			margin-bottom: 30px
 		.section-wrapper
 			padding-top: 40px !important
 			@media (max-width: 768px)
@@ -824,6 +835,8 @@
 		.btn-wrap
 			justify-content: center
 .FAQs
+	.title
+		text-transform: uppercase
 	@media (max-width: 768px)
 		.Module-211
 			display: none
@@ -843,5 +856,244 @@
 	display: flex
 .fpt-about .statistic-item .statistic-body .statistic-number
 	margin: 0 auto
+.fpt-tapdoan .fpt-about .statistic-col .statistic-item
+	height: 246px
+	overflow: hidden
+.organize-edu-fpt .fpt-about .statistic-col .statistic-item
+	height: 246px
+	overflow: hidden
 .statistic-title img
 	height: 60px
+.organize-edu-fpt,.fpt-university
+	.unit-2
+		font-weight: 700
+	h1
+		font-size: 30px
+	p
+		font-family: 'Muli'
+	.Module-156
+		display: none
+	.section-wrapper
+		padding-top: 60px !important
+		padding-bottom: 0 !important
+.fpt-university
+	.statistic-item
+		max-width: none !important
+	.fpt-about .statistic-item .statistic-body .statistic-number
+		margin: 0 !important
+	.unit-2
+		width: auto !important
+	.statistic-number
+		width: 100% !important
+.organize-edu-fpt
+	.fpt-about .statistic-col:nth-child(3) .statistic-number:last-child:before
+		display: none !important
+	.fpt-about .statistic-item
+		max-width: none !important
+	.statistic-col
+		@media (min-width: 1200px)
+			flex: 0 0 25% !important
+			max-width: 25% !important
+	@media (max-width: 1200px)
+		img
+			max-width: 100% !important
+			height: auto !important
+		.fpt-about .statistic-col:nth-child(3) .statistic-item
+			max-width: none
+		.fpt-about .statistic-col:nth-child(3)
+			flex: 0 0 50%!important
+			max-width: 50%!important
+	@media (max-width: 768px)
+		.fpt-about .statistic-item:first-child, .fpt-about .statistic-item:nth-child(2)
+			max-width: none !important
+		.fpt-about .statistic-col:nth-child(3) .statistic-number:last-child 
+			margin-left: 0 !important
+	.statistic-item
+		@media (max-width: 1200px)
+			max-width: none !important
+	.statistic-title
+		justify-content: center !important
+		span
+			display: none !important
+	.statistic-number
+		.operator
+			display: inline-block !important
+			color: #fff
+			font-family: Roboto Slab
+			font-size: 40px
+			font-weight: 700
+			@media (max-width: 576px)
+				font-size: 16px
+.fpt-university
+	@media (max-width: 1200px)
+		img
+			max-width: 100% !important
+			height: auto !important
+	@media (max-width: 992px)
+		p.col-6
+			padding-left: 0 !important
+			display: flex
+			align-items: center
+	@media (max-width: 768px)
+		h2
+			margin-top: 0 !important
+			*
+				font-size: 15px !important
+	h1:first-child
+		display: none
+	.fpt-about .section-wrapper .row-2
+		margin: 0
+		transform: scale(0.75)
+		margin-top: -80px
+		margin-bottom: -80px
+		div[class*=col-]
+			padding-right: 0
+			padding-left: 0
+		.statistic-col
+			flex: 0 0 33.333333% !important
+			max-width: 33.333333% !important
+		@media (max-width: 576px)
+			transform: scale(1)
+			margin-bottom: 30px
+			margin-top: 30px
+	.fpt-about .statistic-col:nth-child(3) .statistic-number:last-child:before
+		display: none !important
+	.fpt-about .statistic-col
+		margin-bottom: 0 !important
+	.fpt-about .statistic-col:nth-child(2n-1)
+		.statistic-item
+			border: 1.5px solid #f26f21
+	.fpt-about .statistic-col:nth-child(2n)
+		.statistic-item
+			background: #fff
+			border: 1.5px solid #f26f21
+			*
+				color: #f26f21 !important
+			.statistic-title
+				border-bottom: 1px solid #f26f21 !important
+				
+	.statistic-title
+		justify-content: center !important
+		span
+			display: none !important
+	.statistic-number
+		.unit
+			height: 39.6px
+			@media (max-width: 992px)
+				font-size: 13px !important
+			@media (max-width: 576px)
+				font-size: 9px !important
+
+.thanh-tich
+	font-family: 'Muli'
+	tr
+		td:first-child
+			text-align: center !important
+		td:nth-child(2)
+			width: 85% !important
+.fb-comments
+	width: 100% !important
+.fb_iframe_widget, .fb_iframe_widget span, .fb_iframe_widget span iframe[style], .fb-comments span, .fb-comments iframe
+	width: 100% !important
+span.label
+	display: block
+	margin-bottom: 10px
+.en-us
+	.slogan
+		z-index: 50
+		img
+			height: auto !important
+			width: 236px
+		@media (max-width: 576px)
+			img
+				width: auto
+				max-height: none !important
+				height: 36px !important
+	.fpt-home-1,.fpt-home-2
+		display: none
+	.fpt-footer
+		img
+			max-height: 4rem !important
+		.icon-list
+			padding-top: 5px
+			span
+				font-size: 50px
+@media (min-width: 992px)
+	.news-item .big-img a
+		height: 100%
+	.news-item .box-img a
+		height: 100%
+	.homepage
+		.tintuc-1
+			.news-item
+				.big-img
+					height: 315.16px
+					img
+						height: 100%
+						width: 100%
+						object-fit: cover
+			.col-lg-6:first-child
+				.news-item
+					h4
+						height: 54px
+	.fpt-home-1
+		.tuyensinh-wrapper
+			.news-item
+				.img
+					height: 335.16px
+					img
+						height: 100%
+						width: 100%
+						object-fit: cover
+				h4
+					height: 54px
+	.thisinh-1
+		.big-img
+			height: 332.48px
+			img
+				height: 100%
+				width: 100%
+				object-fit: cover
+		.col-md-8
+			h4
+				height: 54px
+			p
+				height: 44px
+	.tuyendung
+		.big-img
+			height: 350.16px
+			img
+				height: 100%
+				width: 100%
+				object-fit: cover
+		.tuyendung-1
+			.col-lg-6:first-child
+				.news-item
+					h4
+						height: 54px
+					p
+						height: 44px
+	.fpt-news-list
+		.big-img
+			height: 332.5px
+			img
+				height: 100%
+				width: 100%
+				object-fit: cover
+		.tintuc-1
+			.col-lg-6:first-child
+				.news-item
+					h4
+						height: 54px
+					p
+						height: 66px
+.homepage
+	.tintuc-1
+		h5
+			height: 40px
+.tintuc-2
+	h5
+		height: 40px
+a
+	&:hover
+		color: #f26f21

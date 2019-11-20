@@ -10,6 +10,9 @@
 		</div>
 		<div class="flex-center">
 			<a class="btn-more" href="/tin-tuc-1">
+			<xsl:attribute name='href'>
+				<xsl:value-of select='/NewsList/NewsLink'></xsl:value-of>
+			</xsl:attribute>
 				<span><xsl:value-of select="/NewsList/ViewAllText" disable-output-escaping="yes"></xsl:value-of></span>
 			</a>
 		</div>

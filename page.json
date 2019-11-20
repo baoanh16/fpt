@@ -1,5 +1,5 @@
 {
-	"buildAll": true,
+	"buildAll": false,
 	"page": [{
 			"name": "index",
 			"isWorking": true,
@@ -20,7 +20,7 @@
 		{
 			"name": "tuyensinh",
 			"isWorking": false,
-			"js": []
+			"js": ["./src/plugins/scrollClass.js"]
 		},
 		{
 			"name": "register",
@@ -81,7 +81,7 @@
 		},
 		{
 			"name": "tuyendung",
-			"isWorking": true,
+			"isWorking": false,
 			"js": []
 		},
 		{

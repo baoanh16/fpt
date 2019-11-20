@@ -39,20 +39,16 @@ if ($('.fpt-daotao-ct2').length > 0) {
 				$(this).prop('Counter', 0).animate({
 					Counter: $(this).text()
 				}, {
-						duration: 5000,
-						easing: 'swing',
-						step: function (now) {
-							// $(this).text(Math.ceil(now));
-							$(this).text(roundUp(now, 1));
-							// $(this).text(Math.round10(now, -1));
-						}
-					});
+					duration: 5000,
+					easing: 'swing',
+					step: function (now) {
+						// $(this).text(Math.ceil(now));
+						$(this).text(roundUp(now, 1));
+						// $(this).text(Math.round10(now, -1));
+					}
+				});
 			});
 		}
 		scroll = true;
 	});
-	$('.event-item img').height($('.event-item img').width() / (270 / 171))
-	$(window).on('resize', function () {
-		$('.event-item img').height($('.event-item img').width() / (270 / 171))
-	})
 }

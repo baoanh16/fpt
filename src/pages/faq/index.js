@@ -18,11 +18,16 @@ function toggleTabsWrapper() {
 
 function toggleTabsItem() {
 	$('body').on('click', '.FAQs .tabs-title', function () {
-		$(this).toggleClass('active')
-		$(this).next().toggle()
-		if ($(window).width() < 576) {
-			$(this).parent().siblings().children('.tabs-content').hide()
-		}
+		var _this = $(this)
+		$(this).addClass('active')
+		$(this).parent().siblings().children('.tabs-content').slideUp()
+		$(this).parent().siblings().children('.tabs-title').removeClass('active')
+		$(this).next().slideDown(function () {
+			$('body, html').animate({
+				scrollTop: _this.offset().top - _this.height() - 17
+			})
+		});
+
 	})
 }
 

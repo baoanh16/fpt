@@ -9,12 +9,12 @@
 
 	</xsl:template>
 	<xsl:template match="Zone">
-		<xsl:if test="count(Zone) > 1 and IsActive='true' ">
+		<xsl:if test="count(Zone) = 2 and IsActive='true' ">
 			<nav class="fpt-nav ">
 				<div class="container">
 					<div class="nav-wrapper">
 						<h2>lựa chọn chuyên ngành</h2>
-						<ul class="nav animated hiddenV slow" data-scroll-class="visible heartBeat">
+						<ul class="nav animated slow" data-scroll-class="visible heartBeat">
 							<xsl:apply-templates select="Zone" mode="Child"></xsl:apply-templates>
 						</ul>
 					</div>

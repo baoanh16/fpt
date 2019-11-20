@@ -28,14 +28,22 @@
 	<xsl:template match="Banner">
 		<div class="swiper-slide">
 			<div class="item">
-				<img>
-				<xsl:attribute name='src'>
-					<xsl:value-of select='ImageUrl'></xsl:value-of>
-				</xsl:attribute>
-				<xsl:attribute name='alt'>
-					<xsl:value-of select='Title'></xsl:value-of>
-				</xsl:attribute>
-				</img>
+				<a>
+					<xsl:attribute name='href'>
+						<xsl:value-of select='Url'></xsl:value-of>
+					</xsl:attribute>
+					<xsl:attribute name='target'>
+						<xsl:value-of select='Target'></xsl:value-of>
+					</xsl:attribute>
+					<img>
+					<xsl:attribute name='src'>
+						<xsl:value-of select='ImageUrl'></xsl:value-of>
+					</xsl:attribute>
+					<xsl:attribute name='alt'>
+						<xsl:value-of select='Title'></xsl:value-of>
+					</xsl:attribute>
+					</img>
+				</a>
 			</div>
 		</div>
 	</xsl:template>

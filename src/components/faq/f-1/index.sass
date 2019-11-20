@@ -74,18 +74,18 @@
 				i
 					&:before
 						content: '\e873'
-			.tabs-content
-				display: block
 	.tabs-content
-		transition: all .5s ease-in-out
-		display: none
 		padding-left: 20px
 		padding-right: 20px
 		padding-top: 30px
+		display: none
 		table
 			width: 100% !important
-	.tabs-wrapper
-		transition: all .5s ease-in-out
+		.table
+			overflow-x: auto
+		@media (max-width: 768px)
+			table
+				width: 200% !important
 	.btn-more
 		color: #f26f21
 		border-color: #f26f21

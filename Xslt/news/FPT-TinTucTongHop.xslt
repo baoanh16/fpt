@@ -5,7 +5,7 @@
 		<xsl:apply-templates select="/ZoneList/Zone"></xsl:apply-templates>
 	</xsl:template>
 	<xsl:template match="Zone">
-		<xsl:if test="position() &lt; 10">
+		<xsl:if test="position() &lt; 11">
 			<section class="tintuc-2-wrapper">
 				<div class="container">
 					<div class="tintuc-2">
@@ -21,10 +21,10 @@
 							</h4>
 						</div>
 						<div class="row">
-							<xsl:if test="position() &lt; 9">
+							<xsl:if test="position() &lt; 10">
 								<xsl:apply-templates select="News" mode="ZoneNews1"></xsl:apply-templates>
 							</xsl:if>
-							<xsl:if test="position()=9">
+							<xsl:if test="position()=10">
 								<xsl:apply-templates select="News" mode="ZoneNews2"></xsl:apply-templates>
 							</xsl:if>
 						</div>
@@ -32,7 +32,7 @@
 				</div>
 			</section>
 		</xsl:if>
-		<xsl:if test="position()= 10">
+		<xsl:if test="position()= 11">
 			<section class="slide-1">
 				<div class="container">
 					<div class="swiper-container">

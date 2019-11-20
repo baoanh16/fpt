@@ -26,6 +26,10 @@
 	<xsl:template match="News">
 		<div class="tabs-item">
 			<div class="tabs-title">
+				<xsl:attribute name="id">
+					<xsl:text>#tab</xsl:text>
+					<xsl:value-of select='NewsId'></xsl:value-of>
+				</xsl:attribute>
 				<span></span>
 				<p>
 					<xsl:value-of select="Title"></xsl:value-of>
